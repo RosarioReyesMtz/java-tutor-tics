@@ -1,0 +1,229 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1089pt" height="851pt" viewBox="0.00 0.00 1089.00 851.23">
+<g id="graph0" class="graph" transform="translate(4,847.22998046875) scale(1)" data-name="Diagrama_5_1_Suma">
+
+<polygon fill="white" stroke="none" points="-4,4 -4,-847.23 1085,-847.23 1085,4 -4,4"/>
+<!-- inicio -->
+<g id="node1" class="node" pointer-events="visible" data-name="inicio">
+
+<ellipse fill="none" stroke="black" cx="231" cy="-813.82" rx="157.2" ry="29.33"/>
+<text text-anchor="start" x="127.91" y="-818.02" font-family="Arial" font-size="14.00">INICIO (Matrices A1 y B1 leídas,</text>
+<text text-anchor="middle" x="231" y="-801.22" font-family="Arial" font-size="14.00"> Matriz C en ceros)</text>
+</g>
+<!-- init_ptrs -->
+<g id="node3" class="node" pointer-events="visible" data-name="init_ptrs">
+
+<polygon fill="none" stroke="black" points="284.27,-747.4 177.73,-747.4 177.73,-711.4 284.27,-711.4 284.27,-747.4"/>
+<text text-anchor="middle" x="231" y="-725.2" font-family="Arial" font-size="14.00">I LL- 1, J LL- 1</text>
+</g>
+<!-- inicio&#45;&gt;init_ptrs -->
+<g id="edge1" class="edge" data-name="inicio-&gt;init_ptrs">
+
+<path fill="none" stroke="black" d="M231,-783.99C231,-775.98 231,-767.27 231,-759.26"/>
+<polygon fill="black" stroke="black" points="234.5,-759.31 231,-749.31 227.5,-759.31 234.5,-759.31"/>
+</g>
+<!-- fin -->
+<g id="node2" class="node" pointer-events="visible" data-name="fin">
+
+<ellipse fill="none" stroke="black" cx="625" cy="-20.8" rx="80.46" ry="18"/>
+<text text-anchor="middle" x="625" y="-16.6" font-family="Arial" font-size="14.00">FIN (Imprimir C)</text>
+</g>
+<!-- cond_main_loop -->
+<g id="node7" class="node" pointer-events="visible" data-name="cond_main_loop">
+
+<polygon fill="none" stroke="black" points="231,-674.4 108.25,-656.4 231,-638.4 353.75,-656.4 231,-674.4"/>
+<text text-anchor="middle" x="231" y="-652.2" font-family="Arial" font-size="14.00">(I &lt;= K) y (J &lt;= L)</text>
+</g>
+<!-- init_ptrs&#45;&gt;cond_main_loop -->
+<g id="edge2" class="edge" data-name="init_ptrs-&gt;cond_main_loop">
+
+<path fill="none" stroke="black" d="M231,-711.21C231,-703.63 231,-694.5 231,-685.94"/>
+<polygon fill="black" stroke="black" points="234.5,-685.94 231,-675.94 227.5,-685.94 234.5,-685.94"/>
+</g>
+<!-- proc_c_sum -->
+<g id="node4" class="node" pointer-events="visible" data-name="proc_c_sum">
+
+<polygon fill="none" stroke="black" points="396.25,-407.8 65.75,-407.8 65.75,-366.6 396.25,-366.6 396.25,-407.8"/>
+<text text-anchor="start" x="73.63" y="-391.4" font-family="Arial" font-size="14.00">C[A1[I].REN, A1[I].COL] LL- A1[I].VAL + B1[J].VAL</text>
+<text text-anchor="start" x="73.63" y="-374.6" font-family="Arial" font-size="14.00">I LL- I + 1, J LL- J + 1</text>
+</g>
+<!-- proc_c_sum&#45;&gt;cond_main_loop -->
+<g id="edge6" class="edge" data-name="proc_c_sum-&gt;cond_main_loop">
+
+<path fill="none" stroke="black" d="M231,-408.03C231,-454.91 231,-572.71 231,-627.09"/>
+<polygon fill="black" stroke="black" points="227.5,-626.77 231,-636.77 234.5,-626.77 227.5,-626.77"/>
+</g>
+<!-- proc_c_a -->
+<g id="node5" class="node" pointer-events="visible" data-name="proc_c_a">
+
+<polygon fill="none" stroke="black" points="695.04,-313.4 442.96,-313.4 442.96,-272.2 695.04,-272.2 695.04,-313.4"/>
+<text text-anchor="start" x="450.73" y="-297" font-family="Arial" font-size="14.00">C[A1[I].REN, A1[I].COL] LL- A1[I].VAL</text>
+<text text-anchor="start" x="450.73" y="-280.2" font-family="Arial" font-size="14.00">I LL- I + 1</text>
+</g>
+<!-- proc_c_a&#45;&gt;cond_main_loop -->
+<g id="edge9" class="edge" data-name="proc_c_a-&gt;cond_main_loop">
+
+<path fill="none" stroke="black" d="M442.65,-302.26C313.34,-312.57 122.37,-332.91 57,-366.4 46.15,-371.96 38,-374 38,-386.2 38,-568.6 38,-568.6 38,-568.6 38,-616.76 88.6,-638.36 137.99,-647.97"/>
+<polygon fill="black" stroke="black" points="137.2,-651.38 147.66,-649.69 138.43,-644.49 137.2,-651.38"/>
+</g>
+<!-- cond_resto_a -->
+<g id="node12" class="node" pointer-events="visible" data-name="cond_resto_a">
+
+<polygon fill="none" stroke="black" points="569,-219.2 516.9,-201.2 569,-183.2 621.1,-201.2 569,-219.2"/>
+<text text-anchor="middle" x="569" y="-197" font-family="Arial" font-size="14.00">I &lt;= K</text>
+</g>
+<!-- proc_c_a&#45;&gt;cond_resto_a -->
+<g id="edge17" class="edge" data-name="proc_c_a-&gt;cond_resto_a">
+
+<path fill="none" stroke="black" d="M567.64,-271.83C567.1,-261.5 566.67,-248.67 567,-237.2 567.06,-235.1 567.14,-232.93 567.23,-230.75"/>
+<polygon fill="black" stroke="black" points="570.73,-230.96 567.75,-220.79 563.74,-230.6 570.73,-230.96"/>
+</g>
+<!-- proc_c_b -->
+<g id="node6" class="node" pointer-events="visible" data-name="proc_c_b">
+
+<polygon fill="none" stroke="black" points="984.87,-41.4 723.13,-41.4 723.13,-0.2 984.87,-0.2 984.87,-41.4"/>
+<text text-anchor="start" x="731.07" y="-25" font-family="Arial" font-size="14.00">C[B1[J].REN, B1[J].COL] LL- B1[J].VAL</text>
+<text text-anchor="start" x="731.07" y="-8.2" font-family="Arial" font-size="14.00">J LL- J + 1</text>
+</g>
+<!-- proc_c_b&#45;&gt;cond_main_loop -->
+<g id="edge11" class="edge" data-name="proc_c_b-&gt;cond_main_loop">
+
+<path fill="none" stroke="black" d="M950.93,-41.88C1012.62,-57.55 1081,-81.64 1081,-111.4 1081,-568.6 1081,-568.6 1081,-568.6 1081,-640.07 599.29,-653.12 361.14,-655.21"/>
+<polygon fill="black" stroke="black" points="361.12,-651.71 351.15,-655.29 361.18,-658.71 361.12,-651.71"/>
+</g>
+<!-- cond_resto_b -->
+<g id="node13" class="node" pointer-events="visible" data-name="cond_resto_b">
+
+<polygon fill="none" stroke="black" points="630,-130.4 576.36,-112.4 630,-94.4 683.64,-112.4 630,-130.4"/>
+<text text-anchor="middle" x="630" y="-108.2" font-family="Arial" font-size="14.00">J &lt;= L</text>
+</g>
+<!-- proc_c_b&#45;&gt;cond_resto_b -->
+<g id="edge20" class="edge" data-name="proc_c_b-&gt;cond_resto_b">
+
+<path fill="none" stroke="black" d="M808.96,-41.71C796.31,-47.4 782.58,-53.66 770,-59.6 754.76,-66.79 751.6,-70.01 736,-76.4 714.06,-85.39 688.88,-93.78 668.57,-100.09"/>
+<polygon fill="black" stroke="black" points="667.82,-96.66 659.29,-102.93 669.87,-103.35 667.82,-96.66"/>
+</g>
+<!-- cond_ren -->
+<g id="node8" class="node" pointer-events="visible" data-name="cond_ren">
+
+<polygon fill="none" stroke="black" points="459,-585.6 303.22,-567.6 459,-549.6 614.78,-567.6 459,-585.6"/>
+<text text-anchor="middle" x="459" y="-563.4" font-family="Arial" font-size="14.00">A1[I].REN = B1[J].REN</text>
+</g>
+<!-- cond_main_loop&#45;&gt;cond_ren -->
+<g id="edge3" class="edge" data-name="cond_main_loop-&gt;cond_ren">
+
+<path fill="none" stroke="black" d="M264.15,-642.78C303.43,-627.82 369.1,-602.83 413.21,-586.03"/>
+<polygon fill="black" stroke="black" points="414.42,-589.32 422.52,-582.49 411.93,-582.78 414.42,-589.32"/>
+<text text-anchor="middle" x="371.22" y="-607.8" font-family="Arial" font-size="14.00">Si</text>
+</g>
+<!-- cond_main_loop&#45;&gt;cond_resto_a -->
+<g id="edge15" class="edge" data-name="cond_main_loop-&gt;cond_resto_a">
+
+<path fill="none" stroke="black" d="M145.09,-650.59C112.74,-645.9 76.64,-637.02 47,-620.4 19.88,-605.2 0,-599.69 0,-568.6 0,-568.6 0,-568.6 0,-291.8 0,-240.07 371.66,-213.43 514.23,-205.12"/>
+<polygon fill="black" stroke="black" points="514,-208.63 523.79,-204.57 513.6,-201.65 514,-208.63"/>
+<text text-anchor="middle" x="8.95" y="-430.2" font-family="Arial" font-size="14.00">No</text>
+</g>
+<!-- cond_col -->
+<g id="node9" class="node" pointer-events="visible" data-name="cond_col">
+
+<polygon fill="none" stroke="black" points="459,-496.8 304.74,-478.8 459,-460.8 613.26,-478.8 459,-496.8"/>
+<text text-anchor="middle" x="459" y="-474.6" font-family="Arial" font-size="14.00">A1[I].COL = B1[J].COL</text>
+</g>
+<!-- cond_ren&#45;&gt;cond_col -->
+<g id="edge4" class="edge" data-name="cond_ren-&gt;cond_col">
+
+<path fill="none" stroke="black" d="M459,-549.45C459,-537.76 459,-521.99 459,-508.42"/>
+<polygon fill="black" stroke="black" points="462.5,-508.72 459,-498.72 455.5,-508.72 462.5,-508.72"/>
+<text text-anchor="middle" x="465.22" y="-519" font-family="Arial" font-size="14.00">Si</text>
+</g>
+<!-- cond_ren_cmp -->
+<g id="node11" class="node" pointer-events="visible" data-name="cond_ren_cmp">
+
+<polygon fill="none" stroke="black" points="897,-405.2 741.22,-387.2 897,-369.2 1052.78,-387.2 897,-405.2"/>
+<text text-anchor="middle" x="897" y="-383" font-family="Arial" font-size="14.00">A1[I].REN &lt; B1[J].REN</text>
+</g>
+<!-- cond_ren&#45;&gt;cond_ren_cmp -->
+<g id="edge12" class="edge" data-name="cond_ren-&gt;cond_ren_cmp">
+
+<path fill="none" stroke="black" d="M492.28,-553.04C570.39,-521.23 765.47,-441.77 853.13,-406.07"/>
+<polygon fill="black" stroke="black" points="854.43,-409.32 862.37,-402.31 851.79,-402.84 854.43,-409.32"/>
+<text text-anchor="middle" x="722.95" y="-474.6" font-family="Arial" font-size="14.00">No</text>
+</g>
+<!-- cond_col&#45;&gt;proc_c_sum -->
+<g id="edge5" class="edge" data-name="cond_col-&gt;proc_c_sum">
+
+<path fill="none" stroke="black" d="M424.87,-464.39C389.94,-450.66 334.91,-429.03 292.38,-412.32"/>
+<polygon fill="black" stroke="black" points="293.86,-409.14 283.27,-408.74 291.3,-415.66 293.86,-409.14"/>
+<text text-anchor="middle" x="371.22" y="-430.2" font-family="Arial" font-size="14.00">Si</text>
+</g>
+<!-- cond_col_cmp -->
+<g id="node10" class="node" pointer-events="visible" data-name="cond_col_cmp">
+
+<polygon fill="none" stroke="black" points="569,-405.2 414.74,-387.2 569,-369.2 723.26,-387.2 569,-405.2"/>
+<text text-anchor="middle" x="569" y="-383" font-family="Arial" font-size="14.00">A1[I].COL &lt; B1[J].COL</text>
+</g>
+<!-- cond_col&#45;&gt;cond_col_cmp -->
+<g id="edge7" class="edge" data-name="cond_col-&gt;cond_col_cmp">
+
+<path fill="none" stroke="black" d="M477.66,-462.6C495.12,-448.38 521.43,-426.95 541.33,-410.73"/>
+<polygon fill="black" stroke="black" points="543.53,-413.46 549.07,-404.43 539.11,-408.03 543.53,-413.46"/>
+<text text-anchor="middle" x="528.95" y="-430.2" font-family="Arial" font-size="14.00">No</text>
+</g>
+<!-- cond_col_cmp&#45;&gt;proc_c_a -->
+<g id="edge8" class="edge" data-name="cond_col_cmp-&gt;proc_c_a">
+
+<path fill="none" stroke="black" d="M569,-368.82C569,-356.45 569,-339.48 569,-324.81"/>
+<polygon fill="black" stroke="black" points="572.5,-325.18 569,-315.18 565.5,-325.18 572.5,-325.18"/>
+<text text-anchor="middle" x="575.22" y="-335.8" font-family="Arial" font-size="14.00">Si</text>
+</g>
+<!-- cond_col_cmp&#45;&gt;proc_c_b -->
+<g id="edge10" class="edge" data-name="cond_col_cmp-&gt;proc_c_b">
+
+<path fill="none" stroke="black" d="M668.63,-380.39C724.87,-371.09 784,-348.34 784,-293.8 784,-293.8 784,-293.8 784,-111.4 784,-86.8 800.59,-64.92 817.61,-48.94"/>
+<polygon fill="black" stroke="black" points="819.62,-51.83 824.8,-42.59 814.99,-46.59 819.62,-51.83"/>
+<text text-anchor="middle" x="792.95" y="-197" font-family="Arial" font-size="14.00">No</text>
+</g>
+<!-- cond_ren_cmp&#45;&gt;proc_c_a -->
+<g id="edge13" class="edge" data-name="cond_ren_cmp-&gt;proc_c_a">
+
+<path fill="none" stroke="black" d="M853.1,-373.83C801.62,-359.33 715.17,-334.98 651.13,-316.94"/>
+<polygon fill="black" stroke="black" points="652.28,-313.63 641.71,-314.28 650.39,-320.36 652.28,-313.63"/>
+<text text-anchor="middle" x="768.22" y="-335.8" font-family="Arial" font-size="14.00">Si</text>
+</g>
+<!-- cond_ren_cmp&#45;&gt;proc_c_b -->
+<g id="edge14" class="edge" data-name="cond_ren_cmp-&gt;proc_c_b">
+
+<path fill="none" stroke="black" d="M890.22,-369.48C883.44,-351.21 874,-320.91 874,-293.8 874,-293.8 874,-293.8 874,-111.4 874,-91.59 869.28,-69.89 864.43,-52.81"/>
+<polygon fill="black" stroke="black" points="867.79,-51.81 861.55,-43.25 861.09,-53.83 867.79,-51.81"/>
+<text text-anchor="middle" x="882.95" y="-197" font-family="Arial" font-size="14.00">No</text>
+</g>
+<!-- cond_resto_a&#45;&gt;proc_c_a -->
+<g id="edge16" class="edge" data-name="cond_resto_a-&gt;proc_c_a">
+
+<path fill="none" stroke="black" d="M569,-219.61C569,-231.21 569,-246.78 569,-260.49"/>
+<polygon fill="black" stroke="black" points="565.5,-260.4 569,-270.4 572.5,-260.4 565.5,-260.4"/>
+<text text-anchor="middle" x="575.22" y="-241.4" font-family="Arial" font-size="14.00">Si</text>
+</g>
+<!-- cond_resto_a&#45;&gt;cond_resto_b -->
+<g id="edge18" class="edge" data-name="cond_resto_a-&gt;cond_resto_b">
+
+<path fill="none" stroke="black" d="M578.8,-186.25C588.23,-172.84 602.65,-152.32 613.79,-136.47"/>
+<polygon fill="black" stroke="black" points="616.47,-138.74 619.35,-128.55 610.74,-134.72 616.47,-138.74"/>
+<text text-anchor="middle" x="612.95" y="-152.6" font-family="Arial" font-size="14.00">No</text>
+</g>
+<!-- cond_resto_b&#45;&gt;fin -->
+<g id="edge21" class="edge" data-name="cond_resto_b-&gt;fin">
+
+<path fill="none" stroke="black" d="M629.06,-94.55C628.37,-82.19 627.42,-65.11 626.61,-50.61"/>
+<polygon fill="black" stroke="black" points="630.11,-50.49 626.05,-40.7 623.12,-50.88 630.11,-50.49"/>
+<text text-anchor="middle" x="635.95" y="-63.8" font-family="Arial" font-size="14.00">No</text>
+</g>
+<!-- cond_resto_b&#45;&gt;proc_c_b -->
+<g id="edge19" class="edge" data-name="cond_resto_b-&gt;proc_c_b">
+
+<path fill="none" stroke="black" d="M647.68,-100.03C666.06,-88.6 695.95,-71.07 723.55,-59.6 736.27,-54.32 749.97,-49.48 763.54,-45.15"/>
+<polygon fill="black" stroke="black" points="764.42,-48.55 772.94,-42.25 762.35,-41.86 764.42,-48.55"/>
+<text text-anchor="middle" x="729.22" y="-63.8" font-family="Arial" font-size="14.00">Si</text>
+</g>
+</g>
+</svg>

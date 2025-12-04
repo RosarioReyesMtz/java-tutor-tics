@@ -1,0 +1,87 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="351pt" height="594pt" viewBox="0.00 0.00 350.99 594.40">
+<g id="graph0" class="graph" transform="translate(4,590.4000244140625) scale(1)" data-name="Ejemplo_4_10">
+
+<polygon fill="white" stroke="none" points="-4,4 -4,-590.4 346.99,-590.4 346.99,4 -4,4" style=""/>
+<!-- inicio -->
+<g id="node1" class="node" pointer-events="visible" data-name="inicio">
+
+<ellipse fill="none" stroke="black" cx="171.49" cy="-568.4" rx="171.49" ry="18" style=""/>
+<text text-anchor="middle" x="171.49" y="-564.2" font-family="Arial" font-size="14.00" style="">INICIO (Llenar Matriz MET[32][12][5])</text>
+</g>
+<!-- proc_a -->
+<g id="node3" class="node" pointer-events="visible" data-name="proc_a">
+
+<polygon fill="none" stroke="black" points="262.24,-514.6 80.74,-514.6 80.74,-455.8 262.24,-455.8 262.24,-514.6" style=""/>
+<text text-anchor="start" x="88.62" y="-497.8" font-family="Arial" font-size="14.00" style="">INCISO A</text>
+<text text-anchor="start" x="88.62" y="-481" font-family="Arial" font-size="14.00" style="">Recorrer E=1..32, M=1..12</text>
+<text text-anchor="start" x="88.62" y="-464.2" font-family="Arial" font-size="14.00" style="">Escribir MET[E, M, 3]</text>
+</g>
+<!-- inicio&#45;&gt;proc_a -->
+<g id="edge1" class="edge" data-name="inicio-&gt;proc_a">
+
+<path fill="none" stroke="black" d="M171.49,-550.18C171.49,-543.14 171.49,-534.67 171.49,-526.24" style=""/>
+<polygon fill="black" stroke="black" points="174.99,-526.41 171.49,-516.41 167.99,-526.41 174.99,-526.41" style=""/>
+</g>
+<!-- fin -->
+<g id="node2" class="node" pointer-events="visible" data-name="fin">
+
+<ellipse fill="none" stroke="black" cx="171.49" cy="-18" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="171.49" y="-13.8" font-family="Arial" font-size="14.00" style="">FIN</text>
+</g>
+<!-- proc_b -->
+<g id="node4" class="node" pointer-events="visible" data-name="proc_b">
+
+<polygon fill="none" stroke="black" points="290.63,-420 52.35,-420 52.35,-328 290.63,-328 290.63,-420" style=""/>
+<text text-anchor="start" x="60.42" y="-403.4" font-family="Arial" font-size="14.00" style="">INCISO B</text>
+<text text-anchor="start" x="60.42" y="-386.6" font-family="Arial" font-size="14.00" style="">LLUVIA LL- 0</text>
+<text text-anchor="start" x="60.42" y="-369.8" font-family="Arial" font-size="14.00" style="">Recorrer E=1..32, M=1..12</text>
+<text text-anchor="start" x="60.42" y="-353" font-family="Arial" font-size="14.00" style="">LLUVIA LL- LLUVIA + MET[E, M, 4]</text>
+<text text-anchor="start" x="60.42" y="-336.2" font-family="Arial" font-size="14.00" style="">Escribir LLUVIA</text>
+</g>
+<!-- proc_a&#45;&gt;proc_b -->
+<g id="edge2" class="edge" data-name="proc_a-&gt;proc_b">
+
+<path fill="none" stroke="black" d="M171.49,-455.51C171.49,-448.12 171.49,-439.91 171.49,-431.64" style=""/>
+<polygon fill="black" stroke="black" points="174.99,-431.91 171.49,-421.91 167.99,-431.91 174.99,-431.91" style=""/>
+</g>
+<!-- proc_c -->
+<g id="node5" class="node" pointer-events="visible" data-name="proc_c">
+
+<polygon fill="none" stroke="black" points="293.87,-292 49.12,-292 49.12,-200 293.87,-200 293.87,-292" style=""/>
+<text text-anchor="start" x="57.31" y="-275.4" font-family="Arial" font-size="14.00" style="">INCISO C</text>
+<text text-anchor="start" x="57.31" y="-258.6" font-family="Arial" font-size="14.00" style="">LLUVIA LL- 0</text>
+<text text-anchor="start" x="57.31" y="-241.8" font-family="Arial" font-size="14.00" style="">Recorrer M=1..12</text>
+<text text-anchor="start" x="57.31" y="-225" font-family="Arial" font-size="14.00" style="">LLUVIA LL- LLUVIA + MET[17, M, 5]</text>
+<text text-anchor="start" x="57.31" y="-208.2" font-family="Arial" font-size="14.00" style="">Escribir LLUVIA</text>
+</g>
+<!-- proc_b&#45;&gt;proc_c -->
+<g id="edge3" class="edge" data-name="proc_b-&gt;proc_c">
+
+<path fill="none" stroke="black" d="M171.49,-327.51C171.49,-319.84 171.49,-311.79 171.49,-303.87" style=""/>
+<polygon fill="black" stroke="black" points="174.99,-303.94 171.49,-293.94 167.99,-303.94 174.99,-303.94" style=""/>
+</g>
+<!-- proc_d -->
+<g id="node6" class="node" pointer-events="visible" data-name="proc_d">
+
+<polygon fill="none" stroke="black" points="291.19,-164 51.8,-164 51.8,-72 291.19,-72 291.19,-164" style=""/>
+<text text-anchor="start" x="59.65" y="-147.4" font-family="Arial" font-size="14.00" style="">INCISO D</text>
+<text text-anchor="start" x="59.65" y="-130.6" font-family="Arial" font-size="14.00" style="">LLUVIA LL- 0</text>
+<text text-anchor="start" x="59.65" y="-113.8" font-family="Arial" font-size="14.00" style="">Recorrer E=1..32, M=1..12, A=1..5</text>
+<text text-anchor="start" x="59.65" y="-97" font-family="Arial" font-size="14.00" style="">LLUVIA LL- LLUVIA + MET[E, M, A]</text>
+<text text-anchor="start" x="59.65" y="-80.2" font-family="Arial" font-size="14.00" style="">Escribir LLUVIA</text>
+</g>
+<!-- proc_c&#45;&gt;proc_d -->
+<g id="edge4" class="edge" data-name="proc_c-&gt;proc_d">
+
+<path fill="none" stroke="black" d="M171.49,-199.51C171.49,-191.84 171.49,-183.79 171.49,-175.87" style=""/>
+<polygon fill="black" stroke="black" points="174.99,-175.94 171.49,-165.94 167.99,-175.94 174.99,-175.94" style=""/>
+</g>
+<!-- proc_d&#45;&gt;fin -->
+<g id="edge5" class="edge" data-name="proc_d-&gt;fin">
+
+<path fill="none" stroke="black" d="M171.49,-71.73C171.49,-63.53 171.49,-55.2 171.49,-47.65" style=""/>
+<polygon fill="black" stroke="black" points="174.99,-47.72 171.49,-37.72 167.99,-47.72 174.99,-47.72" style=""/>
+</g>
+</g>
+</svg>

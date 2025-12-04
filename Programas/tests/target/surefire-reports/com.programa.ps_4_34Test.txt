@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: com.programa.ps_4_34Test
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.010 s <<< FAILURE! -- in com.programa.ps_4_34Test
+com.programa.ps_4_34Test.testGetDeptoMayorProduccion -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ps_4_34 - testGetDeptoMayorProduccion: Se esperaba 'Bebidas' como depto con mayor producción ==> expected: <Bebidas> but was: <Dulces>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1152)
+	at com.programa.ps_4_34Test.testGetDeptoMayorProduccion(ps_4_34Test.java:22)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.ps_4_34Test.testGetDetalleMaxIndividual -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ps_4_34 - testGetDetalleMaxIndividual: Se esperaba detalle del máximo individual en Mes 6, Año 3, Depto Conservas ==> expected: <Mes: 6, Año: 3, Depto: Conservas> but was: <Mes: 1, Año: 1, Depto: Dulces>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1152)
+	at com.programa.ps_4_34Test.testGetDetalleMaxIndividual(ps_4_34Test.java:62)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.ps_4_34Test.testGetMesMayorProdAnio2 -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ps_4_34 - testGetMesMayorProdAnio2: Se esperaba mes 2 para el año 2 con mayor producción ==> expected: <2> but was: <1>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:559)
+	at com.programa.ps_4_34Test.testGetMesMayorProdAnio2(ps_4_34Test.java:35)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.ps_4_34Test.testGetAnioMayorProduccion -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ps_4_34 - testGetAnioMayorProduccion: Se esperaba el año 3 como el de mayor producción ==> expected: <3> but was: <1>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:559)
+	at com.programa.ps_4_34Test.testGetAnioMayorProduccion(ps_4_34Test.java:49)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

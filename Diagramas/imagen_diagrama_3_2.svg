@@ -1,0 +1,117 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="376pt" height="498pt" viewBox="0.00 0.00 375.58 497.80">
+<g id="graph0" class="graph" transform="translate(4,493.79998779296875) scale(1)" data-name="Diagrama_3_3">
+
+<polygon fill="white" stroke="none" points="-4,4 -4,-493.8 371.58,-493.8 371.58,4 -4,4"/>
+<!-- inicio -->
+<g id="node1" class="node" pointer-events="visible" data-name="inicio">
+
+<ellipse fill="none" stroke="black" cx="153.77" cy="-471.8" rx="40.59" ry="18"/>
+<text text-anchor="middle" x="153.77" y="-467.6" font-family="Arial" font-size="14.00">INICIO</text>
+</g>
+<!-- init_nom -->
+<g id="node3" class="node" pointer-events="visible" data-name="init_nom">
+
+<polygon fill="none" stroke="black" points="207.57,-416.8 99.97,-416.8 99.97,-380.8 207.57,-380.8 207.57,-416.8"/>
+<text text-anchor="middle" x="153.77" y="-394.6" font-family="Arial" font-size="14.00">NOMINA LL- 0</text>
+</g>
+<!-- inicio&#45;&gt;init_nom -->
+<g id="edge1" class="edge" data-name="inicio-&gt;init_nom">
+
+<path fill="none" stroke="black" d="M153.77,-453.61C153.77,-446.03 153.77,-436.9 153.77,-428.34"/>
+<polygon fill="black" stroke="black" points="157.27,-428.34 153.77,-418.34 150.27,-428.34 157.27,-428.34"/>
+</g>
+<!-- fin -->
+<g id="node2" class="node" pointer-events="visible" data-name="fin">
+
+<ellipse fill="none" stroke="black" cx="298.77" cy="-91" rx="27" ry="18"/>
+<text text-anchor="middle" x="298.77" y="-86.8" font-family="Arial" font-size="14.00">FIN</text>
+</g>
+<!-- init_i -->
+<g id="node4" class="node" pointer-events="visible" data-name="init_i">
+
+<polygon fill="none" stroke="black" points="181.46,-343.8 126.08,-343.8 126.08,-307.8 181.46,-307.8 181.46,-343.8"/>
+<text text-anchor="middle" x="153.77" y="-321.6" font-family="Arial" font-size="14.00">I LL- 1</text>
+</g>
+<!-- init_nom&#45;&gt;init_i -->
+<g id="edge2" class="edge" data-name="init_nom-&gt;init_i">
+
+<path fill="none" stroke="black" d="M153.77,-380.61C153.77,-373.03 153.77,-363.9 153.77,-355.34"/>
+<polygon fill="black" stroke="black" points="157.27,-355.34 153.77,-345.34 150.27,-355.34 157.27,-355.34"/>
+</g>
+<!-- cond -->
+<g id="node9" class="node" pointer-events="visible" data-name="cond">
+
+<polygon fill="none" stroke="black" points="153.77,-270.8 95.5,-252.8 153.77,-234.8 212.03,-252.8 153.77,-270.8"/>
+<text text-anchor="middle" x="153.77" y="-248.6" font-family="Arial" font-size="14.00">I &lt;= 10</text>
+</g>
+<!-- init_i&#45;&gt;cond -->
+<g id="edge3" class="edge" data-name="init_i-&gt;cond">
+
+<path fill="none" stroke="black" d="M153.77,-307.61C153.77,-300.14 153.77,-291.17 153.77,-282.72"/>
+<polygon fill="black" stroke="black" points="157.27,-282.84 153.77,-272.84 150.27,-282.84 157.27,-282.84"/>
+</g>
+<!-- proceso_nom -->
+<g id="node5" class="node" pointer-events="visible" data-name="proceso_nom">
+
+<polygon fill="none" stroke="black" points="254.02,-109 53.51,-109 53.51,-73 254.02,-73 254.02,-109"/>
+<text text-anchor="middle" x="153.77" y="-86.8" font-family="Arial" font-size="14.00">NOMINA LL- NOMINA + SUE</text>
+</g>
+<!-- increment_i -->
+<g id="node6" class="node" pointer-events="visible" data-name="increment_i">
+
+<polygon fill="none" stroke="black" points="75.3,-36 0.23,-36 0.23,0 75.3,0 75.3,-36"/>
+<text text-anchor="middle" x="37.77" y="-13.8" font-family="Arial" font-size="14.00">I LL- I + 1</text>
+</g>
+<!-- proceso_nom&#45;&gt;increment_i -->
+<g id="edge6" class="edge" data-name="proceso_nom-&gt;increment_i">
+
+<path fill="none" stroke="black" d="M125.39,-72.63C110.5,-63.52 92.06,-52.23 75.94,-42.36"/>
+<polygon fill="black" stroke="black" points="77.9,-39.46 67.54,-37.23 74.25,-45.43 77.9,-39.46"/>
+</g>
+<!-- increment_i&#45;&gt;cond -->
+<g id="edge7" class="edge" data-name="increment_i-&gt;cond">
+
+<path fill="none" stroke="black" d="M36.31,-36.2C35.36,-54.79 35.67,-84.96 44.77,-109 63.51,-158.53 105.34,-205.18 131.39,-230.98"/>
+<polygon fill="black" stroke="black" points="128.86,-233.4 138.48,-237.85 133.73,-228.38 128.86,-233.4"/>
+</g>
+<!-- lectura -->
+<g id="node7" class="node" pointer-events="visible" data-name="lectura">
+
+<polygon fill="none" stroke="black" points="198.86,-182 127.13,-182 108.68,-146 180.41,-146 198.86,-182"/>
+<text text-anchor="middle" x="153.77" y="-159.8" font-family="Arial" font-size="14.00">SUE</text>
+</g>
+<!-- lectura&#45;&gt;proceso_nom -->
+<g id="edge5" class="edge" data-name="lectura-&gt;proceso_nom">
+
+<path fill="none" stroke="black" d="M153.77,-145.81C153.77,-138.23 153.77,-129.1 153.77,-120.54"/>
+<polygon fill="black" stroke="black" points="157.27,-120.54 153.77,-110.54 150.27,-120.54 157.27,-120.54"/>
+</g>
+<!-- escritura -->
+<g id="node8" class="node" pointer-events="visible" data-name="escritura">
+
+<polygon fill="none" stroke="black" points="367.4,-182 251.86,-182 222.13,-146 337.68,-146 367.4,-182"/>
+<text text-anchor="middle" x="294.77" y="-159.8" font-family="Arial" font-size="14.00">NOMINA</text>
+</g>
+<!-- escritura&#45;&gt;fin -->
+<g id="edge9" class="edge" data-name="escritura-&gt;fin">
+
+<path fill="none" stroke="black" d="M295.74,-145.81C296.17,-138.14 296.69,-128.89 297.18,-120.24"/>
+<polygon fill="black" stroke="black" points="300.65,-120.72 297.72,-110.54 293.67,-120.33 300.65,-120.72"/>
+</g>
+<!-- cond&#45;&gt;lectura -->
+<g id="edge4" class="edge" data-name="cond-&gt;lectura">
+
+<path fill="none" stroke="black" d="M153.77,-234.65C153.77,-222.96 153.77,-207.19 153.77,-193.62"/>
+<polygon fill="black" stroke="black" points="157.27,-193.92 153.77,-183.92 150.27,-193.92 157.27,-193.92"/>
+<text text-anchor="middle" x="159.99" y="-204.2" font-family="Arial" font-size="14.00">Si</text>
+</g>
+<!-- cond&#45;&gt;escritura -->
+<g id="edge8" class="edge" data-name="cond-&gt;escritura">
+
+<path fill="none" stroke="black" d="M172.49,-240.27C193.91,-227.09 229.53,-205.16 256.82,-188.36"/>
+<polygon fill="black" stroke="black" points="258.48,-191.45 265.16,-183.22 254.81,-185.49 258.48,-191.45"/>
+<text text-anchor="middle" x="246.72" y="-204.2" font-family="Arial" font-size="14.00">No</text>
+</g>
+</g>
+</svg>

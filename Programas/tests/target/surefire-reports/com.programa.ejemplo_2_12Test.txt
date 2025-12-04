@@ -1,0 +1,88 @@
+-------------------------------------------------------------------------------
+Test set: com.programa.ejemplo_2_12Test
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0.019 s <<< FAILURE! -- in com.programa.ejemplo_2_12Test
+com.programa.ejemplo_2_12Test.testPermutacion_A_B_C -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ejemplo_2_12 - testPermutacion_A_B_C: Se esperaba el orden '10, 5, 1' para (10,5,1) ==> expected: <10, 5, 1> but was: <0, 0, 0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1152)
+	at com.programa.ejemplo_2_12Test.testPermutacion_A_B_C(ejemplo_2_12Test.java:12)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.ejemplo_2_12Test.testPermutacion_A_C_B -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ejemplo_2_12 - testPermutacion_A_C_B: Se esperaba '10, 5, 1' para (10,1,5) ==> expected: <10, 5, 1> but was: <0, 0, 0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1152)
+	at com.programa.ejemplo_2_12Test.testPermutacion_A_C_B(ejemplo_2_12Test.java:17)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.ejemplo_2_12Test.testPermutacion_B_A_C -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ejemplo_2_12 - testPermutacion_B_A_C: Se esperaba '10, 5, 1' para (5,10,1) ==> expected: <10, 5, 1> but was: <0, 0, 0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1152)
+	at com.programa.ejemplo_2_12Test.testPermutacion_B_A_C(ejemplo_2_12Test.java:22)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.ejemplo_2_12Test.testPermutacion_B_C_A -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ejemplo_2_12 - testPermutacion_B_C_A: Se esperaba '10, 5, 1' para (1,10,5) ==> expected: <10, 5, 1> but was: <0, 0, 0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1152)
+	at com.programa.ejemplo_2_12Test.testPermutacion_B_C_A(ejemplo_2_12Test.java:27)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.ejemplo_2_12Test.testPermutacion_C_A_B -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ejemplo_2_12 - testPermutacion_C_A_B: Se esperaba '10, 5, 1' para (5,1,10) ==> expected: <10, 5, 1> but was: <0, 0, 0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1152)
+	at com.programa.ejemplo_2_12Test.testPermutacion_C_A_B(ejemplo_2_12Test.java:32)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.ejemplo_2_12Test.testPermutacion_C_B_A -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ejemplo_2_12 - testPermutacion_C_B_A: Se esperaba '10, 5, 1' para (1,5,10) ==> expected: <10, 5, 1> but was: <0, 0, 0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1152)
+	at com.programa.ejemplo_2_12Test.testPermutacion_C_B_A(ejemplo_2_12Test.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.ejemplo_2_12Test.testNumerosIguales -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ejemplo_2_12 - testNumerosIguales: Se esperaba '5, 5, 5' para (5,5,5) ==> expected: <5, 5, 5> but was: <0, 0, 0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1152)
+	at com.programa.ejemplo_2_12Test.testNumerosIguales(ejemplo_2_12Test.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

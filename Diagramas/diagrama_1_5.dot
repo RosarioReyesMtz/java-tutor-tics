@@ -1,0 +1,28 @@
+/* Pega este código en un editor de Graphviz (como Graphviz Online)
+  para generar tu archivo de imagen (ej. diagrama.png)
+*/
+digraph G {
+    graph [fontname="Inter, sans-serif"];
+    node [shape=ellipse, style=filled, fillcolor="#f5f5f5", fontname="Inter, sans-serif"];
+    edge [fontname="Inter, sans-serif"];
+
+    // Definición de Nodos con las formas del diagrama de flujo
+    INICIO [shape=ellipse];
+    
+    LEER [shape=parallelogram, label="RADIO, ALTU"];
+    
+    PROCESO [
+      shape=rect, 
+      label="VOL = 3.141592 * (RADIO^2) * ALTU\nARE = 2 * 3.141592 * RADIO * ALTU"
+    ];
+    
+    ESCRIBIR [shape=document, label="VOL, ARE"];
+    
+    FIM [shape=ellipse];
+
+    // Conexiones
+    INICIO -> LEER;
+    LEER -> PROCESO;
+    PROCESO -> ESCRIBIR;
+    ESCRIBIR -> FIM;
+}

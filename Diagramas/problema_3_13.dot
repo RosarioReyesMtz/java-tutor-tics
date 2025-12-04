@@ -1,0 +1,57 @@
+digraph Diagrama_3_20 {
+    graph [fontname="Arial"];
+    node [fontname="Arial", shape=ellipse, style=solid];
+    edge [fontname="Arial"];
+
+    inicio [label="INICIO"];
+    fin [label="FIN"];
+    
+    node [shape=rect, style=solid];
+    init_vars [label="ARNO \L\L- 0, ARCE \L\L- 0, ARSU \L\L- 0\lMERSU \L\L- 500000, I \L\L- 1\l"];
+    proceso_acum [label="ARNO \L\L- ARNO + RNO\lARCE \L\L- ARCE + RCE\lARSU \L\L- ARSU + RSU\l"];
+    proceso_mersu [label="MERSU \L\L- RSU\lMES \L\L- I\l"];
+    increment_i [label="I \L\L- I + 1"];
+    calc_prom [label="PRORCE \L\L- ARCE / 12"];
+    
+    node [shape=parallelogram, style=solid];
+    lectura [label="RNO, RCE, RSU"];
+    
+    node [shape=parallelogram, style="solid,waves", waves=bottom];
+    escritura_ab [label="\"Promedio Centro:\", PRORCE\l\"Mes menor lluvia Sur:\", MES\l\"Registro:\", MERSU\l"];
+    esc_norte [label="\"MAYOR LLUVIA: NORTE\""];
+    esc_centro [label="\"MAYOR LLUVIA: CENTRO\""];
+    esc_sur [label="\"MAYOR LLUVIA: SUR\""];
+    esc_sur2 [label="\"MAYOR LLUVIA: SUR\""];
+    
+    node [shape=diamond, style=solid];
+    cond_loop [label="I <= 12"];
+    cond_mersu [label="RSU < MERSU"];
+    cond_c1 [label="ARNO > ARCE"];
+    cond_c2 [label="ARNO > ARSU"];
+    cond_c3 [label="ARCE > ARSU"];
+    
+    inicio -> init_vars -> cond_loop;
+    cond_loop -> lectura [label="Si"];
+    lectura -> proceso_acum -> cond_mersu;
+    cond_mersu -> proceso_mersu [label="Si"];
+    proceso_mersu -> increment_i;
+    cond_mersu -> increment_i [label="No"];
+    increment_i -> cond_loop;
+    
+    cond_loop -> calc_prom [label="No"];
+    calc_prom -> escritura_ab -> cond_c1;
+    
+    cond_c1 -> cond_c2 [label="Si"];
+    cond_c1 -> cond_c3 [label="No"];
+    
+    cond_c2 -> esc_norte [label="Si"];
+    cond_c2 -> esc_sur [label="No"];
+    
+    cond_c3 -> esc_centro [label="Si"];
+    cond_c3 -> esc_sur2 [label="No"];
+    
+    esc_norte -> fin;
+    esc_centro -> fin;
+    esc_sur -> fin;
+    esc_sur2 -> fin;
+}

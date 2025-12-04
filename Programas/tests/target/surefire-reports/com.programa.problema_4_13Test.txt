@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+Test set: com.programa.problema_4_13Test
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.010 s <<< FAILURE! -- in com.programa.problema_4_13Test
+com.programa.problema_4_13Test.testIntercambioMatrizPar -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: problema_4_13 - testIntercambioMatrizPar: La matriz debe invertirse por filas para N=4 ==> array contents differ at index [0][0], expected: <4> but was: <1>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertArrayEquals.failArraysNotEqual(AssertArrayEquals.java:440)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:241)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayElementsEqual(AssertArrayEquals.java:364)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:346)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:159)
+	at org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1466)
+	at com.programa.problema_4_13Test.testIntercambioMatrizPar(problema_4_13Test.java:29)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.problema_4_13Test.testIntercambioMatrizImpar -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: problema_4_13 - testIntercambioMatrizImpar: La matriz debe invertirse por filas para N=3 (fila central permanece) ==> array contents differ at index [0][0], expected: <3> but was: <1>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertArrayEquals.failArraysNotEqual(AssertArrayEquals.java:440)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:241)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayElementsEqual(AssertArrayEquals.java:364)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:346)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:159)
+	at org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1466)
+	at com.programa.problema_4_13Test.testIntercambioMatrizImpar(problema_4_13Test.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

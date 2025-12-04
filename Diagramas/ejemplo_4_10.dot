@@ -1,0 +1,23 @@
+digraph Ejemplo_4_10 {
+    graph [fontname="Arial"];
+    node [fontname="Arial", shape=ellipse, style=solid];
+    edge [fontname="Arial"];
+
+    inicio [label="INICIO (Llenar Matriz MET[32][12][5])"];
+    fin [label="FIN"];
+    
+    node [shape=rect, style=solid];
+    // Parte A
+    proc_a [label="INCISO A\lRecorrer E=1..32, M=1..12\lEscribir MET[E, M, 3]\l"];
+    
+    // Parte B
+    proc_b [label="INCISO B\lLLUVIA \L\L- 0\lRecorrer E=1..32, M=1..12\lLLUVIA \L\L- LLUVIA + MET[E, M, 4]\lEscribir LLUVIA\l"];
+    
+    // Parte C
+    proc_c [label="INCISO C\lLLUVIA \L\L- 0\lRecorrer M=1..12\lLLUVIA \L\L- LLUVIA + MET[17, M, 5]\lEscribir LLUVIA\l"];
+    
+    // Parte D
+    proc_d [label="INCISO D\lLLUVIA \L\L- 0\lRecorrer E=1..32, M=1..12, A=1..5\lLLUVIA \L\L- LLUVIA + MET[E, M, A]\lEscribir LLUVIA\l"];
+    
+    inicio -> proc_a -> proc_b -> proc_c -> proc_d -> fin;
+}

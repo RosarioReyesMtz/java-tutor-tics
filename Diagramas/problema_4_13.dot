@@ -1,0 +1,72 @@
+digraph Diagrama_4_21 {
+    graph [fontname="Arial"];
+    node [fontname="Arial", shape=ellipse, style=solid];
+    edge [fontname="Arial"];
+
+    inicio [label="INICIO"];
+    fin [label="FIN"];
+    
+    node [shape=parallelogram, style=solid];
+    lectura_n [label="N"];
+    lectura_a [label="A[I, J]"];
+    
+    node [shape=parallelogram, style="solid,waves", waves=bottom];
+    escritura_a [label="A[I, J]"];
+
+    node [shape=rect, style=solid];
+    init_i_read [label="I \L\L- 1"];
+    init_j_read [label="J \L\L- 1"];
+    inc_j_read [label="J \L\L- J + 1"];
+    inc_i_read [label="I \L\L- I + 1"];
+    
+    init_i_swap [label="I \L\L- 1"];
+    init_j_swap [label="J \L\L- 1"];
+    swap_logic [label="AUX \L\L- A[I, J]\lA[I, J] \L\L- A[N - I + 1, J]\lA[N - I + 1, J] \L\L- AUX\l"];
+    inc_j_swap [label="J \L\L- J + 1"];
+    inc_i_swap [label="I \L\L- I + 1"];
+    
+    init_i_write [label="I \L\L- 1"];
+    init_j_write [label="J \L\L- 1"];
+    inc_j_write [label="J \L\L- J + 1"];
+    inc_i_write [label="I \L\L- I + 1"];
+
+    node [shape=diamond, style=solid];
+    cond_n [label="(N >= 1) y (N <= 50)"];
+    cond_i_read [label="I <= N"];
+    cond_j_read [label="J <= N"];
+    cond_i_swap [label="I <= N / 2"];
+    cond_j_swap [label="J <= N"];
+    cond_i_write [label="I <= N"];
+    cond_j_write [label="J <= N"];
+    
+    inicio -> lectura_n -> cond_n;
+    cond_n -> init_i_read [label="Si"];
+    cond_n -> fin [label="No\l\"Error en datos\"\l"];
+    
+    init_i_read -> cond_i_read;
+    cond_i_read -> init_j_read [label="Si"];
+    init_j_read -> cond_j_read;
+    cond_j_read -> lectura_a [label="Si"];
+    lectura_a -> inc_j_read -> cond_j_read;
+    cond_j_read -> inc_i_read [label="No"];
+    inc_i_read -> cond_i_read;
+    
+    cond_i_read -> init_i_swap [label="No"];
+    init_i_swap -> cond_i_swap;
+    cond_i_swap -> init_j_swap [label="Si"];
+    init_j_swap -> cond_j_swap;
+    cond_j_swap -> swap_logic [label="Si"];
+    swap_logic -> inc_j_swap -> cond_j_swap;
+    cond_j_swap -> inc_i_swap [label="No"];
+    inc_i_swap -> cond_i_swap;
+    
+    cond_i_swap -> init_i_write [label="No"];
+    init_i_write -> cond_i_write;
+    cond_i_write -> init_j_write [label="Si"];
+    init_j_write -> cond_j_write;
+    cond_j_write -> escritura_a [label="Si"];
+    escritura_a -> inc_j_write -> cond_j_write;
+    cond_j_write -> inc_i_write [label="No"];
+    inc_i_write -> cond_i_write;
+    cond_i_write -> fin [label="No"];
+}

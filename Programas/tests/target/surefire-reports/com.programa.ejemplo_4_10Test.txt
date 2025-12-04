@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: com.programa.ejemplo_4_10Test
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.009 s <<< FAILURE! -- in com.programa.ejemplo_4_10Test
+com.programa.ejemplo_4_10Test.testCalcTotalAnio4 -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ejemplo_4_10 - testCalcTotalAnio4: El total del año 4 debe ser 300.0 para los datos de prueba ==> expected: <300.0> but was: <0.0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1020)
+	at com.programa.ejemplo_4_10Test.testCalcTotalAnio4(ejemplo_4_10Test.java:30)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.ejemplo_4_10Test.testCalcGranTotal -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ejemplo_4_10 - testCalcGranTotal: El gran total debe ser 330.0 para los datos de prueba ==> expected: <330.0> but was: <0.0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1020)
+	at com.programa.ejemplo_4_10Test.testCalcGranTotal(ejemplo_4_10Test.java:41)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.ejemplo_4_10Test.testCalcTotalEst17Anio5 -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ejemplo_4_10 - testCalcTotalEst17Anio5: El total del estado 17 en el año 5 debe ser 30.0 para los datos de prueba ==> expected: <30.0> but was: <0.0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1020)
+	at com.programa.ejemplo_4_10Test.testCalcTotalEst17Anio5(ejemplo_4_10Test.java:35)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

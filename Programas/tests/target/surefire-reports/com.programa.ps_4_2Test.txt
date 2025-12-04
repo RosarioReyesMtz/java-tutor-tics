@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: com.programa.ps_4_2Test
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.007 s <<< FAILURE! -- in com.programa.ps_4_2Test
+com.programa.ps_4_2Test.testContarMultiplesOcurrencias -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ps_4_2 - testContarMultiplesOcurrencias: Se esperaban 4 ocurrencias del número 5 en el arreglo de prueba ==> expected: <4> but was: <0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:559)
+	at com.programa.ps_4_2Test.testContarMultiplesOcurrencias(ps_4_2Test.java:14)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.ps_4_2Test.testContarDosOcurrencias -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ps_4_2 - testContarDosOcurrencias: Se esperaban 2 ocurrencias del número 10 en el arreglo de prueba ==> expected: <2> but was: <0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:559)
+	at com.programa.ps_4_2Test.testContarDosOcurrencias(ps_4_2Test.java:20)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

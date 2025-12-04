@@ -1,0 +1,263 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1611pt" height="767pt" viewBox="0.00 0.00 1610.65 767.40">
+<g id="graph0" class="graph" transform="translate(4,763.4000244140625) scale(1)" data-name="Diagrama_3_20">
+
+<polygon fill="white" stroke="none" points="-4,4 -4,-763.4 1606.65,-763.4 1606.65,4 -4,4"/>
+<!-- inicio -->
+<g id="node1" class="node" pointer-events="visible" data-name="inicio">
+
+<ellipse fill="none" stroke="black" cx="1433.65" cy="-741.4" rx="40.59" ry="18"/>
+<text text-anchor="middle" x="1433.65" y="-737.2" font-family="Arial" font-size="14.00">INICIO</text>
+</g>
+<!-- init_vars -->
+<g id="node3" class="node" pointer-events="visible" data-name="init_vars">
+
+<polygon fill="none" stroke="black" points="1562.35,-686.2 1304.95,-686.2 1304.95,-645 1562.35,-645 1562.35,-686.2"/>
+<text text-anchor="start" x="1313.05" y="-669.8" font-family="Arial" font-size="14.00">ARNO LL- 0, ARCE LL- 0, ARSU LL- 0</text>
+<text text-anchor="start" x="1313.05" y="-653" font-family="Arial" font-size="14.00">MERSU LL- 500000, I LL- 1</text>
+</g>
+<!-- inicio&#45;&gt;init_vars -->
+<g id="edge1" class="edge" data-name="inicio-&gt;init_vars">
+
+<path fill="none" stroke="black" d="M1433.65,-722.91C1433.65,-715.41 1433.65,-706.41 1433.65,-697.83"/>
+<polygon fill="black" stroke="black" points="1437.15,-698.08 1433.65,-688.08 1430.15,-698.08 1437.15,-698.08"/>
+</g>
+<!-- fin -->
+<g id="node2" class="node" pointer-events="visible" data-name="fin">
+
+<ellipse fill="none" stroke="black" cx="655.65" cy="-18" rx="27" ry="18"/>
+<text text-anchor="middle" x="655.65" y="-13.8" font-family="Arial" font-size="14.00">FIN</text>
+</g>
+<!-- cond_loop -->
+<g id="node14" class="node" pointer-events="visible" data-name="cond_loop">
+
+<polygon fill="none" stroke="black" points="1433.65,-607.8 1375.38,-589.8 1433.65,-571.8 1491.91,-589.8 1433.65,-607.8"/>
+<text text-anchor="middle" x="1433.65" y="-585.6" font-family="Arial" font-size="14.00">I &lt;= 12</text>
+</g>
+<!-- init_vars&#45;&gt;cond_loop -->
+<g id="edge2" class="edge" data-name="init_vars-&gt;cond_loop">
+
+<path fill="none" stroke="black" d="M1433.65,-644.82C1433.65,-637.05 1433.65,-627.96 1433.65,-619.49"/>
+<polygon fill="black" stroke="black" points="1437.15,-619.63 1433.65,-609.63 1430.15,-619.63 1437.15,-619.63"/>
+</g>
+<!-- proceso_acum -->
+<g id="node4" class="node" pointer-events="visible" data-name="proceso_acum">
+
+<polygon fill="none" stroke="black" points="1519.62,-417 1347.67,-417 1347.67,-358.2 1519.62,-358.2 1519.62,-417"/>
+<text text-anchor="start" x="1355.66" y="-400.2" font-family="Arial" font-size="14.00">ARNO LL- ARNO + RNO</text>
+<text text-anchor="start" x="1355.66" y="-383.4" font-family="Arial" font-size="14.00">ARCE LL- ARCE + RCE</text>
+<text text-anchor="start" x="1355.66" y="-366.6" font-family="Arial" font-size="14.00">ARSU LL- ARSU + RSU</text>
+</g>
+<!-- cond_mersu -->
+<g id="node15" class="node" pointer-events="visible" data-name="cond_mersu">
+
+<polygon fill="none" stroke="black" points="1433.65,-292.2 1324.49,-274.2 1433.65,-256.2 1542.8,-274.2 1433.65,-292.2"/>
+<text text-anchor="middle" x="1433.65" y="-270" font-family="Arial" font-size="14.00">RSU &lt; MERSU</text>
+</g>
+<!-- proceso_acum&#45;&gt;cond_mersu -->
+<g id="edge5" class="edge" data-name="proceso_acum-&gt;cond_mersu">
+
+<path fill="none" stroke="black" d="M1433.65,-357.91C1433.65,-341.31 1433.65,-320.49 1433.65,-303.89"/>
+<polygon fill="black" stroke="black" points="1437.15,-304.18 1433.65,-294.18 1430.15,-304.18 1437.15,-304.18"/>
+</g>
+<!-- proceso_mersu -->
+<g id="node5" class="node" pointer-events="visible" data-name="proceso_mersu">
+
+<polygon fill="none" stroke="black" points="1574.78,-203.2 1450.51,-203.2 1450.51,-162 1574.78,-162 1574.78,-203.2"/>
+<text text-anchor="start" x="1458.58" y="-186.8" font-family="Arial" font-size="14.00">MERSU LL- RSU</text>
+<text text-anchor="start" x="1458.58" y="-170" font-family="Arial" font-size="14.00">MES LL- I</text>
+</g>
+<!-- increment_i -->
+<g id="node6" class="node" pointer-events="visible" data-name="increment_i">
+
+<polygon fill="none" stroke="black" points="1595.18,-109 1520.11,-109 1520.11,-73 1595.18,-73 1595.18,-109"/>
+<text text-anchor="middle" x="1557.65" y="-86.8" font-family="Arial" font-size="14.00">I LL- I + 1</text>
+</g>
+<!-- proceso_mersu&#45;&gt;increment_i -->
+<g id="edge7" class="edge" data-name="proceso_mersu-&gt;increment_i">
+
+<path fill="none" stroke="black" d="M1522.63,-161.71C1528.84,-149.35 1536.92,-133.27 1543.75,-119.67"/>
+<polygon fill="black" stroke="black" points="1546.86,-121.27 1548.22,-110.76 1540.61,-118.13 1546.86,-121.27"/>
+</g>
+<!-- increment_i&#45;&gt;cond_loop -->
+<g id="edge9" class="edge" data-name="increment_i-&gt;cond_loop">
+
+<path fill="none" stroke="black" d="M1572.38,-109.25C1585.5,-126.41 1602.65,-154.1 1602.65,-181.6 1602.65,-502 1602.65,-502 1602.65,-502 1602.65,-554.17 1538.12,-575.01 1488.82,-583.32"/>
+<polygon fill="black" stroke="black" points="1488.46,-579.83 1479.1,-584.81 1489.52,-586.75 1488.46,-579.83"/>
+</g>
+<!-- calc_prom -->
+<g id="node7" class="node" pointer-events="visible" data-name="calc_prom">
+
+<polygon fill="none" stroke="black" points="1270.69,-519 1100.6,-519 1100.6,-483 1270.69,-483 1270.69,-519"/>
+<text text-anchor="middle" x="1185.65" y="-496.8" font-family="Arial" font-size="14.00">PRORCE LL- ARCE / 12</text>
+</g>
+<!-- escritura_ab -->
+<g id="node9" class="node" pointer-events="visible" data-name="escritura_ab">
+
+<polygon fill="none" stroke="black" points="1300.26,-445.9 965.22,-445.9 879.04,-329.3 1214.07,-329.3 1300.26,-445.9"/>
+<text text-anchor="start" x="921.56" y="-400.2" font-family="Arial" font-size="14.00">"Promedio Centro:", PRORCE</text>
+<text text-anchor="start" x="921.56" y="-383.4" font-family="Arial" font-size="14.00">"Mes menor lluvia Sur:", MES</text>
+<text text-anchor="start" x="921.56" y="-366.6" font-family="Arial" font-size="14.00">"Registro:", MERSU</text>
+</g>
+<!-- calc_prom&#45;&gt;escritura_ab -->
+<g id="edge11" class="edge" data-name="calc_prom-&gt;escritura_ab">
+
+<path fill="none" stroke="black" d="M1170.65,-482.59C1163.82,-474.67 1155.27,-464.75 1146.31,-454.35"/>
+<polygon fill="black" stroke="black" points="1149.22,-452.37 1140.04,-447.08 1143.92,-456.94 1149.22,-452.37"/>
+</g>
+<!-- lectura -->
+<g id="node8" class="node" pointer-events="visible" data-name="lectura">
+
+<polygon fill="none" stroke="black" points="1556.98,-519 1360.78,-519 1310.31,-483 1506.51,-483 1556.98,-519"/>
+<text text-anchor="middle" x="1433.65" y="-496.8" font-family="Arial" font-size="14.00">RNO, RCE, RSU</text>
+</g>
+<!-- lectura&#45;&gt;proceso_acum -->
+<g id="edge4" class="edge" data-name="lectura-&gt;proceso_acum">
+
+<path fill="none" stroke="black" d="M1433.65,-482.59C1433.65,-468.17 1433.65,-447.1 1433.65,-428.57"/>
+<polygon fill="black" stroke="black" points="1437.15,-428.66 1433.65,-418.66 1430.15,-428.66 1437.15,-428.66"/>
+</g>
+<!-- cond_c1 -->
+<g id="node16" class="node" pointer-events="visible" data-name="cond_c1">
+
+<polygon fill="none" stroke="black" points="983.65,-292.2 875,-274.2 983.65,-256.2 1092.29,-274.2 983.65,-292.2"/>
+<text text-anchor="middle" x="983.65" y="-270" font-family="Arial" font-size="14.00">ARNO &gt; ARCE</text>
+</g>
+<!-- escritura_ab&#45;&gt;cond_c1 -->
+<g id="edge12" class="edge" data-name="escritura_ab-&gt;cond_c1">
+
+<path fill="none" stroke="black" d="M1034.78,-328.94C1024.37,-318 1014.05,-307.16 1005.44,-298.11"/>
+<polygon fill="black" stroke="black" points="1008.24,-295.96 998.81,-291.13 1003.16,-300.79 1008.24,-295.96"/>
+</g>
+<!-- esc_norte -->
+<g id="node10" class="node" pointer-events="visible" data-name="esc_norte">
+
+<polygon fill="none" stroke="black" points="1501.76,-109 1202.51,-109 1125.53,-73 1424.78,-73 1501.76,-109"/>
+<text text-anchor="middle" x="1313.65" y="-86.8" font-family="Arial" font-size="14.00">"MAYOR LLUVIA: NORTE"</text>
+</g>
+<!-- esc_norte&#45;&gt;fin -->
+<g id="edge19" class="edge" data-name="esc_norte-&gt;fin">
+
+<path fill="none" stroke="black" d="M1151.84,-72.54C999.2,-56.07 781.16,-32.54 693.9,-23.13"/>
+<polygon fill="black" stroke="black" points="694.29,-19.65 683.98,-22.06 693.54,-26.61 694.29,-19.65"/>
+</g>
+<!-- esc_centro -->
+<g id="node11" class="node" pointer-events="visible" data-name="esc_centro">
+
+<polygon fill="none" stroke="black" points="752.21,-109 436.34,-109 355.08,-73 670.95,-73 752.21,-109"/>
+<text text-anchor="middle" x="553.65" y="-86.8" font-family="Arial" font-size="14.00">"MAYOR LLUVIA: CENTRO"</text>
+</g>
+<!-- esc_centro&#45;&gt;fin -->
+<g id="edge20" class="edge" data-name="esc_centro-&gt;fin">
+
+<path fill="none" stroke="black" d="M578.6,-72.63C593.64,-62.16 612.82,-48.81 628.28,-38.05"/>
+<polygon fill="black" stroke="black" points="629.9,-41.19 636.11,-32.6 625.9,-35.44 629.9,-41.19"/>
+</g>
+<!-- esc_sur -->
+<g id="node12" class="node" pointer-events="visible" data-name="esc_sur">
+
+<polygon fill="none" stroke="black" points="1107.44,-109 838.93,-109 769.85,-73 1038.36,-73 1107.44,-109"/>
+<text text-anchor="middle" x="938.65" y="-86.8" font-family="Arial" font-size="14.00">"MAYOR LLUVIA: SUR"</text>
+</g>
+<!-- esc_sur&#45;&gt;fin -->
+<g id="edge21" class="edge" data-name="esc_sur-&gt;fin">
+
+<path fill="none" stroke="black" d="M869.05,-72.54C813.02,-58.48 736.49,-39.28 691.93,-28.1"/>
+<polygon fill="black" stroke="black" points="692.81,-24.72 682.26,-25.68 691.11,-31.51 692.81,-24.72"/>
+</g>
+<!-- esc_sur2 -->
+<g id="node13" class="node" pointer-events="visible" data-name="esc_sur2">
+
+<polygon fill="none" stroke="black" points="337.44,-109 68.93,-109 -0.15,-73 268.36,-73 337.44,-109"/>
+<text text-anchor="middle" x="168.65" y="-86.8" font-family="Arial" font-size="14.00">"MAYOR LLUVIA: SUR"</text>
+</g>
+<!-- esc_sur2&#45;&gt;fin -->
+<g id="edge22" class="edge" data-name="esc_sur2-&gt;fin">
+
+<path fill="none" stroke="black" d="M272.82,-74.81C381.08,-59.03 544.7,-35.17 617.91,-24.5"/>
+<polygon fill="black" stroke="black" points="618.39,-27.97 627.78,-23.06 617.38,-21.04 618.39,-27.97"/>
+</g>
+<!-- cond_loop&#45;&gt;calc_prom -->
+<g id="edge10" class="edge" data-name="cond_loop-&gt;calc_prom">
+
+<path fill="none" stroke="black" d="M1407.11,-579.51C1368.96,-566.16 1297.57,-541.17 1246.14,-523.17"/>
+<polygon fill="black" stroke="black" points="1247.51,-519.94 1236.92,-519.94 1245.2,-526.55 1247.51,-519.94"/>
+<text text-anchor="middle" x="1340.59" y="-541.2" font-family="Arial" font-size="14.00">No</text>
+</g>
+<!-- cond_loop&#45;&gt;lectura -->
+<g id="edge3" class="edge" data-name="cond_loop-&gt;lectura">
+
+<path fill="none" stroke="black" d="M1433.65,-571.65C1433.65,-559.96 1433.65,-544.19 1433.65,-530.62"/>
+<polygon fill="black" stroke="black" points="1437.15,-530.92 1433.65,-520.92 1430.15,-530.92 1437.15,-530.92"/>
+<text text-anchor="middle" x="1439.87" y="-541.2" font-family="Arial" font-size="14.00">Si</text>
+</g>
+<!-- cond_mersu&#45;&gt;proceso_mersu -->
+<g id="edge6" class="edge" data-name="cond_mersu-&gt;proceso_mersu">
+
+<path fill="none" stroke="black" d="M1447.05,-258C1458.09,-245.48 1474.05,-227.37 1487.46,-212.16"/>
+<polygon fill="black" stroke="black" points="1490.02,-214.55 1494.01,-204.74 1484.77,-209.92 1490.02,-214.55"/>
+<text text-anchor="middle" x="1483.87" y="-225.6" font-family="Arial" font-size="14.00">Si</text>
+</g>
+<!-- cond_mersu&#45;&gt;increment_i -->
+<g id="edge8" class="edge" data-name="cond_mersu-&gt;increment_i">
+
+<path fill="none" stroke="black" d="M1426.61,-257.09C1417.75,-234.14 1405.73,-191.52 1423.75,-161.8 1433.6,-145.55 1475.25,-125.31 1509.51,-110.82"/>
+<polygon fill="black" stroke="black" points="1510.58,-114.17 1518.47,-107.1 1507.89,-107.71 1510.58,-114.17"/>
+<text text-anchor="middle" x="1432.59" y="-178.4" font-family="Arial" font-size="14.00">No</text>
+</g>
+<!-- cond_c2 -->
+<g id="node17" class="node" pointer-events="visible" data-name="cond_c2">
+
+<polygon fill="none" stroke="black" points="983.65,-200.6 875,-182.6 983.65,-164.6 1092.29,-182.6 983.65,-200.6"/>
+<text text-anchor="middle" x="983.65" y="-178.4" font-family="Arial" font-size="14.00">ARNO &gt; ARSU</text>
+</g>
+<!-- cond_c1&#45;&gt;cond_c2 -->
+<g id="edge13" class="edge" data-name="cond_c1-&gt;cond_c2">
+
+<path fill="none" stroke="black" d="M983.65,-255.92C983.65,-243.53 983.65,-226.54 983.65,-212.15"/>
+<polygon fill="black" stroke="black" points="987.15,-212.34 983.65,-202.34 980.15,-212.34 987.15,-212.34"/>
+<text text-anchor="middle" x="989.87" y="-225.6" font-family="Arial" font-size="14.00">Si</text>
+</g>
+<!-- cond_c3 -->
+<g id="node18" class="node" pointer-events="visible" data-name="cond_c3">
+
+<polygon fill="none" stroke="black" points="553.65,-200.6 446.53,-182.6 553.65,-164.6 660.76,-182.6 553.65,-200.6"/>
+<text text-anchor="middle" x="553.65" y="-178.4" font-family="Arial" font-size="14.00">ARCE &gt; ARSU</text>
+</g>
+<!-- cond_c1&#45;&gt;cond_c3 -->
+<g id="edge14" class="edge" data-name="cond_c1-&gt;cond_c3">
+
+<path fill="none" stroke="black" d="M937.22,-263.53C858.04,-247.03 697.09,-213.49 611.01,-195.55"/>
+<polygon fill="black" stroke="black" points="611.86,-192.16 601.36,-193.54 610.44,-199.01 611.86,-192.16"/>
+<text text-anchor="middle" x="816.59" y="-225.6" font-family="Arial" font-size="14.00">No</text>
+</g>
+<!-- cond_c2&#45;&gt;esc_norte -->
+<g id="edge15" class="edge" data-name="cond_c2-&gt;esc_norte">
+
+<path fill="none" stroke="black" d="M1023.45,-170.79C1076.55,-156.37 1171.62,-130.56 1238.43,-112.42"/>
+<polygon fill="black" stroke="black" points="1239.13,-115.86 1247.86,-109.86 1237.29,-109.1 1239.13,-115.86"/>
+<text text-anchor="middle" x="1183.87" y="-131.2" font-family="Arial" font-size="14.00">Si</text>
+</g>
+<!-- cond_c2&#45;&gt;esc_sur -->
+<g id="edge16" class="edge" data-name="cond_c2-&gt;esc_sur">
+
+<path fill="none" stroke="black" d="M975.6,-165.58C969.15,-152.74 959.95,-134.43 952.35,-119.28"/>
+<polygon fill="black" stroke="black" points="955.68,-118.13 948.07,-110.76 949.43,-121.27 955.68,-118.13"/>
+<text text-anchor="middle" x="972.59" y="-131.2" font-family="Arial" font-size="14.00">No</text>
+</g>
+<!-- cond_c3&#45;&gt;esc_centro -->
+<g id="edge17" class="edge" data-name="cond_c3-&gt;esc_centro">
+
+<path fill="none" stroke="black" d="M553.65,-164.32C553.65,-151.93 553.65,-134.94 553.65,-120.55"/>
+<polygon fill="black" stroke="black" points="557.15,-120.74 553.65,-110.74 550.15,-120.74 557.15,-120.74"/>
+<text text-anchor="middle" x="559.87" y="-131.2" font-family="Arial" font-size="14.00">Si</text>
+</g>
+<!-- cond_c3&#45;&gt;esc_sur2 -->
+<g id="edge18" class="edge" data-name="cond_c3-&gt;esc_sur2">
+
+<path fill="none" stroke="black" d="M510.23,-171.5C448.44,-157.11 333.83,-130.44 254.52,-111.98"/>
+<polygon fill="black" stroke="black" points="255.58,-108.64 245.04,-109.78 253.99,-115.46 255.58,-108.64"/>
+<text text-anchor="middle" x="393.59" y="-131.2" font-family="Arial" font-size="14.00">No</text>
+</g>
+</g>
+</svg>

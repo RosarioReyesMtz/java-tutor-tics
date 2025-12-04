@@ -1,0 +1,15 @@
+{
+    "java.project.sourcePaths": [
+        "Ps_4.2/Codigo",
+        "Ps_4.18/Codigo",
+        "Ps_3.22/Codigo",
+        "Ps_1.13/Codigo",
+        "Problema_5.1/Codigo",
+        "Problema_4.13/Codigo",
+        "Problema_3.13/Codigo",
+        "Ejemplo_4.10/Codigo",
+        "Ejemplo_3.2/Codigo",
+        "Ejemplo_1.4/Codigo",
+        "Ps_4.34/Codigo"
+    ]
+}

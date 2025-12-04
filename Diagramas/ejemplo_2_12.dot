@@ -1,0 +1,58 @@
+/* Código DOT para el Diagrama de Flujo 2.15 
+  (Ejemplo 2.12: Ordenar A, B, C en forma descendente) 
+*/
+digraph G {
+    graph [fontname="Inter, sans-serif"];
+    node [shape=ellipse, style=filled, fillcolor="#f5f5f5", fontname="Inter, sans-serif"];
+    edge [fontname="Inter, sans-serif"];
+
+    // 1. Nodos de Inicio y Fin
+    INICIO [shape=ellipse];
+    FIN [shape=ellipse];
+
+    // 2. Nodo de Lectura
+    LEER [shape=parallelogram, label="A, B, C"];
+
+    // 3. Nodos de Decisión (Rombos)
+    D1_A_gt_B [shape=diamond, label="A > B"];
+    D2_A_gt_C [shape=diamond, label="A > C"];
+    D3_B_gt_C [shape=diamond, label="B > C"];
+    D4_B_gt_C [shape=diamond, label="B > C"]; // Nota: Es el D3 del lado "Si"
+    D5_A_gt_C [shape=diamond, label="A > C"]; // Nota: Es el D2 del lado "No"
+    
+    // 4. Nodos de Salida (Documentos)
+    OUT_ABC [shape=document, label="A, B, C"];
+    OUT_ACB [shape=document, label="A, C, B"];
+    OUT_CAB [shape=document, label="C, A, B"];
+    OUT_BAC [shape=document, label="B, A, C"];
+    OUT_BCA [shape=document, label="B, C, A"];
+    OUT_CBA [shape=document, label="C, B, A"];
+
+    // 5. Conexiones (Edges)
+    INICIO -> LEER;
+    LEER -> D1_A_gt_B;
+
+    // Rama Izquierda (A > B es Verdadero)
+    D1_A_gt_B -> D2_A_gt_C [label="Si"];
+    D2_A_gt_C -> D4_B_gt_C [label="Si"]; // A es el mayor
+    D4_B_gt_C -> OUT_ABC [label="Si"];   // B > C
+    D4_B_gt_C -> OUT_ACB [label="No"];   // C >= B
+    
+    D2_A_gt_C -> OUT_CAB [label="No"];  // C es el mayor
+
+    // Rama Derecha (A > B es Falso, o sea B >= A)
+    D1_A_gt_B -> D3_B_gt_C [label="No"];
+    D3_B_gt_C -> D5_A_gt_C [label="Si"]; // B es el mayor
+    D5_A_gt_C -> OUT_BAC [label="Si"];   // A > C
+    D5_A_gt_C -> OUT_BCA [label="No"];   // C >= A
+    
+    D3_B_gt_C -> OUT_CBA [label="No"]; // C es el mayor
+
+    // 6. Conexiones al Fin
+    OUT_ABC -> FIN;
+    OUT_ACB -> FIN;
+    OUT_CAB -> FIN;
+    OUT_BAC -> FIN;
+    OUT_BCA -> FIN;
+    OUT_CBA -> FIN;
+}

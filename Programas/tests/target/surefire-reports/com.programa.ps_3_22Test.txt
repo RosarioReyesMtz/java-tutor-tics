@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: com.programa.ps_3_22Test
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! -- in com.programa.ps_3_22Test
+com.programa.ps_3_22Test.testPromedioSimple -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ps_3_22 - testPromedioSimple: Promedio de cinco 10 debe ser 10.0 ==> expected: <10.0> but was: <0.0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:70)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:925)
+	at com.programa.ps_3_22Test.testPromedioSimple(ps_3_22Test.java:12)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.ps_3_22Test.testPromedioMixto -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ps_3_22 - testPromedioMixto: Promedio esperado 8.0 para (7,8,8,9,8) ==> expected: <8.0> but was: <0.0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:70)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:925)
+	at com.programa.ps_3_22Test.testPromedioMixto(ps_3_22Test.java:17)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.programa.ps_3_22Test.testPromedioConCeros -- Time elapsed: 0 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: ps_3_22 - testPromedioConCeros: Promedio de (10,10,0,0,0) debe ser 4.0 ==> expected: <4.0> but was: <0.0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:70)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:925)
+	at com.programa.ps_3_22Test.testPromedioConCeros(ps_3_22Test.java:22)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
