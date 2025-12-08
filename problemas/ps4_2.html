@@ -5,53 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PS 4.2 - Contar Ocurrencias en Arreglo</title>
   <link rel="stylesheet" href="../styles_desc.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="container">
     <header class="page-header">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
       <h1>PS 4.2 - Contar Ocurrencias en Arreglo</h1>
+      <p class="subtitle">Programación Estructurada en Java - Página 441</p>
     </header>
 
     <main class="exercise-detail">
       <article class="exercise-card" aria-labelledby="ps4_2-title">
         <header class="exercise-header">
-          <span class="exercise-badge">Problema PS 4.2 (pág. 441)</span>
+          <span class="exercise-badge">PS 4.2</span>
           <h2 id="ps4_2-title">Contar Ocurrencias en Arreglo Unidimensional</h2>
           
           <p class="exercise-description">
-            Construya un programa tal que dado como entrada un arreglo unidimensional de
-            enteros y un número entero, determine cuántas veces se encuentra el número
-            dentro del arreglo.
+            En este problema aprenderás a buscar y contar elementos en arreglos unidimensionales.
+            Es un ejercicio fundamental para dominar el recorrido de arreglos y el uso de contadores.
           </p>
+
+          <button onclick="openDiagramModal()" class="btn-diagram">📊 Ver Diagrama de Flujo</button>
         </header>
         
         <div class="exercise-content">
           <section class="exercise-main">
-            <h3>Requisitos</h3>
+            <h3>Objetivo</h3>
+            <p>Crear un programa que determine cuántas veces aparece un número específico dentro de un arreglo unidimensional de enteros.</p>
+
+            <h3>Variables a Declarar</h3>
             <ul>
-              <li><strong>Datos:</strong> VEC (arreglo de 100 enteros), NUM (entero a buscar).</li>
-              <li>Recorrer el arreglo $VEC$ completo.</li>
-              <li>Usar un <strong>contador</strong> para registrar las veces que $NUM$ aparece en $VEC$.</li>
-              <li>Imprimir el contador final.</li>
+              <li><strong>VEC:</strong> tipo arreglo unidimensional (<code>int[100]</code>) - Arreglo de enteros</li>
+              <li><strong>NUM:</strong> tipo entero (<code>int</code>) - Número a buscar</li>
+              <li><strong>CONTADOR:</strong> tipo entero (<code>int</code>) - Cuenta las ocurrencias de NUM</li>
+              <li><strong>I:</strong> tipo entero (<code>int</code>) - Índice para recorrer el arreglo</li>
             </ul>
+
+            <h3>Operaciones a Realizar</h3>
+            <ul>
+              <li>Leer los elementos del arreglo VEC (o generarlos aleatoriamente).</li>
+              <li>Leer el número NUM a buscar.</li>
+              <li>Inicializar el contador en 0.</li>
+              <li>Recorrer el arreglo completo con un ciclo FOR.</li>
+              <li>En cada posición, si $VEC[I] = NUM$, incrementar el contador.</li>
+              <li>Imprimir el valor final del contador.</li>
+            </ul>
+
+            <h3>Ejemplo</h3>
+            <pre><code>VEC = [5, 3, 7, 3, 9, 3, 2, 8, 3, 1]
+NUM = 3
+
+Recorrido:
+Posición 1: 3 == 3 → CONTADOR = 1
+Posición 3: 3 == 3 → CONTADOR = 2
+Posición 5: 3 == 3 → CONTADOR = 3
+Posición 8: 3 == 3 → CONTADOR = 4
+
+Resultado: El número 3 aparece 4 veces</code></pre>
+
+            <h3>Resultado Esperado</h3>
+            <pre><code>Ingrese el número a buscar: 7
+
+El número 7 aparece 5 veces en el arreglo.</code></pre>
           </section>
-          
+
           <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
+            <h3>Notas Rápidas</h3>
+            <p><strong>Puntos importantes:</strong></p>
             <ul>
-              <li>Este es un ejercicio fundamental de recorrido de arreglos.</li>
-              <li>Aplica el concepto de <strong>contador</strong> simple.</li>
-              <li>No hay diagrama de flujo en el libro para este problema.</li>
+              <li>Este es un ejercicio fundamental de búsqueda y recorrido de arreglos.</li>
+              <li>Aplica el concepto de <strong>contador</strong> simple: inicializa en 0 e incrementa cada vez que encuentras el valor.</li>
+              <li>El contador debe inicializarse antes del ciclo.</li>
+              <li>Debes recorrer todo el arreglo, no detenerte al encontrar la primera ocurrencia.</li>
+              <li>Este patrón es muy común en programación: buscar y contar elementos que cumplen una condición.</li>
             </ul>
+
+            <h3>Tip</h3>
+            <p>
+              El patrón de "contar ocurrencias" es: inicializar contador = 0, recorrer toda la estructura,
+              y cada vez que encuentres el elemento, incrementar el contador. ¡No olvides inicializar el contador antes del ciclo!
+            </p>
           </aside>
         </div>
       </article>
     </main>
 
-    <footer class="page-footer">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
-    </footer>
+
+    <!-- Modal para Diagrama de Flujo -->
+    <div id="diagramModal" class="diagram-modal" onclick="closeDiagramModal(event)">
+      <div class="diagram-modal-content" onclick="event.stopPropagation()">
+        <div class="diagram-modal-header">
+          <h3>📊 Diagrama de Flujo - PS 4.2 (Contar Ocurrencias)</h3>
+          <button class="close-modal" onclick="closeDiagramModal()">&times;</button>
+        </div>
+        <div class="diagram-modal-body">
+          <img src="../Diagramas/imagen_diagrama_ps4_2.svg" alt="Diagrama de flujo PS 4.2">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openDiagramModal() {
+        document.getElementById('diagramModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDiagramModal(event) {
+        if (!event || event.target.id === 'diagramModal' || event.target.className === 'close-modal') {
+          document.getElementById('diagramModal').classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      // Cerrar modal con tecla ESC
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeDiagramModal();
+        }
+      });
+    </script>
   </div>
 </body>
 </html>

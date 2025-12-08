@@ -1,0 +1,32 @@
+digraph ps_1_13 {
+    // Configuración general
+    rankdir=TB;
+    node [fontname="Arial", fontsize=11];
+    
+    // Inicio
+    inicio [label="INICIO", shape=ellipse, style=filled, fillcolor="#90EE90"];
+    
+    // Entrada
+    entrada [label="Leer:\nPER (perímetro base)\nAPO (apotema)\nALT (altura)", shape=parallelogram, style=filled, fillcolor="#87CEEB"];
+    
+    // Cálculos
+    calc1 [label="AB = (PER × APO) / 2\n(Área de la Base)", shape=box];
+    calc2 [label="AL = PER × ALT\n(Área Lateral)", shape=box];
+    calc3 [label="AT = (2 × AB) + AL\n(Área Total)", shape=box];
+    calc4 [label="VOL = AB × ALT\n(Volumen)", shape=box];
+    
+    // Salida
+    salida [label="Imprimir:\nÁrea Base = AB\nÁrea Lateral = AL\nÁrea Total = AT\nVolumen = VOL", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // Fin
+    fin [label="FIN", shape=ellipse, style=filled, fillcolor="#FF6B6B"];
+    
+    // Conexiones
+    inicio -> entrada;
+    entrada -> calc1;
+    calc1 -> calc2;
+    calc2 -> calc3;
+    calc3 -> calc4;
+    calc4 -> salida;
+    salida -> fin;
+}

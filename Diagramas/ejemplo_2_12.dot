@@ -20,13 +20,13 @@ digraph G {
     D4_B_gt_C [shape=diamond, label="B > C"]; // Nota: Es el D3 del lado "Si"
     D5_A_gt_C [shape=diamond, label="A > C"]; // Nota: Es el D2 del lado "No"
     
-    // 4. Nodos de Salida (Documentos)
-    OUT_ABC [shape=document, label="A, B, C"];
-    OUT_ACB [shape=document, label="A, C, B"];
-    OUT_CAB [shape=document, label="C, A, B"];
-    OUT_BAC [shape=document, label="B, A, C"];
-    OUT_BCA [shape=document, label="B, C, A"];
-    OUT_CBA [shape=document, label="C, B, A"];
+    // 4. Nodos de Salida
+    OUT_ABC [shape=egg, style=filled, fillcolor="#FFB6C1", label="A, B, C"];
+    OUT_ACB [shape=egg, style=filled, fillcolor="#FFB6C1", label="A, C, B"];
+    OUT_CAB [shape=egg, style=filled, fillcolor="#FFB6C1", label="C, A, B"];
+    OUT_BAC [shape=egg, style=filled, fillcolor="#FFB6C1", label="B, A, C"];
+    OUT_BCA [shape=egg, style=filled, fillcolor="#FFB6C1", label="B, C, A"];
+    OUT_CBA [shape=egg, style=filled, fillcolor="#FFB6C1", label="C, B, A"];
 
     // 5. Conexiones (Edges)
     INICIO -> LEER;

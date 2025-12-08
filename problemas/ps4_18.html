@@ -5,54 +5,139 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PS 4.18 - Generar Matriz Identidad</title>
   <link rel="stylesheet" href="../styles_desc.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="container">
     <header class="page-header">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
       <h1>PS 4.18 - Generar Matriz Identidad</h1>
+      <p class="subtitle">Programación Estructurada en Java - Página 446</p>
     </header>
 
     <main class="exercise-detail">
       <article class="exercise-card" aria-labelledby="ps4_18-title">
         <header class="exercise-header">
-          <span class="exercise-badge">Problema PS 4.18 (pág. 446)</span>
-          <h2 id="ps4_18-title">Generar Matriz Identidad</h2>
+          <span class="exercise-badge">PS 4.18</span>
+          <h2 id="ps4_18-title">Generar Matriz Identidad N×N</h2>
           
           <p class="exercise-description">
-            Construya un diagrama de flujo que llene de ceros una matriz cuadrada A [N x N], 
-            excepto en la diagonal principal donde debe asignar 1.
+            En este problema aprenderás a generar matrices especiales utilizando ciclos anidados.
+            La matriz identidad es fundamental en álgebra lineal y tiene muchas aplicaciones en programación.
           </p>
+
+          <button onclick="openDiagramModal()" class="btn-diagram">📊 Ver Diagrama de Flujo</button>
         </header>
         
         <div class="exercise-content">
           <section class="exercise-main">
-            <h3>Requisitos</h3>
+            <h3>Objetivo</h3>
+            <p>Crear un programa que genere e imprima la matriz identidad de orden $N$, es decir, una matriz cuadrada $N \times N$ que tiene 1 en la diagonal principal y 0 en todas las demás posiciones.</p>
+
+            <h3>Variables a Declarar</h3>
             <ul>
-              <li><strong>Datos:</strong> N (dimensión de la matriz, $1 < N < 50$).</li>
-              <li>Crear una matriz A[N][N].</li>
-              <li>Usar ciclos anidados (para $i$ y $j$).</li>
-              <li>Si $i == j$ (diagonal principal), asignar 1.</li>
-              <li>Si $i != j$, asignar 0.</li>
-              <li>Imprimir la matriz resultante.</li>
+              <li><strong>N:</strong> tipo entero (<code>int</code>) - Orden de la matriz (tamaño)</li>
+              <li><strong>A:</strong> tipo matriz bidimensional (<code>int[][]</code>) - Matriz identidad $N \times N$</li>
+              <li><strong>I:</strong> tipo entero (<code>int</code>) - Índice de renglón</li>
+              <li><strong>J:</strong> tipo entero (<code>int</code>) - Índice de columna</li>
             </ul>
+
+            <h3>Operaciones a Realizar</h3>
+            <ul>
+              <li>Leer el valor de N (tamaño de la matriz).</li>
+              <li>Declarar e inicializar la matriz A de tamaño $N \times N$.</li>
+              <li>Usar dos ciclos anidados: el externo para I (renglones) y el interno para J (columnas).</li>
+              <li>En cada posición, evaluar: si $I = J$, asignar $A[I][J] = 1$; si $I \neq J$, asignar $A[I][J] = 0$.</li>
+              <li>Imprimir la matriz completa con formato adecuado.</li>
+            </ul>
+
+            <h3>Fórmula Matemática</h3>
+            <p>$$A[i][j] = \begin{cases} 1 & \text{si } i = j \\ 0 & \text{si } i \neq j \end{cases}$$</p>
+
+            <h3>Ejemplo</h3>
+            <pre><code>Para N = 4, la matriz identidad es:
+
+1  0  0  0
+0  1  0  0
+0  0  1  0
+0  0  0  1</code></pre>
+
+            <h3>Resultado Esperado</h3>
+            <pre><code>Ingrese el orden de la matriz: 5
+
+Matriz Identidad de orden 5:
+
+1  0  0  0  0
+0  1  0  0  0
+0  0  1  0  0
+0  0  0  1  0
+0  0  0  0  1</code></pre>
           </section>
-          
+
           <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
+            <h3>Notas Rápidas</h3>
+            <p><strong>Puntos importantes:</strong></p>
             <ul>
-              <li>Este ejercicio es clave para entender el manejo de índices (<code>i</code>, <code>j</code>) en matrices.</li>
-              <li>La condición <code>i == j</code> es la definición de la <strong>diagonal principal</strong>.</li>
-              <li>No hay diagrama de flujo en el libro para este problema.</li>
+              <li>La <strong>matriz identidad</strong> tiene 1 en la diagonal principal y 0 en el resto.</li>
+              <li>La diagonal principal se identifica cuando $i = j$ (mismo índice de renglón y columna).</li>
+              <li>Usa una estructura de <code>if-else</code> dentro de los ciclos anidados.</li>
+              <li>Este ejercicio es fundamental para entender el acceso a matrices con doble índice.</li>
+              <li>La matriz identidad es el elemento neutro de la multiplicación matricial.</li>
             </ul>
+
+            <h3>Tip</h3>
+            <p>
+              La condición clave es $i = j$. Cuando los índices son iguales, estás en la diagonal principal.
+              Piensa en cómo se comporta esta condición al recorrer la matriz: solo será verdadera N veces.
+            </p>
           </aside>
         </div>
       </article>
     </main>
 
-    <footer class="page-footer">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
-    </footer>
+
+
+    <!-- Modal para Diagrama de Flujo -->
+    <div id="diagramModal" class="diagram-modal" onclick="closeDiagramModal(event)">
+      <div class="diagram-modal-content" onclick="event.stopPropagation()">
+        <div class="diagram-modal-header">
+          <h3>📊 Diagrama de Flujo - PS 4.18 (Matriz Identidad)</h3>
+          <button class="close-modal" onclick="closeDiagramModal()">&times;</button>
+        </div>
+        <div class="diagram-modal-body">
+          <img src="../Diagramas/imagen_diagrama_ps4_18.svg" alt="Diagrama de flujo PS 4.18">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openDiagramModal() {
+        document.getElementById('diagramModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDiagramModal(event) {
+        if (!event || event.target.id === 'diagramModal' || event.target.className === 'close-modal') {
+          document.getElementById('diagramModal').classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      // Cerrar modal con tecla ESC
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeDiagramModal();
+        }
+      });
+    </script>
   </div>
 </body>
 </html>

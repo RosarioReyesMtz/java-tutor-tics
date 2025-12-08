@@ -1,0 +1,61 @@
+digraph ps_4_18 {
+    // Configuración general
+    rankdir=TB;
+    node [fontname="Arial", fontsize=11];
+    
+    // Inicio
+    inicio [label="INICIO", shape=ellipse, style=filled, fillcolor="#90EE90"];
+    
+    // Entrada
+    entrada [label="Leer N\n(Dimensión de la matriz)", shape=parallelogram, style=filled, fillcolor="#87CEEB"];
+    
+    // Crear matriz
+    crear [label="Crear matriz A[N][N]", shape=box];
+    
+    // Inicialización ciclo externo
+    init_i [label="I = 0", shape=box];
+    
+    // Ciclo externo
+    ciclo_i [label="¿I < N?", shape=diamond, style=filled, fillcolor="#FFD700"];
+    
+    // Inicialización ciclo interno
+    init_j [label="J = 0", shape=box];
+    
+    // Ciclo interno
+    ciclo_j [label="¿J < N?", shape=diamond, style=filled, fillcolor="#FFA500"];
+    
+    // Comparación diagonal
+    comp [label="¿I = J?", shape=diamond];
+    
+    // Asignaciones
+    asigna_1 [label="A[I][J] = 1", shape=box];
+    asigna_0 [label="A[I][J] = 0", shape=box];
+    
+    // Incrementos
+    inc_j [label="J = J + 1", shape=box];
+    inc_i [label="I = I + 1", shape=box];
+    
+    // Salida
+    salida [label="Imprimir\nMatriz A[N][N]", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // Fin
+    fin [label="FIN", shape=ellipse, style=filled, fillcolor="#FF6B6B"];
+    
+    // Conexiones
+    inicio -> entrada;
+    entrada -> crear;
+    crear -> init_i;
+    init_i -> ciclo_i;
+    ciclo_i -> init_j [label="SÍ"];
+    init_j -> ciclo_j;
+    ciclo_j -> comp [label="SÍ"];
+    comp -> asigna_1 [label="SÍ"];
+    comp -> asigna_0 [label="NO"];
+    asigna_1 -> inc_j;
+    asigna_0 -> inc_j;
+    inc_j -> ciclo_j;
+    ciclo_j -> inc_i [label="NO"];
+    inc_i -> ciclo_i;
+    ciclo_i -> salida [label="NO"];
+    salida -> fin;
+}

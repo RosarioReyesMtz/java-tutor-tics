@@ -1,0 +1,46 @@
+digraph ps_4_2 {
+    // Configuración general
+    rankdir=TB;
+    node [fontname="Arial", fontsize=11];
+    
+    // Inicio
+    inicio [label="INICIO", shape=ellipse, style=filled, fillcolor="#90EE90"];
+    
+    // Entrada del arreglo
+    entrada_arr [label="Leer VEC[100]\n(Arreglo de enteros)", shape=parallelogram, style=filled, fillcolor="#87CEEB"];
+    entrada_num [label="Leer NUM\n(Número a buscar)", shape=parallelogram, style=filled, fillcolor="#87CEEB"];
+    
+    // Inicialización
+    init [label="CONTADOR = 0\nI = 0", shape=box];
+    
+    // Ciclo FOR
+    ciclo [label="¿I < 100?", shape=diamond, style=filled, fillcolor="#FFD700"];
+    
+    // Comparación
+    comp [label="¿VEC[I] = NUM?", shape=diamond];
+    
+    // Incrementar contador
+    inc_cont [label="CONTADOR =\nCONTADOR + 1", shape=box];
+    
+    // Incrementar índice
+    inc_i [label="I = I + 1", shape=box];
+    
+    // Salida
+    salida [label="Imprimir:\nNUM aparece\nCONTADOR veces", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // Fin
+    fin [label="FIN", shape=ellipse, style=filled, fillcolor="#FF6B6B"];
+    
+    // Conexiones
+    inicio -> entrada_arr;
+    entrada_arr -> entrada_num;
+    entrada_num -> init;
+    init -> ciclo;
+    ciclo -> comp [label="SÍ"];
+    comp -> inc_cont [label="SÍ"];
+    comp -> inc_i [label="NO"];
+    inc_cont -> inc_i;
+    inc_i -> ciclo;
+    ciclo -> salida [label="NO"];
+    salida -> fin;
+}

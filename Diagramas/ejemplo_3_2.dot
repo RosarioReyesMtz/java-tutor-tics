@@ -1,32 +1,39 @@
-digraph Diagrama_3_3 {
-    graph [fontname="Arial"];
-    node [fontname="Arial", shape=ellipse, style=solid];
-    edge [fontname="Arial"];
-
-    inicio [label="INICIO"];
-    fin [label="FIN"];
+digraph ejemplo_3_2 {
+    // Configuración general
+    rankdir=TB;
+    node [fontname="Arial", fontsize=11];
     
-    node [shape=rect, style=solid];
-    init_nom [label="NOMINA \L\L- 0"];
-    init_i [label="I \L\L- 1"];
-    proceso_nom [label="NOMINA \L\L- NOMINA + SUE"];
-    increment_i [label="I \L\L- I + 1"];
+    // Inicio
+    inicio [label="INICIO", shape=ellipse, style=filled, fillcolor="#90EE90"];
     
-    node [shape=parallelogram, style=solid];
-    lectura [label="SUE"];
+    // Inicialización de variables
+    init_nomina [label="NOMINA = 0\n(Acumulador de sueldos)", shape=box];
+    init_i [label="I = 1\n(Contador de trabajadores)", shape=box];
     
-    node [shape=egg, style="solid,waves", waves=bottom];
-    escritura [label="NOMINA"];
+    // Ciclo FOR
+    ciclo [label="¿I ≤ 10?", shape=diamond, style=filled, fillcolor="#FFD700"];
     
-    node [shape=diamond, style=solid];
-    cond [label="I <= 10"];
+    // Dentro del ciclo
+    entrada [label="Leer SUE\n(Sueldo del trabajador I)", shape=parallelogram, style=filled, fillcolor="#87CEEB"];
     
-    inicio -> init_nom -> init_i -> cond;
-    cond -> lectura [label="Si"]; 
-    lectura -> proceso_nom -> increment_i -> cond;
-    cond -> escritura [label="No"];
-    escritura -> fin;
+    acumular [label="NOMINA = NOMINA + SUE\n(Sumar sueldo al acumulador)", shape=box];
+    
+    incremento [label="I = I + 1\n(Siguiente trabajador)", shape=box];
+    
+    // Salida
+    salida [label="Imprimir:\n\"Nómina Total: \", NOMINA", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // Fin
+    fin [label="FIN", shape=ellipse, style=filled, fillcolor="#FF6B6B"];
+    
+    // Conexiones
+    inicio -> init_nomina;
+    init_nomina -> init_i;
+    init_i -> ciclo;
+    ciclo -> entrada [label="SÍ"];
+    entrada -> acumular;
+    acumular -> incremento;
+    incremento -> ciclo;
+    ciclo -> salida [label="NO"];
+    salida -> fin;
 }
-
-
-/* imprimir en pantalla shape=egg */

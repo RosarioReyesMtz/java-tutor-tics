@@ -5,58 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ejemplo 1.4 - Evaluación de Expresiones Lógicas</title>
   <link rel="stylesheet" href="../styles_desc.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="container">
     <header class="page-header">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
       <h1>Ejemplo 1.4 - Evaluación de Expresiones Lógicas</h1>
+      <p class="subtitle">Programación Estructurada en Java - Página 18</p>
     </header>
 
     <main class="exercise-detail">
       <article class="exercise-card" aria-labelledby="ej1_4-title">
         <header class="exercise-header">
-          <span class="exercise-badge">Ejemplo 1.4 (pág. 20)</span>
-          <h2 id="ej1_4-title">Evaluación de Expresiones Lógicas (Operadores)</h2>
+          <span class="exercise-badge">Ejemplo 1.4</span>
+          <h2 id="ej1_4-title">Evaluación de Expresiones Lógicas</h2>
           
           <p class="exercise-description">
-            Este ejemplo demuestra la jerarquía de operadores y la evaluación paso a paso de expresiones lógicas (booleanas) complejas, combinando operadores aritméticos, relacionales y lógicos (Y, O, NO).
+            En este ejemplo aprenderás sobre la jerarquía de operadores y la evaluación de expresiones booleanas complejas.
+            Se presentan tres casos de evaluación con operadores lógicos, relacionales y aritméticos combinados.
           </p>
+
+          <button onclick="openDiagramModal()" class="btn-diagram">📊 Ver Diagrama de Flujo</button>
         </header>
         
         <div class="exercise-content">
           <section class="exercise-main">
-            <h3>Requisitos</h3>
+            <h3>Objetivo</h3>
+            <p>Evaluar expresiones lógicas complejas aplicando correctamente la jerarquía de operadores (potencia, multiplicación/división, suma/resta, comparación, lógicos).</p>
+
+            <h3>Variables a Declarar</h3>
             <ul>
-              <li>Evaluar el resultado de tres expresiones lógicas complejas.</li>
-              <li>Aplicar correctamente la jerarquía de operadores (aritméticos, relacionales y lógicos)</li>
-              <li><strong>Caso a:</strong> <code>NO(15 >= 7**2) O (43 - 8 * 2 div 4 <> 3 * 2 div 2)</code></li>
-              <li><strong>Caso b:</strong> <code>(15 >= 7*3**2 Y 8 > 3 Y 15 > 6) O NO(7*3 < 5 + 12*2 div 3**2)</code></li>
-              <li><strong>Caso c:</strong> Demostrar un error de tipo al comparar un valor lógico con uno numérico.</li>
+              <li><strong>RESULTADO_A:</strong>  Resultado del caso A</li>
+              <li><strong>RESULTADO_B:</strong>  Resultado del caso B</li>
+              <li><strong>RESULTADO_C:</strong> Error de tipos - No se puede asignar entero a booleano</li>
             </ul>
 
-         
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <p class="note-text">Conversión de pseudocódigo a Java:</p>
+            <h3>Operaciones a Realizar</h3>
             <ul>
-              <li><code>**</code> (potencia) es <code>Math.pow()</code></li>
-              <li><code>div</code> (div. entera) es <code>/</code> (con operandos int)</li>
-              <li><code>O</code> (OR) es <code>||</code></li>
-              <li><code>Y</code> (AND) es <code>&&</code></li>
-              <li><code>NO</code> (NOT) es <code>!</code></li>
-              <li><code><></code> (diferente) es <code>!=</code></li>
+              <li><strong>Caso A:</strong> Evaluar: $NO(15 \geq 7^2)$ O $(43 - 8 \times 2 \div 4 \neq 3 \times 2 \div 2)$</li>
+              <li><strong>Caso B:</strong> Evaluar: $(15 \geq 7 \times 3^2$ Y $8 > 3$ Y $15 > 6)$ O $NO(7 \times 3 < 5 + 12 \times 2 \div 3^2)$</li>
+              <li><strong>Caso C:</strong> Intentar: $BOOLEANO = 5 + 3$ (genera error de tipos)</li>
+              <li>Imprimir los resultados de cada caso.</li>
             </ul>
+
+            <h3>Resultado Esperado</h3>
+            <pre><code>--- Evaluación de Expresiones Lógicas (Ejemplo 1.4) ---
+Caso a) Resultado: true
+Caso b) Resultado: false
+Caso c) Produce un error de tipos.</code></pre>
+          </section>
+
+          <aside class="exercise-sidebar">
+            <h3>Notas Rápidas</h3>
+            <p><strong>Puntos importantes:</strong></p>
+            <ul>
+              <li>Jerarquía de operadores: potencia > multiplicación/división > suma/resta > comparación > lógicos.</li>
+              <li>El operador <code>div</code> es división entera en pseudocódigo, en Java se usa <code>/</code> con enteros.</li>
+              <li>Los operadores lógicos: NO (<code>!</code>), Y (<code>&&</code>), O (<code>||</code>).</li>
+              <li>Las potencias se calculan con <code>Math.pow(base, exponente)</code>.</li>
+              <li>Este ejercicio refuerza la evaluación de expresiones booleanas complejas.</li>
+            </ul>
+
+            <h3>Tip</h3>
+            <p>
+              Al evaluar expresiones complejas, descompón cada parte siguiendo el orden de operaciones. Primero resuelve
+              las operaciones aritméticas (potencias, multiplicaciones, sumas), luego las comparaciones, y finalmente los
+              operadores lógicos (primero NO, luego Y, finalmente O).
+            </p>
           </aside>
         </div>
       </article>
     </main>
 
-    <footer class="page-footer">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
-    </footer>
+    
+
+    <!-- Modal para Diagrama de Flujo -->
+    <div id="diagramModal" class="diagram-modal" onclick="closeDiagramModal(event)">
+      <div class="diagram-modal-content" onclick="event.stopPropagation()">
+        <div class="diagram-modal-header">
+          <h3>📊 Diagrama de Flujo - Ejemplo 1.4 (Expresiones Lógicas)</h3>
+          <button class="close-modal" onclick="closeDiagramModal()">&times;</button>
+        </div>
+        <div class="diagram-modal-body">
+          <img src="../Diagramas/imagen_diagrama_1_4.svg" alt="Diagrama de flujo Ejemplo 1.4">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openDiagramModal() {
+        document.getElementById('diagramModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDiagramModal(event) {
+        if (!event || event.target.id === 'diagramModal' || event.target.className === 'close-modal') {
+          document.getElementById('diagramModal').classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      // Cerrar modal con tecla ESC
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeDiagramModal();
+        }
+      });
+    </script>
   </div>
 </body>
 </html>

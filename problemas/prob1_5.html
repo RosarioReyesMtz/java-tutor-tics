@@ -19,71 +19,116 @@
 <body>
   <div class="container">
     <header class="page-header">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
       <h1>Problema 1.5 - Área y Volumen de un Cilindro</h1>
+      <p class="subtitle">Programación Estructurada en Java - Página 44</p>
     </header>
 
     <main class="exercise-detail">
       <article class="exercise-card" aria-labelledby="prob1_5-title">
         <header class="exercise-header">
-          <span class="exercise-badge">Problema 1.5 (pág. 44)</span>
+          <span class="exercise-badge">Problema 1.5</span>
           <h2 id="prob1_5-title">Calcular Área y Volumen de un Cilindro</h2>
           
           <p class="exercise-description">
-            Construya un diagrama de flujo tal que dado como datos el radio y la altura de un
-            cilindro, calcule e imprima el área y su volumen.
+            En este problema aprenderás a calcular el área lateral y el volumen de un cilindro. 
+            Dado el radio y la altura como datos de entrada, deberás aplicar las fórmulas matemáticas 
+            correspondientes para obtener ambos resultados.
           </p>
+
+          <button onclick="openDiagramModal()" class="btn-diagram">📊 Ver Diagrama de Flujo</button>
         </header>
         
         <div class="exercise-content">
           <section class="exercise-main">
-            <h3>Requisitos</h3>
+            <h3>Objetivo</h3>
+            <p>Crear un programa que calcule el área lateral y el volumen de un cilindro a partir de su radio y altura, utilizando las fórmulas matemáticas estándar de geometría.</p>
+
+            <h3>Variables a Declarar</h3>
             <ul>
-              <li><strong>Datos:</strong> radio, altura (variables de tipo real).</li>
-              <li>Calcular el volumen con la fórmula: $Volumen = \pi \cdot radio^2 \cdot altura$.</li>
-              <li>Calcular el área (lateral) con la fórmula: $Area = 2 \cdot \pi \cdot radio \cdot altura$.</li>
-              <li>Imprimir ambos resultados.</li>
+              <li><strong>RADIO:</strong>  Radio de la base del cilindro</li>
+              <li><strong>ALTURA:</strong>  Altura del cilindro</li>
+              <li><strong>AREA:</strong>  Área lateral del cilindro (resultado)</li>
+              <li><strong>VOLUMEN:</strong>  Volumen del cilindro (resultado)</li>
             </ul>
 
-            <h3>Diagrama de Flujo</h3>
-            <button onclick="toggleDiagram()" class="btn-diagram" id="btnDiagram">Ver diagrama de flujo ↓</button>
-            <div id="diagramContainer" style="display: none; margin-top: 1rem;">
-              <img src="../Diagramas/imagen_diagrama_1_5.svg" alt="Diagrama de flujo Problema 1.5" style="width: 50%; height: auto;">
-            </div>
+            <h3>Operaciones a Realizar</h3>
+            <ul>
+              <li>Leer el valor del radio y la altura del cilindro.</li>
+              <li>Aplicar la fórmula del volumen</li>
+              <li>Aplicar la fórmula del área</li>
+              <li>Mostrar ambos resultados en la consola.</li>
+            </ul>
 
-            <script>
-              function toggleDiagram() {
-                const container = document.getElementById('diagramContainer');
-                const btn = document.getElementById('btnDiagram');
-                
-                if (container.style.display === 'none') {
-                  container.style.display = 'block';
-                  btn.textContent = 'Ocultar diagrama de flujo ↑';
-                } else {
-                  container.style.display = 'none';
-                  btn.textContent = 'Ver diagrama de flujo ↓';
-                }
-              }
-            </script>
+            <h3>Fórmulas Matemáticas</h3>
+            <p><strong>Volumen del Cilindro:</strong></p>
+            <p>$$Volumen = \pi \cdot radio^2 \cdot altura$$</p>
+            
+            <p><strong>Área Lateral del Cilindro:</strong></p>
+            <p>$$Area = 2 \cdot \pi \cdot radio \cdot altura$$</p>
+
+            <h3>Resultado Esperado</h3>
+            <pre><code>Ingrese el radio del cilindro: 5.0
+Ingrese la altura del cilindro: 10.0
+
+RESULTADOS:
+Área lateral del cilindro: 314.16 unidades²
+Volumen del cilindro: 785.40 unidades³</code></pre>
           </section>
-          
+
           <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <p class="note-text">Este problema introduce:</p>
+            <h3>Notas Rápidas</h3>
+            <p><strong>Puntos importantes:</strong></p>
             <ul>
-              <li>Lectura de datos (entrada).</li>
-              <li>Procesamiento (cálculos matemáticos).</li>
-              <li>Escritura de datos (salida).</li>
-              <li>Uso de constantes como $\pi$.</li>
-            </ul>
+        
+              <li>Las variables deben ser de tipo <code>double</code> para manejar decimales.</li>
+              <li>Este ejercicio refuerza el uso de constantes matemáticas y operaciones aritméticas.</li>
+             
+
+            <h3>Tip</h3>
+            <p>
+              En este ejercicio trabajarás con fórmulas geométricas básicas. Recuerda que $\pi$ es aproximadamente 3.14159, 
+              y en Java puedes usar la constante <code>Math.PI</code> para mayor precisión. El operador de potencia 
+              ($radio^2$) se puede calcular multiplicando <code>radio * radio</code> o usando <code>Math.pow(radio, 2)</code>.
+            </p>
           </aside>
         </div>
       </article>
     </main>
 
-    <footer class="page-footer">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
-    </footer>
+
+    <!-- Modal para Diagrama de Flujo -->
+    <div id="diagramModal" class="diagram-modal" onclick="closeDiagramModal(event)">
+      <div class="diagram-modal-content" onclick="event.stopPropagation()">
+        <div class="diagram-modal-header">
+          <h3>📊 Diagrama de Flujo - Problema 1.5 (Cilindro)</h3>
+          <button class="close-modal" onclick="closeDiagramModal()">&times;</button>
+        </div>
+        <div class="diagram-modal-body">
+          <img src="../Diagramas/imagen_diagrama_1_5.svg" alt="Diagrama de flujo Problema 1.5">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openDiagramModal() {
+        document.getElementById('diagramModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDiagramModal(event) {
+        if (!event || event.target.id === 'diagramModal' || event.target.className === 'close-modal') {
+          document.getElementById('diagramModal').classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      // Cerrar modal con tecla ESC
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeDiagramModal();
+        }
+      });
+    </script>
   </div>
 </body>
 </html>

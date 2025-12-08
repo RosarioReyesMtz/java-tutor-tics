@@ -5,54 +5,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PS 1.13 - Prisma Pentagonal</title>
   <link rel="stylesheet" href="../styles_desc.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="container">
     <header class="page-header">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
       <h1>PS 1.13 - Prisma Pentagonal</h1>
+      <p class="subtitle">Programación Estructurada en Java - Página 408</p>
     </header>
 
     <main class="exercise-detail">
       <article class="exercise-card" aria-labelledby="ps1_13-title">
         <header class="exercise-header">
-          <span class="exercise-badge">Problema PS 1.13 (pág. 408)</span>
+          <span class="exercise-badge">PS 1.13</span>
           <h2 id="ps1_13-title">Calcular Áreas y Volumen de un Prisma Pentagonal</h2>
           
           <p class="exercise-description">
-            Construya un diagrama de flujo tal que dado el perímetro de la base, el apotema
-            y la altura de un prisma pentagonal; calcule el área de la base, el área lateral, el
-            área total y el volumen.
+            En este problema aplicarás fórmulas geométricas para calcular diferentes medidas de un prisma pentagonal
+            (prisma con base de pentágono regular). Trabajarás con perímetro, apotema y altura para obtener áreas y volumen.
           </p>
+
+          <button onclick="openDiagramModal()" class="btn-diagram">📊 Ver Diagrama de Flujo</button>
         </header>
         
         <div class="exercise-content">
           <section class="exercise-main">
-            <h3>Requisitos</h3>
+            <h3>Objetivo</h3>
+            <p>Crear un programa que calcule el área de la base, el área lateral, el área total y el volumen de un prisma pentagonal dados su perímetro, apotema y altura.</p>
+
+            <h3>Variables a Declarar</h3>
             <ul>
-              <li><strong>Datos:</strong> PER, APO, ALT (variables de tipo real).</li>
-              <li>Calcular Área Base: $AB = (PER \cdot APO) / 2$.</li>
-              <li>Calcular Área Lateral: $AL = PER \cdot ALT$.</li>
-              <li>Calcular Área Total: $AT = 2 \cdot AB + AL$.</li>
-              <li>Calcular Volumen: $VOL = AB \cdot ALT$.</li>
+              <li><strong>PER:</strong> tipo real (<code>double</code>) - Perímetro de la base pentagonal</li>
+              <li><strong>APO:</strong> tipo real (<code>double</code>) - Apotema del pentágono base</li>
+              <li><strong>ALT:</strong> tipo real (<code>double</code>) - Altura del prisma</li>
+              <li><strong>AB:</strong> tipo real (<code>double</code>) - Área de la base</li>
+              <li><strong>AL:</strong> tipo real (<code>double</code>) - Área lateral</li>
+              <li><strong>AT:</strong> tipo real (<code>double</code>) - Área total</li>
+              <li><strong>VOL:</strong> tipo real (<code>double</code>) - Volumen del prisma</li>
             </ul>
+
+            <h3>Operaciones a Realizar</h3>
+            <ul>
+              <li>Leer los valores de PER (perímetro), APO (apotema) y ALT (altura).</li>
+              <li>Calcular el área de la base pentagonal.</li>
+              <li>Calcular el área lateral del prisma.</li>
+              <li>Calcular el área total (dos bases + lateral).</li>
+              <li>Calcular el volumen del prisma.</li>
+              <li>Mostrar todos los resultados.</li>
+            </ul>
+
+            <h3>Fórmulas Geométricas</h3>
+            <p><strong>Área de la Base (pentágono):</strong></p>
+            <p>$$AB = \frac{PER \cdot APO}{2}$$</p>
+            
+            <p><strong>Área Lateral (rectángulo que rodea el prisma):</strong></p>
+            <p>$$AL = PER \cdot ALT$$</p>
+
+            <p><strong>Área Total (dos bases + lateral):</strong></p>
+            <p>$$AT = 2 \cdot AB + AL$$</p>
+
+            <p><strong>Volumen del Prisma:</strong></p>
+            <p>$$VOL = AB \cdot ALT$$</p>
+
+            <h3>Resultado Esperado</h3>
+            <pre><code>Ingrese el perímetro de la base: 25.0
+Ingrese el apotema: 3.44
+Ingrese la altura del prisma: 10.0
+
+RESULTADOS:
+Área de la base: 43.00 unidades²
+Área lateral: 250.00 unidades²
+Área total: 336.00 unidades²
+Volumen: 430.00 unidades³</code></pre>
           </section>
-          
+
           <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
+            <h3>Notas Rápidas</h3>
+            <p><strong>Puntos importantes:</strong></p>
             <ul>
-              <li>Este es un problema secuencial simple.</li>
-              <li>Se enfoca en la correcta aplicación de fórmulas matemáticas.</li>
-              <li>No hay diagrama de flujo en el libro para este problema.</li>
+              <li>Este es un problema secuencial simple (entrada → proceso → salida).</li>
+              <li>Se enfoca en la correcta aplicación de fórmulas geométricas.</li>
+              <li>El apotema es la distancia del centro del pentágono al punto medio de cualquier lado.</li>
+              <li>El área de un polígono regular se calcula: $(perímetro \times apotema) / 2$.</li>
+              <li>Las variables deben ser de tipo <code>double</code> para manejar decimales.</li>
             </ul>
+
+            <h3>Tip</h3>
+            <p>
+              Un prisma pentagonal tiene dos bases pentagonales (arriba y abajo) y cinco caras rectangulares laterales.
+              El perímetro multiplicado por la altura da el área de todas las caras laterales juntas.
+            </p>
           </aside>
         </div>
       </article>
     </main>
 
-    <footer class="page-footer">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
-    </footer>
+
+    <!-- Modal para Diagrama de Flujo -->
+    <div id="diagramModal" class="diagram-modal" onclick="closeDiagramModal(event)">
+      <div class="diagram-modal-content" onclick="event.stopPropagation()">
+        <div class="diagram-modal-header">
+          <h3>📊 Diagrama de Flujo - PS 1.13 (Prisma Pentagonal)</h3>
+          <button class="close-modal" onclick="closeDiagramModal()">&times;</button>
+        </div>
+        <div class="diagram-modal-body">
+          <img src="../Diagramas/imagen_diagrama_ps1_13.svg" alt="Diagrama de flujo PS 1.13">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openDiagramModal() {
+        document.getElementById('diagramModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDiagramModal(event) {
+        if (!event || event.target.id === 'diagramModal' || event.target.className === 'close-modal') {
+          document.getElementById('diagramModal').classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      // Cerrar modal con tecla ESC
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeDiagramModal();
+        }
+      });
+    </script>
   </div>
 </body>
 </html>

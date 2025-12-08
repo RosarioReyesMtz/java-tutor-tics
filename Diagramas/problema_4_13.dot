@@ -1,72 +1,91 @@
-digraph Diagrama_4_21 {
-    graph [fontname="Arial"];
-    node [fontname="Arial", shape=ellipse, style=solid];
-    edge [fontname="Arial"];
-
-    inicio [label="INICIO"];
-    fin [label="FIN"];
+digraph problema_4_13 {
+    // Configuración general
+    rankdir=TB;
+    node [fontname="Arial", fontsize=11];
     
-    node [shape=parallelogram, style=solid];
-    lectura_n [label="N"];
-    lectura_a [label="A[I, J]"];
+    // Inicio
+    inicio [label="INICIO", shape=ellipse, style=filled, fillcolor="#90EE90"];
     
-    node [shape=parallelogram, style="solid,waves", waves=bottom];
-    escritura_a [label="A[I, J]"];
-
-    node [shape=rect, style=solid];
-    init_i_read [label="I \L\L- 1"];
-    init_j_read [label="J \L\L- 1"];
-    inc_j_read [label="J \L\L- J + 1"];
-    inc_i_read [label="I \L\L- I + 1"];
+    // Entrada N
+    entrada_n [label="Leer N\n(Dimensión de la matriz)", shape=parallelogram, style=filled, fillcolor="#87CEEB"];
     
-    init_i_swap [label="I \L\L- 1"];
-    init_j_swap [label="J \L\L- 1"];
-    swap_logic [label="AUX \L\L- A[I, J]\lA[I, J] \L\L- A[N - I + 1, J]\lA[N - I + 1, J] \L\L- AUX\l"];
-    inc_j_swap [label="J \L\L- J + 1"];
-    inc_i_swap [label="I \L\L- I + 1"];
+    // Validación
+    validar [label="¿(N ≥ 1) Y (N ≤ 50)?", shape=diamond, style=filled, fillcolor="#FFD700"];
+    error [label="Imprimir:\n\"Error en datos\"", shape=egg, style=filled, fillcolor="#FFB6C1"];
     
-    init_i_write [label="I \L\L- 1"];
-    init_j_write [label="J \L\L- 1"];
-    inc_j_write [label="J \L\L- J + 1"];
-    inc_i_write [label="I \L\L- I + 1"];
-
-    node [shape=diamond, style=solid];
-    cond_n [label="(N >= 1) y (N <= 50)"];
-    cond_i_read [label="I <= N"];
-    cond_j_read [label="J <= N"];
-    cond_i_swap [label="I <= N / 2"];
-    cond_j_swap [label="J <= N"];
-    cond_i_write [label="I <= N"];
-    cond_j_write [label="J <= N"];
+    // LECTURA DE MATRIZ
+    titulo_leer [label="PASO 1: Leer Matriz", shape=box, style=filled, fillcolor="#FFD700"];
+    init_i_leer [label="I = 1", shape=box];
+    ciclo_i_leer [label="¿I ≤ N?", shape=diamond];
+    init_j_leer [label="J = 1", shape=box];
+    ciclo_j_leer [label="¿J ≤ N?", shape=diamond];
+    leer_elem [label="Leer A[I][J]", shape=parallelogram, style=filled, fillcolor="#87CEEB"];
+    inc_j_leer [label="J = J + 1", shape=box];
+    inc_i_leer [label="I = I + 1", shape=box];
     
-    inicio -> lectura_n -> cond_n;
-    cond_n -> init_i_read [label="Si"];
-    cond_n -> fin [label="No\l\"Error en datos\"\l"];
+    // INTERCAMBIO DE RENGLONES
+    titulo_swap [label="PASO 2: Intercambiar Renglones", shape=box, style=filled, fillcolor="#FFD700"];
+    init_i_swap [label="I = 1", shape=box];
+    ciclo_i_swap [label="¿I ≤ N/2?", shape=diamond, style=filled, fillcolor="#FFA500"];
+    init_j_swap [label="J = 1", shape=box];
+    ciclo_j_swap [label="¿J ≤ N?", shape=diamond];
+    swap [label="AUX = A[I][J]\nA[I][J] = A[N-I+1][J]\nA[N-I+1][J] = AUX\n(Intercambiar elementos)", shape=box];
+    inc_j_swap [label="J = J + 1", shape=box];
+    inc_i_swap [label="I = I + 1", shape=box];
     
-    init_i_read -> cond_i_read;
-    cond_i_read -> init_j_read [label="Si"];
-    init_j_read -> cond_j_read;
-    cond_j_read -> lectura_a [label="Si"];
-    lectura_a -> inc_j_read -> cond_j_read;
-    cond_j_read -> inc_i_read [label="No"];
-    inc_i_read -> cond_i_read;
+    // IMPRESIÓN DE MATRIZ
+    titulo_impr [label="PASO 3: Imprimir Matriz", shape=box, style=filled, fillcolor="#FFD700"];
+    init_i_impr [label="I = 1", shape=box];
+    ciclo_i_impr [label="¿I ≤ N?", shape=diamond];
+    init_j_impr [label="J = 1", shape=box];
+    ciclo_j_impr [label="¿J ≤ N?", shape=diamond];
+    impr_elem [label="Imprimir A[I][J]", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    inc_j_impr [label="J = J + 1", shape=box];
+    inc_i_impr [label="I = I + 1", shape=box];
     
-    cond_i_read -> init_i_swap [label="No"];
-    init_i_swap -> cond_i_swap;
-    cond_i_swap -> init_j_swap [label="Si"];
-    init_j_swap -> cond_j_swap;
-    cond_j_swap -> swap_logic [label="Si"];
-    swap_logic -> inc_j_swap -> cond_j_swap;
-    cond_j_swap -> inc_i_swap [label="No"];
-    inc_i_swap -> cond_i_swap;
+    // Fin
+    fin [label="FIN", shape=ellipse, style=filled, fillcolor="#FF6B6B"];
     
-    cond_i_swap -> init_i_write [label="No"];
-    init_i_write -> cond_i_write;
-    cond_i_write -> init_j_write [label="Si"];
-    init_j_write -> cond_j_write;
-    cond_j_write -> escritura_a [label="Si"];
-    escritura_a -> inc_j_write -> cond_j_write;
-    cond_j_write -> inc_i_write [label="No"];
-    inc_i_write -> cond_i_write;
-    cond_i_write -> fin [label="No"];
+    // Conexiones
+    inicio -> entrada_n;
+    entrada_n -> validar;
+    validar -> titulo_leer [label="SÍ"];
+    validar -> error [label="NO"];
+    error -> fin;
+    
+    // Lectura
+    titulo_leer -> init_i_leer;
+    init_i_leer -> ciclo_i_leer;
+    ciclo_i_leer -> init_j_leer [label="SÍ"];
+    init_j_leer -> ciclo_j_leer;
+    ciclo_j_leer -> leer_elem [label="SÍ"];
+    leer_elem -> inc_j_leer;
+    inc_j_leer -> ciclo_j_leer;
+    ciclo_j_leer -> inc_i_leer [label="NO"];
+    inc_i_leer -> ciclo_i_leer;
+    
+    // Intercambio
+    ciclo_i_leer -> titulo_swap [label="NO"];
+    titulo_swap -> init_i_swap;
+    init_i_swap -> ciclo_i_swap;
+    ciclo_i_swap -> init_j_swap [label="SÍ"];
+    init_j_swap -> ciclo_j_swap;
+    ciclo_j_swap -> swap [label="SÍ"];
+    swap -> inc_j_swap;
+    inc_j_swap -> ciclo_j_swap;
+    ciclo_j_swap -> inc_i_swap [label="NO"];
+    inc_i_swap -> ciclo_i_swap;
+    
+    // Impresión
+    ciclo_i_swap -> titulo_impr [label="NO"];
+    titulo_impr -> init_i_impr;
+    init_i_impr -> ciclo_i_impr;
+    ciclo_i_impr -> init_j_impr [label="SÍ"];
+    init_j_impr -> ciclo_j_impr;
+    ciclo_j_impr -> impr_elem [label="SÍ"];
+    impr_elem -> inc_j_impr;
+    inc_j_impr -> ciclo_j_impr;
+    ciclo_j_impr -> inc_i_impr [label="NO"];
+    inc_i_impr -> ciclo_i_impr;
+    ciclo_i_impr -> fin [label="NO"];
 }

@@ -1,50 +1,79 @@
-digraph Diagrama_5_1_Suma {
-    graph [fontname="Arial"];
-    node [fontname="Arial", shape=ellipse, style=solid];
-    edge [fontname="Arial"];
-
-    inicio [label="INICIO (Matrices A1 y B1 leídas,\l Matriz C en ceros)"];
-    fin [label="FIN (Imprimir C)"];
-
-    node [shape=rect, style=solid];
-    init_ptrs [label="I \L\L- 1, J \L\L- 1"];
-    proc_c_sum [label="C[A1[I].REN, A1[I].COL] \L\L- A1[I].VAL + B1[J].VAL\lI \L\L- I + 1, J \L\L- J + 1\l"];
-    proc_c_a [label="C[A1[I].REN, A1[I].COL] \L\L- A1[I].VAL\lI \L\L- I + 1\l"];
-    proc_c_b [label="C[B1[J].REN, B1[J].COL] \L\L- B1[J].VAL\lJ \L\L- J + 1\l"];
+digraph problema_5_1 {
+    // Configuración general
+    rankdir=TB;
+    node [fontname="Arial", fontsize=11];
     
-    node [shape=diamond, style=solid];
-    cond_main_loop [label="(I <= K) y (J <= L)"];
-    cond_ren [label="A1[I].REN = B1[J].REN"];
-    cond_col [label="A1[I].COL = B1[J].COL"];
-    cond_col_cmp [label="A1[I].COL < B1[J].COL"];
-    cond_ren_cmp [label="A1[I].REN < B1[J].REN"];
-    cond_resto_a [label="I <= K"];
-    cond_resto_b [label="J <= L"];
+    // Inicio
+    inicio [label="INICIO\n(Matrices A1 y B1 ya leídas\ncomo arreglos de elementos)", shape=ellipse, style=filled, fillcolor="#90EE90"];
     
-    inicio -> init_ptrs -> cond_main_loop;
+    // Inicialización
+    init [label="Crear matriz C[M][N] = 0\nI = 1 (puntero en A1)\nJ = 1 (puntero en B1)\nK = tamaño de A1\nL = tamaño de B1", shape=box];
     
-    cond_main_loop -> cond_ren [label="Si"];
-    cond_ren -> cond_col [label="Si"];
-    cond_col -> proc_c_sum [label="Si"];
-    proc_c_sum -> cond_main_loop;
+    // Ciclo principal
+    ciclo_principal [label="¿(I ≤ K) Y (J ≤ L)?", shape=diamond, style=filled, fillcolor="#FFD700"];
     
-    cond_col -> cond_col_cmp [label="No"];
-    cond_col_cmp -> proc_c_a [label="Si"];
-    proc_c_a -> cond_main_loop;
-    cond_col_cmp -> proc_c_b [label="No"];
-    proc_c_b -> cond_main_loop;
-
-    cond_ren -> cond_ren_cmp [label="No"];
-    cond_ren_cmp -> proc_c_a [label="Si"];
-    cond_ren_cmp -> proc_c_b [label="No"];
+    // Comparar renglones
+    comp_ren [label="¿A1[I].REN = B1[J].REN?", shape=diamond];
     
-    cond_main_loop -> cond_resto_a [label="No"];
-    cond_resto_a -> proc_c_a [label="Si"];
-    proc_c_a -> cond_resto_a;
+    // Si renglones iguales, comparar columnas
+    comp_col [label="¿A1[I].COL = B1[J].COL?", shape=diamond];
     
-    cond_resto_a -> cond_resto_b [label="No"];
-    cond_resto_b -> proc_c_b [label="Si"];
-    proc_c_b -> cond_resto_b;
+    // Misma posición: SUMAR
+    sumar [label="C[A1[I].REN][A1[I].COL] =\n  A1[I].VAL + B1[J].VAL\nI = I + 1\nJ = J + 1\n(Sumar elementos)", shape=box];
     
-    cond_resto_b -> fin [label="No"];
+    // Columnas diferentes
+    comp_col_menor [label="¿A1[I].COL < B1[J].COL?", shape=diamond];
+    copiar_a [label="C[A1[I].REN][A1[I].COL] =\n  A1[I].VAL\nI = I + 1\n(Copiar de A1)", shape=box];
+    copiar_b [label="C[B1[J].REN][B1[J].COL] =\n  B1[J].VAL\nJ = J + 1\n(Copiar de B1)", shape=box];
+    
+    // Renglones diferentes
+    comp_ren_menor [label="¿A1[I].REN < B1[J].REN?", shape=diamond];
+    
+    // Copiar resto de A1
+    ciclo_resto_a [label="¿I ≤ K?", shape=diamond];
+    copiar_resto_a [label="C[A1[I].REN][A1[I].COL] =\n  A1[I].VAL\nI = I + 1", shape=box];
+    
+    // Copiar resto de B1
+    ciclo_resto_b [label="¿J ≤ L?", shape=diamond];
+    copiar_resto_b [label="C[B1[J].REN][B1[J].COL] =\n  B1[J].VAL\nJ = J + 1", shape=box];
+    
+    // Salida
+    salida [label="Imprimir matriz C\n(Resultado de A + B)", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // Fin
+    fin [label="FIN", shape=ellipse, style=filled, fillcolor="#FF6B6B"];
+    
+    // Conexiones
+    inicio -> init;
+    init -> ciclo_principal;
+    
+    ciclo_principal -> comp_ren [label="SÍ"];
+    
+    // Renglones iguales
+    comp_ren -> comp_col [label="SÍ"];
+    comp_col -> sumar [label="SÍ\n(misma posición)"];
+    sumar -> ciclo_principal;
+    
+    comp_col -> comp_col_menor [label="NO"];
+    comp_col_menor -> copiar_a [label="SÍ\n(A viene antes)"];
+    comp_col_menor -> copiar_b [label="NO\n(B viene antes)"];
+    copiar_a -> ciclo_principal;
+    copiar_b -> ciclo_principal;
+    
+    // Renglones diferentes
+    comp_ren -> comp_ren_menor [label="NO"];
+    comp_ren_menor -> copiar_a [label="SÍ\n(A viene antes)"];
+    comp_ren_menor -> copiar_b [label="NO\n(B viene antes)"];
+    
+    // Resto de elementos
+    ciclo_principal -> ciclo_resto_a [label="NO\n(uno terminó)"];
+    ciclo_resto_a -> copiar_resto_a [label="SÍ"];
+    copiar_resto_a -> ciclo_resto_a;
+    
+    ciclo_resto_a -> ciclo_resto_b [label="NO"];
+    ciclo_resto_b -> copiar_resto_b [label="SÍ"];
+    copiar_resto_b -> ciclo_resto_b;
+    
+    ciclo_resto_b -> salida [label="NO"];
+    salida -> fin;
 }

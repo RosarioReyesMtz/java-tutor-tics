@@ -5,54 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Problema 4.13 - Intercambiar Renglones de Matriz</title>
   <link rel="stylesheet" href="../styles_desc.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="container">
     <header class="page-header">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
       <h1>Problema 4.13 - Intercambiar Renglones de Matriz</h1>
+      <p class="subtitle">Programación Estructurada en Java - Página 287</p>
     </header>
 
     <main class="exercise-detail">
       <article class="exercise-card" aria-labelledby="prob4_13-title">
         <header class="exercise-header">
-          <span class="exercise-badge">Problema 4.13 (pág. 287)</span>
+          <span class="exercise-badge">Problema 4.13</span>
           <h2 id="prob4_13-title">Intercambiar Renglones de una Matriz Cuadrada</h2>
           
           <p class="exercise-description">
-            Construya un diagrama de flujo que intercambie los renglones de un arreglo bidimensional cuadrado (A[N x N]). 
-            El renglón 1 debe intercambiarse con el N, el 2 con el N-1, y así sucesivamente.
+            En este problema aprenderás a manipular matrices bidimensionales realizando intercambios simétricos
+            de renglones. El primer renglón se intercambia con el último, el segundo con el penúltimo, y así sucesivamente.
           </p>
+
+          <button onclick="openDiagramModal()" class="btn-diagram">📊 Ver Diagrama de Flujo</button>
         </header>
         
         <div class="exercise-content">
           <section class="exercise-main">
-            <h3>Requisitos</h3>
+            <h3>Objetivo</h3>
+            <p>Construir un algoritmo que intercambie los renglones de una matriz cuadrada de forma simétrica, modificando la matriz original sin usar matrices auxiliares completas.</p>
+
+            <h3>Variables a Declarar</h3>
             <ul>
-              <li><strong>Datos:</strong> Matriz A[N, N] (tipo entero, $1 < N < 50$).</li>
-              <li>El intercambio es simétrico: Renglón $i$ se intercambia con $N - 1 - i$ (en base 0) o $N - i + 1$ (en base 1).</li>
-              <li>El ciclo principal debe iterar solo hasta la mitad de los renglones ($N / 2$).</li>
-              <li>Se debe usar una variable $AUX$ para el intercambio.</li>
+              <li><strong>A:</strong> tipo matriz bidimensional (<code>int[N][N]</code>) - Matriz cuadrada a modificar</li>
+              <li><strong>N:</strong> tipo entero (<code>int</code>) - Dimensión de la matriz, con $1 < N < 50$</li>
+              <li><strong>I:</strong> tipo entero (<code>int</code>) - Contador de renglones</li>
+              <li><strong>J:</strong> tipo entero (<code>int</code>) - Contador de columnas</li>
+              <li><strong>AUX:</strong> tipo entero (<code>int</code>) - Variable temporal para intercambio</li>
             </ul>
 
-            <h3>Diagrama de Flujo</h3>
-            <img src="../Diagramas/imagen_diagrama_4_13.svg" alt="Diagrama de flujo Problema 4.13" style="width: 100%; height: auto;">
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
+            <h3>Operaciones a Realizar</h3>
             <ul>
-              <li>El bucle exterior (<code>i</code>) solo necesita llegar a <code>N / 2</code>. Si llega hasta <code>N</code>, volvería a intercambiar los renglones, revirtiendo la operación.</li>
-              <li>El bucle interior (<code>j</code>) debe recorrer todas las columnas.</li>
+              <li>Leer la dimensión N de la matriz cuadrada.</li>
+              <li>Leer los elementos de la matriz $A[N][N]$.</li>
+              <li>Ejecutar un ciclo I desde 0 hasta $N/2 - 1$ (o desde 1 hasta $N/2$ en base 1).</li>
+              <li>Para cada renglón I, intercambiar todos sus elementos con el renglón $N - 1 - I$ (base 0).</li>
+              <li>Usar una variable auxiliar AUX para realizar el intercambio: $AUX = A[I][J]$, $A[I][J] = A[N-1-I][J]$, $A[N-1-I][J] = AUX$.</li>
+              <li>Imprimir la matriz resultante.</li>
             </ul>
+
+            <h3>Ejemplo Visual</h3>
+            <pre><code>Matriz Original:        Matriz Intercambiada:
+[ 10  15  28  49 ]      [ 87   5  13  56 ]
+[ 68 115  36  15 ]      [ 90   0   7  28 ]
+[ 90   0   7  28 ]  =>  [ 68 115  36  15 ]
+[ 87   5  13  56 ]      [ 10  15  28  49 ]
+
+Renglón 0 ↔ Renglón 3
+Renglón 1 ↔ Renglón 2</code></pre>
+
+            <h3>Resultado Esperado</h3>
+            <pre><code>Matriz original:
+10 15 28 49
+68 115 36 15
+90 0 7 28
+87 5 13 56
+
+Matriz con renglones intercambiados:
+87 5 13 56
+90 0 7 28
+68 115 36 15
+10 15 28 49</code></pre>
+          </section>
+
+          <aside class="exercise-sidebar">
+            <h3>Notas Rápidas</h3>
+            <p><strong>Puntos importantes:</strong></p>
+            <ul>
+              <li>El bucle exterior (<code>i</code>) solo necesita llegar a $N/2$. Si llega hasta N, volvería a intercambiar los renglones, revirtiendo la operación.</li>
+              <li>El bucle interior (<code>j</code>) debe recorrer todas las columnas (de 0 a N-1).</li>
+              <li>El intercambio es simétrico: renglón $i$ con renglón $N - 1 - i$ (en índices base 0).</li>
+              <li>Se modifica la matriz "in-place" (en el mismo lugar), sin crear una nueva.</li>
+              <li>Este patrón es útil para reflejar o invertir estructuras de datos.</li>
+            </ul>
+
+            <h3>Tip</h3>
+            <p>
+              Visualiza el intercambio como un espejo horizontal: la primera fila se refleja con la última, la segunda
+              con la penúltima, etc. Por eso solo necesitas iterar hasta la mitad. ¡Si vas más allá, desharás el intercambio!
+            </p>
           </aside>
         </div>
       </article>
     </main>
 
-    <footer class="page-footer">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
-    </footer>
+
+    <!-- Modal para Diagrama de Flujo -->
+    <div id="diagramModal" class="diagram-modal" onclick="closeDiagramModal(event)">
+      <div class="diagram-modal-content" onclick="event.stopPropagation()">
+        <div class="diagram-modal-header">
+          <h3>📊 Diagrama de Flujo - Problema 4.13 (Intercambiar Renglones)</h3>
+          <button class="close-modal" onclick="closeDiagramModal()">&times;</button>
+        </div>
+        <div class="diagram-modal-body">
+          <img src="../Diagramas/imagen_diagrama_4_13.svg" alt="Diagrama de flujo Problema 4.13">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openDiagramModal() {
+        document.getElementById('diagramModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDiagramModal(event) {
+        if (!event || event.target.id === 'diagramModal' || event.target.className === 'close-modal') {
+          document.getElementById('diagramModal').classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      // Cerrar modal con tecla ESC
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeDiagramModal();
+        }
+      });
+    </script>
   </div>
 </body>
 </html>

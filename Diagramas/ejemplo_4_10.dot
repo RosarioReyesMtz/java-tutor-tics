@@ -1,23 +1,56 @@
-digraph Ejemplo_4_10 {
-    graph [fontname="Arial"];
-    node [fontname="Arial", shape=ellipse, style=solid];
-    edge [fontname="Arial"];
-
-    inicio [label="INICIO (Llenar Matriz MET[32][12][5])"];
-    fin [label="FIN"];
+digraph ejemplo_4_10 {
+    // Configuración general
+    rankdir=TB;
+    node [fontname="Arial", fontsize=11];
     
-    node [shape=rect, style=solid];
-    // Parte A
-    proc_a [label="INCISO A\lRecorrer E=1..32, M=1..12\lEscribir MET[E, M, 3]\l"];
+    // Inicio
+    inicio [label="INICIO", shape=ellipse, style=filled, fillcolor="#90EE90"];
     
-    // Parte B
-    proc_b [label="INCISO B\lLLUVIA \L\L- 0\lRecorrer E=1..32, M=1..12\lLLUVIA \L\L- LLUVIA + MET[E, M, 4]\lEscribir LLUVIA\l"];
+    // Cargar datos
+    cargar [label="Cargar arreglo\nMET[32][12][5]\n(Estado, Mes, Año)", shape=parallelogram, style=filled, fillcolor="#87CEEB"];
     
-    // Parte C
-    proc_c [label="INCISO C\lLLUVIA \L\L- 0\lRecorrer M=1..12\lLLUVIA \L\L- LLUVIA + MET[17, M, 5]\lEscribir LLUVIA\l"];
+    // CONSULTA A
+    titulo_a [label="CONSULTA A:\nLluvias mensuales de cada estado\nen el 3er año", shape=box, style=filled, fillcolor="#FFD700"];
+    ciclo_a [label="Para E = 1 hasta 32:\n  Para M = 1 hasta 12:\n    Imprimir MET[E][M][3]", shape=box];
+    out_a [label="Imprimir:\nTabla de lluvias\npor estado y mes (año 3)", shape=egg, style=filled, fillcolor="#FFB6C1"];
     
-    // Parte D
-    proc_d [label="INCISO D\lLLUVIA \L\L- 0\lRecorrer E=1..32, M=1..12, A=1..5\lLLUVIA \L\L- LLUVIA + MET[E, M, A]\lEscribir LLUVIA\l"];
+    // CONSULTA B
+    titulo_b [label="CONSULTA B:\nTotal de lluvias en el país\nen el 4to año", shape=box, style=filled, fillcolor="#FFD700"];
+    init_b [label="LLUVIA = 0", shape=box];
+    ciclo_b [label="Para E = 1 hasta 32:\n  Para M = 1 hasta 12:\n    LLUVIA = LLUVIA + MET[E][M][4]", shape=box];
+    out_b [label="Imprimir:\n\"Total 4to año: \", LLUVIA", shape=egg, style=filled, fillcolor="#FFB6C1"];
     
-    inicio -> proc_a -> proc_b -> proc_c -> proc_d -> fin;
+    // CONSULTA C
+    titulo_c [label="CONSULTA C:\nTotal de lluvias del estado 17\nen el 5to año", shape=box, style=filled, fillcolor="#FFD700"];
+    init_c [label="LLUVIA = 0", shape=box];
+    ciclo_c [label="Para M = 1 hasta 12:\n  LLUVIA = LLUVIA + MET[17][M][5]", shape=box];
+    out_c [label="Imprimir:\n\"Total Estado 17 (año 5): \", LLUVIA", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // CONSULTA D
+    titulo_d [label="CONSULTA D:\nGran total de lluvias\nen los 5 años", shape=box, style=filled, fillcolor="#FFD700"];
+    init_d [label="LLUVIA = 0", shape=box];
+    ciclo_d [label="Para E = 1 hasta 32:\n  Para M = 1 hasta 12:\n    Para A = 1 hasta 5:\n      LLUVIA = LLUVIA + MET[E][M][A]", shape=box];
+    out_d [label="Imprimir:\n\"Gran Total 5 años: \", LLUVIA", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // Fin
+    fin [label="FIN", shape=ellipse, style=filled, fillcolor="#FF6B6B"];
+    
+    // Conexiones
+    inicio -> cargar;
+    cargar -> titulo_a;
+    titulo_a -> ciclo_a;
+    ciclo_a -> out_a;
+    out_a -> titulo_b;
+    titulo_b -> init_b;
+    init_b -> ciclo_b;
+    ciclo_b -> out_b;
+    out_b -> titulo_c;
+    titulo_c -> init_c;
+    init_c -> ciclo_c;
+    ciclo_c -> out_c;
+    out_c -> titulo_d;
+    titulo_d -> init_d;
+    init_d -> ciclo_d;
+    ciclo_d -> out_d;
+    out_d -> fin;
 }

@@ -1,0 +1,56 @@
+digraph ps_4_34 {
+    // Configuración general
+    rankdir=TB;
+    node [fontname="Arial", fontsize=11];
+    
+    // Inicio
+    inicio [label="INICIO", shape=ellipse, style=filled, fillcolor="#90EE90"];
+    
+    // Cargar datos
+    cargar [label="Cargar arreglo\nFABRICA[12][4][3]\n(Mes, Año, Depto)", shape=parallelogram, style=filled, fillcolor="#87CEEB"];
+    
+    // CONSULTA A
+    titulo_a [label="CONSULTA A:\nDepto con mayor producción", shape=box, style=filled, fillcolor="#FFD700"];
+    calc_a [label="Para cada departamento D:\nSumar FABRICA[M][A][D]\npara todo M y A", shape=box];
+    max_a [label="Encontrar departamento\ncon mayor total", shape=box];
+    out_a [label="Imprimir:\nDepto con mayor producción", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // CONSULTA B
+    titulo_b [label="CONSULTA B:\nMes del 2do año con mayor producción", shape=box, style=filled, fillcolor="#FFD700"];
+    calc_b [label="Para cada mes M:\nSumar FABRICA[M][1][D]\npara todo D (año índice 1)", shape=box];
+    max_b [label="Encontrar mes\ncon mayor total", shape=box];
+    out_b [label="Imprimir:\nMes del 2do año\ncon mayor producción", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // CONSULTA C
+    titulo_c [label="CONSULTA C:\nAño con mayor producción", shape=box, style=filled, fillcolor="#FFD700"];
+    calc_c [label="Para cada año A:\nSumar FABRICA[M][A][D]\npara todo M y D", shape=box];
+    max_c [label="Encontrar año\ncon mayor total", shape=box];
+    out_c [label="Imprimir:\nAño con mayor producción", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // CONSULTA D
+    titulo_d [label="CONSULTA D:\nMayor producción individual", shape=box, style=filled, fillcolor="#FFD700"];
+    calc_d [label="Recorrer toda la matriz\nFABRICA[M][A][D]\nGuardar máximo y sus índices", shape=box];
+    out_d [label="Imprimir:\nMes, Año y Depto\nde la mayor producción", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // Fin
+    fin [label="FIN", shape=ellipse, style=filled, fillcolor="#FF6B6B"];
+    
+    // Conexiones
+    inicio -> cargar;
+    cargar -> titulo_a;
+    titulo_a -> calc_a;
+    calc_a -> max_a;
+    max_a -> out_a;
+    out_a -> titulo_b;
+    titulo_b -> calc_b;
+    calc_b -> max_b;
+    max_b -> out_b;
+    out_b -> titulo_c;
+    titulo_c -> calc_c;
+    calc_c -> max_c;
+    max_c -> out_c;
+    out_c -> titulo_d;
+    titulo_d -> calc_d;
+    calc_d -> out_d;
+    out_d -> fin;
+}

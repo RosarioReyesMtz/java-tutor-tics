@@ -22,6 +22,6 @@ public class ejemplo_1_4 {
         boolean resultadoB = evaluarCasoB();
         System.out.println("Caso b) Resultado: " + resultadoB);
 
-        System.out.println("Caso c) Produce un error de tipos, como se indica en el libro.");
+        System.out.println("Caso c) Produce un error de tipos.");
     }
 }

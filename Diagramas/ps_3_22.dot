@@ -1,0 +1,38 @@
+digraph ps_3_22 {
+    // Configuración general
+    rankdir=TB;
+    node [fontname="Arial", fontsize=11];
+    
+    // Inicio
+    inicio [label="INICIO", shape=ellipse, style=filled, fillcolor="#90EE90"];
+    
+    // Inicialización
+    init [label="I = 1", shape=box];
+    
+    // Ciclo FOR
+    ciclo [label="¿I ≤ 35?", shape=diamond, style=filled, fillcolor="#FFD700"];
+    
+    // Dentro del ciclo
+    entrada1 [label="Leer MAT\n(Matrícula del alumno)", shape=parallelogram, style=filled, fillcolor="#87CEEB"];
+    entrada2 [label="Leer CAL1, CAL2,\nCAL3, CAL4, CAL5\n(5 calificaciones)", shape=parallelogram, style=filled, fillcolor="#87CEEB"];
+    
+    calc [label="PROMEDIO =\n(CAL1 + CAL2 + CAL3\n+ CAL4 + CAL5) / 5", shape=box];
+    
+    salida [label="Imprimir:\nMAT, PROMEDIO", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    incremento [label="I = I + 1", shape=box];
+    
+    // Fin
+    fin [label="FIN", shape=ellipse, style=filled, fillcolor="#FF6B6B"];
+    
+    // Conexiones
+    inicio -> init;
+    init -> ciclo;
+    ciclo -> entrada1 [label="SÍ"];
+    entrada1 -> entrada2;
+    entrada2 -> calc;
+    calc -> salida;
+    salida -> incremento;
+    incremento -> ciclo;
+    ciclo -> fin [label="NO"];
+}

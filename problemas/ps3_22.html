@@ -5,53 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PS 3.22 - Promedio de 35 Alumnos</title>
   <link rel="stylesheet" href="../styles_desc.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="container">
     <header class="page-header">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
       <h1>PS 3.22 - Promedio de 35 Alumnos</h1>
+      <p class="subtitle">Programación Estructurada en Java - Página 426</p>
     </header>
 
     <main class="exercise-detail">
       <article class="exercise-card" aria-labelledby="ps3_22-title">
         <header class="exercise-header">
-          <span class="exercise-badge">Problema PS 3.22 (pág. 426)</span>
-          <h2 id="ps3_22-title">Promedio de 35 Alumnos (Lectura Plana)</h2>
+          <span class="exercise-badge">PS 3.22</span>
+          <h2 id="ps3_22-title">Promedio de 35 Alumnos</h2>
           
           <p class="exercise-description">
-            En una clase de una universidad se tienen 35 alumnos. Haga un diagrama de flujo que calcule e imprima la matrícula y el promedio de calificaciones de cada
-            alumno. Cada alumno de la clase tiene 5 calificaciones.
+            En este problema trabajarás con ciclos repetitivos para procesar datos de múltiples alumnos.
+            Aprenderás a leer matrículas y calificaciones, calcular promedios, y mostrar resultados individuales.
           </p>
+
+          <button onclick="openDiagramModal()" class="btn-diagram">📊 Ver Diagrama de Flujo</button>
         </header>
         
         <div class="exercise-content">
           <section class="exercise-main">
-            <h3>Requisitos</h3>
+            <h3>Objetivo</h3>
+            <p>Crear un programa que procese la información de 35 alumnos, calculando e imprimiendo la matrícula y el promedio de calificaciones de cada uno. Cada alumno tiene 5 calificaciones.</p>
+
+            <h3>Variables a Declarar</h3>
             <ul>
-              <li><strong>Datos:</strong> Un total de 35 alumnos.</li>
-              <li>Para cada alumno, se leen 6 datos: $MAT, CAL1, CAL2, CAL3, CAL4, CAL5$.</li>
-              <li>Se debe usar un ciclo <code>FOR</code> (Repetir) que se ejecute 35 veces.</li>
-              <li>Dentro del ciclo, leer los 6 datos, calcular el promedio de las 5 calificaciones.</li>
+              <li><strong>I:</strong> tipo entero (<code>int</code>) - Contador de alumnos, $1 \leq I \leq 35$</li>
+              <li><strong>MAT:</strong> tipo cadena (<code>String</code>) - Matrícula del alumno</li>
+              <li><strong>CAL1, CAL2, CAL3, CAL4, CAL5:</strong> tipo real (<code>double</code>) - Calificaciones</li>
+              <li><strong>PROMEDIO:</strong> tipo real (<code>double</code>) - Promedio de las 5 calificaciones</li>
+            </ul>
+
+            <h3>Operaciones a Realizar</h3>
+            <ul>
+              <li>Ejecutar un ciclo FOR desde 1 hasta 35.</li>
+              <li>En cada iteración, leer la matrícula y las 5 calificaciones del alumno.</li>
+              <li>Calcular el promedio: $PROMEDIO = \frac{CAL1 + CAL2 + CAL3 + CAL4 + CAL5}{5}$</li>
               <li>Imprimir la matrícula y el promedio de ese alumno.</li>
             </ul>
+
+            <h3>Fórmula</h3>
+            <p>$$PROMEDIO = \frac{\sum_{j=1}^{5} CAL_j}{5}$$</p>
+
+            <h3>Resultado Esperado</h3>
+            <pre><code>Alumno 1:
+Matrícula: A001
+Calificación 1: 85
+Calificación 2: 90
+...
+Matrícula: A001 - Promedio: 87.60
+
+Alumno 2:
+Matrícula: A002
+...
+
+[Se repite 35 veces]</code></pre>
           </section>
-          
+
           <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
+            <h3>Notas Rápidas</h3>
+            <p><strong>Puntos importantes:</strong></p>
             <ul>
-              <li>Este problema (y el PS 3.23) ilustra la necesidad de <strong>ciclos anidados</strong>.</li>
-              <li>Esta versión (PS 3.22) resuelve el problema sin un ciclo interno, leyendo 5 variables separadas.</li>
-              <li>No hay diagrama de flujo en el libro para este problema.</li>
+              <li>Este problema ilustra el procesamiento secuencial de datos con un ciclo FOR.</li>
+              <li>Esta versión lee 5 variables separadas (CAL1, CAL2, ...) en lugar de usar un arreglo.</li>
+              <li>El promedio se calcula sumando las 5 calificaciones y dividiendo entre 5.</li>
+              <li>Se procesa e imprime cada alumno individualmente antes de pasar al siguiente.</li>
+              <li>Es un buen ejercicio para practicar ciclos definidos con entrada/salida repetitiva.</li>
             </ul>
+
+            <h3>Tip</h3>
+            <p>
+              Este problema puede resolverse con un solo ciclo. Cada iteración procesa un alumno completo:
+              lee sus datos, calcula su promedio, e imprime el resultado. No necesitas almacenar todos los
+              alumnos, solo procesar uno a la vez.
+            </p>
           </aside>
         </div>
       </article>
     </main>
 
-    <footer class="page-footer">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
-    </footer>
+
+    <!-- Modal para Diagrama de Flujo -->
+    <div id="diagramModal" class="diagram-modal" onclick="closeDiagramModal(event)">
+      <div class="diagram-modal-content" onclick="event.stopPropagation()">
+        <div class="diagram-modal-header">
+          <h3>📊 Diagrama de Flujo - PS 3.22 (Promedio Alumnos)</h3>
+          <button class="close-modal" onclick="closeDiagramModal()">&times;</button>
+        </div>
+        <div class="diagram-modal-body">
+          <img src="../Diagramas/imagen_diagrama_ps3_22.svg" alt="Diagrama de flujo PS 3.22">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openDiagramModal() {
+        document.getElementById('diagramModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDiagramModal(event) {
+        if (!event || event.target.id === 'diagramModal' || event.target.className === 'close-modal') {
+          document.getElementById('diagramModal').classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      // Cerrar modal con tecla ESC
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeDiagramModal();
+        }
+      });
+    </script>
   </div>
 </body>
 </html>

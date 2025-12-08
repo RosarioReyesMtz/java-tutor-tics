@@ -5,53 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PS 4.34 - Producción de Fábrica</title>
   <link rel="stylesheet" href="../styles_desc.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="container">
     <header class="page-header">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
       <h1>PS 4.34 - Producción de Fábrica</h1>
+      <p class="subtitle">Programación Estructurada en Java - Página 453</p>
     </header>
 
     <main class="exercise-detail">
       <article class="exercise-card" aria-labelledby="ps4_34-title">
         <header class="exercise-header">
-          <span class="exercise-badge">Problema PS 4.34 (pág. 453)</span>
+          <span class="exercise-badge">PS 4.34</span>
           <h2 id="ps4_34-title">Producción de Fábrica (Arreglo Tridimensional)</h2>
           
           <p class="exercise-description">
-            Se tiene un arreglo tridimensional (FABRICA[12, 4, 3]) con la producción de 12 meses, 4 años y 3 departamentos (dulces, conservas, bebidas). 
-            Se pide calcular: a) Departamento con mayor producción en 4 años. b) Mes del 2do año con mayor producción. c) Año con mayor producción. d) Depto, mes y año de la mayor producción.
+            En este problema aprenderás a trabajar con arreglos tridimensionales y realizar
+            múltiples tipos de agregaciones. Es un ejercicio avanzado que simula análisis de datos empresariales.
           </p>
+
+          <button onclick="openDiagramModal()" class="btn-diagram">📊 Ver Diagrama de Flujo</button>
         </header>
         
         <div class="exercise-content">
           <section class="exercise-main">
-            <h3>Requisitos</h3>
+            <h3>Objetivo</h3>
+            <p>Analizar la producción de una fábrica con datos organizados en un arreglo tridimensional: 12 meses, 4 años y 3 departamentos. Debes responder 4 consultas diferentes que requieren distintas estrategias de agregación.</p>
+
+            <h3>Estructura del Problema</h3>
+            <p>Se tiene un arreglo tridimensional <strong>FABRICA[12][4][3]</strong> con la producción de:</p>
             <ul>
-              <li><strong>Datos:</strong> Arreglo <code>FABRICA[12][4][3]</code> (Mes, Año, Depto).</li>
-              <li>a) Acumular por departamento y encontrar el máximo.</li>
-              <li>b) Acumular por mes (solo del 2do año, índice 1) y encontrar el máximo.</li>
-              <li>c) Acumular por año y encontrar el máximo.</li>
-              <li>d) Encontrar el valor máximo individual en la matriz 3D y guardar sus 3 índices.</li>
+              <li><strong>Dimensión 1 (12):</strong> Meses del año</li>
+              <li><strong>Dimensión 2 (4):</strong> Años (4 años de datos históricos)</li>
+              <li><strong>Dimensión 3 (3):</strong> Departamentos (dulces, conservas, bebidas)</li>
             </ul>
+
+            <h3>Variables a Declarar</h3>
+            <ul>
+              <li><strong>FABRICA:</strong> tipo arreglo tridimensional (<code>int[12][4][3]</code>) - Producción</li>
+              <li><strong>M, A, D:</strong> tipo entero (<code>int</code>) - Índices para mes, año y departamento</li>
+              <li><strong>SUMA, MAX:</strong> tipo entero (<code>int</code>) - Acumuladores y máximos</li>
+              <li><strong>MES_MAX, ANIO_MAX, DEPTO_MAX:</strong> tipo entero (<code>int</code>) - Guardar índices del máximo</li>
+            </ul>
+
+            <h3>Consultas a Resolver</h3>
+            
+            <h4>a) Departamento con mayor producción en los 4 años</h4>
+            <p>Para cada departamento, acumular la producción de todos los meses y años, luego encontrar el máximo:</p>
+            <p>$$SUMA_d = \sum_{m=1}^{12} \sum_{a=1}^{4} FABRICA[m][a][d] \quad \text{para } d = 1, 2, 3$$</p>
+
+            <h4>b) Mes del 2do año con mayor producción</h4>
+            <p>Para cada mes del segundo año (índice 1), acumular la producción de los 3 departamentos:</p>
+            <p>$$SUMA_m = \sum_{d=1}^{3} FABRICA[m][2][d] \quad \text{para } m = 1, ..., 12$$</p>
+
+            <h4>c) Año con mayor producción</h4>
+            <p>Para cada año, acumular la producción de todos los meses y departamentos:</p>
+            <p>$$SUMA_a = \sum_{m=1}^{12} \sum_{d=1}^{3} FABRICA[m][a][d] \quad \text{para } a = 1, 2, 3, 4$$</p>
+
+            <h4>d) Mes, año y departamento de la mayor producción individual</h4>
+            <p>Recorrer toda la matriz y encontrar el valor máximo individual, guardando sus 3 índices.</p>
+
+            <h3>Resultado Esperado</h3>
+            <pre><code>Análisis de Producción:
+
+a) Departamento con mayor producción: Dulces (325,480 unidades)
+b) Mes del 2do año con mayor producción: Diciembre (48,520 unidades)
+c) Año con mayor producción: Año 4 (438,750 unidades)
+d) Mayor producción individual:
+   Mes: Diciembre, Año: 4, Departamento: Conservas (52,300 unidades)</code></pre>
           </section>
-          
+
           <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
+            <h3>Notas Rápidas</h3>
+            <p><strong>Puntos importantes:</strong></p>
             <ul>
-              <li>Este problema requiere múltiples recorridos del arreglo 3D, acumulando los totales de diferentes maneras (por depto, por año, por mes).</li>
-              <li>Es un ejercicio avanzado sobre manipulación de arreglos multidimensionales.</li>
-              <li>No hay diagrama de flujo en el libro para este problema.</li>
+              <li>Este problema trabaja con un <strong>arreglo tridimensional</strong> $FABRICA[12][4][3]$.</li>
+              <li>Cada consulta requiere una estrategia diferente de agregación y búsqueda.</li>
+              <li>Algunas consultas usan 1 ciclo, otras 2 o 3 ciclos anidados.</li>
+              <li>Identifica qué dimensiones son fijas y cuáles varían en cada consulta.</li>
+              <li>Es fundamental reinicializar acumuladores para cada grupo que analices.</li>
             </ul>
+
+            <h3>Tip</h3>
+            <p>
+              Para arreglos tridimensionales, piensa en las dimensiones como [Plano][Fila][Columna].
+              En cada consulta, identifica qué dimensiones debes recorrer completamente y cuáles son valores fijos.
+              Usa acumuladores temporales para cada grupo antes de comparar con el máximo global.
+            </p>
           </aside>
         </div>
       </article>
     </main>
 
-    <footer class="page-footer">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
-    </footer>
+
+    <!-- Modal para Diagrama de Flujo -->
+    <div id="diagramModal" class="diagram-modal" onclick="closeDiagramModal(event)">
+      <div class="diagram-modal-content" onclick="event.stopPropagation()">
+        <div class="diagram-modal-header">
+          <h3>📊 Diagrama de Flujo - PS 4.34 (Producción Fábrica)</h3>
+          <button class="close-modal" onclick="closeDiagramModal()">&times;</button>
+        </div>
+        <div class="diagram-modal-body">
+          <img src="../Diagramas/imagen_diagrama_ps4_34.svg" alt="Diagrama de flujo PS 4.34">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openDiagramModal() {
+        document.getElementById('diagramModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDiagramModal(event) {
+        if (!event || event.target.id === 'diagramModal' || event.target.className === 'close-modal') {
+          document.getElementById('diagramModal').classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      // Cerrar modal con tecla ESC
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeDiagramModal();
+        }
+      });
+    </script>
   </div>
 </body>
 </html>

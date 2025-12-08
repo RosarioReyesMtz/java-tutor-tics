@@ -5,54 +5,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Problema 3.13 - Promedios Lluvias Regiones</title>
   <link rel="stylesheet" href="../styles_desc.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="container">
     <header class="page-header">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
       <h1>Problema 3.13 - Promedios Lluvias Regiones</h1>
+      <p class="subtitle">Programación Estructurada en Java - Página 150</p>
     </header>
 
     <main class="exercise-detail">
       <article class="exercise-card" aria-labelledby="prob3_13-title">
         <header class="exercise-header">
-          <span class="exercise-badge">Problema 3.13 (pág. 150)</span>
+          <span class="exercise-badge">Problema 3.13</span>
           <h2 id="prob3_13-title">Promedios Lluvias Regiones Cerealeras</h2>
           
           <p class="exercise-description">
-            En el centro meteorológico de Argentina se llevan los promedios mensuales de las lluvias caídas en las regiones NORTE, CENTRO y SUR. 
-            Se necesita calcular: a) El promedio anual de la región centro, b) El mes y registro con menor lluvia en la región sur, c) La región con mayor lluvia anual.
+            En este problema trabajarás con datos meteorológicos de tres regiones de Argentina. Aprenderás a calcular
+            promedios, buscar valores mínimos y comparar totales, todo dentro de una estructura repetitiva eficiente.
           </p>
+
+          <button onclick="openDiagramModal()" class="btn-diagram">📊 Ver Diagrama de Flujo</button>
         </header>
         
         <div class="exercise-content">
           <section class="exercise-main">
-            <h3>Requisitos</h3>
+            <h3>Objetivo</h3>
+            <p>Analizar los promedios mensuales de lluvias en tres regiones cerealeras (NORTE, CENTRO y SUR) durante 12 meses para calcular estadísticas importantes.</p>
+
+            <h3>Variables a Declarar</h3>
             <ul>
-              <li><strong>Datos:</strong> RNO, RCE, RSU (lluvia de las 3 regiones) por cada mes (12 veces).</li>
-              <li>a) Calcular $PRORCE = (\sum RCE) / 12$.</li>
-              <li>b) Encontrar el valor $MERSU$ (menor lluvia en SUR) y $MES$ (el mes en que ocurrió).</li>
-              <li>c) Comparar los totales $ARNO$, $ARCE$ y $ARSU$ para determinar la región con mayor lluvia.</li>
+              <li><strong>RNO, RCE, RSU:</strong> tipo real (<code>double</code>) - Lluvias mensuales de cada región</li>
+              <li><strong>ARNO, ARCE, ARSU:</strong> tipo real (<code>double</code>) - Acumuladores anuales por región</li>
+              <li><strong>PRORCE:</strong> tipo real (<code>double</code>) - Promedio anual de la región CENTRO</li>
+              <li><strong>MERSU:</strong> tipo real (<code>double</code>) - Menor lluvia en región SUR</li>
+              <li><strong>MES:</strong> tipo entero (<code>int</code>) - Mes con menor lluvia en SUR</li>
             </ul>
 
-            <h3>Diagrama de Flujo</h3>
-            <img src="../Diagramas/imagen_diagrama_3_13.svg" alt="Diagrama de flujo Problema 3.13" style="width: 100%; height: auto;">
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
+            <h3>Operaciones a Realizar</h3>
             <ul>
-              <li>Este problema combina múltiples cálculos dentro de un solo ciclo <code>FOR</code>.</li>
-              <li>Introduce la técnica de <strong>búsqueda de mínimo</strong>, inicializando una variable con un valor muy alto.</li>
+              <li>Leer las lluvias mensuales de las tres regiones durante 12 meses.</li>
+              <li><strong>a)</strong> Calcular el promedio anual de la región CENTRO: $PRORCE = \frac{\sum_{i=1}^{12} RCE_i}{12}$</li>
+              <li><strong>b)</strong> Encontrar el mes y registro con menor lluvia en la región SUR.</li>
+              <li><strong>c)</strong> Determinar la región con mayor lluvia anual comparando totales.</li>
             </ul>
+
+            <h3>Resultado Esperado</h3>
+            <pre><code>Mes 1:
+Lluvia NORTE: 45.5
+Lluvia CENTRO: 62.3
+Lluvia SUR: 38.7
+...
+
+RESULTADOS:
+a) Promedio anual región CENTRO: 58.42 mm
+b) Menor lluvia región SUR: 22.3 mm en el mes 7
+c) Región con mayor lluvia anual: NORTE (678.9 mm)</code></pre>
+          </section>
+
+          <aside class="exercise-sidebar">
+            <h3>Notas Rápidas</h3>
+            <p><strong>Puntos importantes:</strong></p>
+            <ul>
+              <li>Este problema combina múltiples cálculos dentro de un solo ciclo <code>FOR</code> (eficiencia).</li>
+              <li>Introduce la técnica de <strong>búsqueda de mínimo</strong>, inicializando MERSU con un valor muy alto.</li>
+              <li>Se usan tres acumuladores simultáneos (ARNO, ARCE, ARSU) para las tres regiones.</li>
+              <li>El promedio se calcula dividiendo el acumulador entre 12.</li>
+              <li>Para encontrar la región con mayor lluvia, se comparan los tres totales al final.</li>
+            </ul>
+
+            <h3>Tip</h3>
+            <p>
+              Cuando busques un mínimo, inicializa la variable con un valor muy alto (como <code>Double.MAX_VALUE</code> en Java).
+              Así, cualquier valor real será menor y podrás actualizar correctamente el mínimo en cada iteración.
+            </p>
           </aside>
         </div>
       </article>
     </main>
 
-    <footer class="page-footer">
-      <a href="../index.html" class="back-link">← Volver al inicio</a>
-    </footer>
+ 
+
+    <!-- Modal para Diagrama de Flujo -->
+    <div id="diagramModal" class="diagram-modal" onclick="closeDiagramModal(event)">
+      <div class="diagram-modal-content" onclick="event.stopPropagation()">
+        <div class="diagram-modal-header">
+          <h3>📊 Diagrama de Flujo - Problema 3.13 (Lluvias Regiones)</h3>
+          <button class="close-modal" onclick="closeDiagramModal()">&times;</button>
+        </div>
+        <div class="diagram-modal-body">
+          <img src="../Diagramas/imagen_diagrama_3_13.svg" alt="Diagrama de flujo Problema 3.13">
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openDiagramModal() {
+        document.getElementById('diagramModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDiagramModal(event) {
+        if (!event || event.target.id === 'diagramModal' || event.target.className === 'close-modal') {
+          document.getElementById('diagramModal').classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      // Cerrar modal con tecla ESC
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeDiagramModal();
+        }
+      });
+    </script>
   </div>
 </body>
 </html>

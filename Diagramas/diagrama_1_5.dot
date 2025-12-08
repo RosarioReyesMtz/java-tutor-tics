@@ -1,30 +1,29 @@
-
 digraph problema_1_5 {
     // Configuración general
     rankdir=TB;
-    node [fontname="Arial", fontsize=10];
+    node [fontname="Arial", fontsize=11];
     
     // Inicio
     inicio [label="INICIO", shape=ellipse, style=filled, fillcolor="#90EE90"];
     
     // Entrada de datos
-    leer [label="Ingresar:\nRadio\nAltura", shape=parallelogram, style=filled, fillcolor="#ADD8E6"];
+    entrada [label="Leer:\nRADIO (radio del cilindro)\nALTURA (altura del cilindro)", shape=parallelogram, style=filled, fillcolor="#87CEEB"];
     
-    // Proceso: Calcular Volumen
-    calc_vol [label="Calcular Volumen:\nVolumen = π × Radio² × Altura", shape=box, style=rounded];
+    // Cálculo del volumen
+    calc_vol [label="VOL = π × RADIO² × ALTURA\n(Calcular volumen)", shape=box];
     
-    // Proceso: Calcular Área
-    calc_area [label="Calcular Área Lateral:\nÁrea = 2 × π × Radio × Altura", shape=box, style=rounded];
+    // Cálculo del área lateral
+    calc_area [label="AREA = 2 × π × RADIO × ALTURA\n(Calcular área lateral)", shape=box];
     
     // Salida de resultados
-    salida [label="Resultados:\nVolumen\nÁrea", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    salida [label="Imprimir:\n\"Volumen: \", VOL\n\"Área Lateral: \", AREA", shape=egg, style=filled, fillcolor="#FFB6C1"];
     
     // Fin
     fin [label="FIN", shape=ellipse, style=filled, fillcolor="#FF6B6B"];
     
     // Conexiones
-    inicio -> leer;
-    leer -> calc_vol;
+    inicio -> entrada;
+    entrada -> calc_vol;
     calc_vol -> calc_area;
     calc_area -> salida;
     salida -> fin;
