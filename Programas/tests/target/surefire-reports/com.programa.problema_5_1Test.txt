@@ -1,19 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.programa.problema_5_1Test
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! -- in com.programa.problema_5_1Test
-com.programa.problema_5_1Test.testSumaEsparcida -- Time elapsed: 0.003 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: problema_5_1 - testSumaEsparcida: La suma de matrices esparcidas no coincide con la esperada ==> array contents differ at index [0][0], expected: <5> but was: <0>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertArrayEquals.failArraysNotEqual(AssertArrayEquals.java:440)
-	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:241)
-	at org.junit.jupiter.api.AssertArrayEquals.assertArrayElementsEqual(AssertArrayEquals.java:364)
-	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:346)
-	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:159)
-	at org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1466)
-	at com.programa.problema_5_1Test.testSumaEsparcida(problema_5_1Test.java:39)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.programa.problema_5_1Test

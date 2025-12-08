@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.programa.problema_3_13Test
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.004 s <<< FAILURE! -- in com.programa.problema_3_13Test
-com.programa.problema_3_13Test.testProcesarDatos -- Time elapsed: 0.003 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: problema_3_13 - testProcesarDatos: Promedio Región Centro debe ser 20.0 ==> expected: <20.0> but was: <0.0>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1020)
-	at com.programa.problema_3_13Test.testProcesarDatos(problema_3_13Test.java:23)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.programa.problema_3_13Test

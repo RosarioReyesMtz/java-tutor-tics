@@ -1,28 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.programa.ejemplo_3_2Test
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.007 s <<< FAILURE! -- in com.programa.ejemplo_3_2Test
-com.programa.ejemplo_3_2Test.testNominaConCeros -- Time elapsed: 0.001 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: ejemplo_3_2 - testNominaConCeros: La suma debe ignorar ceros y resultar 200.0 ==> expected: <200.0> but was: <0.0>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1020)
-	at com.programa.ejemplo_3_2Test.testNominaConCeros(ejemplo_3_2Test.java:21)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
-com.programa.ejemplo_3_2Test.testSumaNomina -- Time elapsed: 0.001 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: ejemplo_3_2 - testSumaNomina: La suma de los sueldos debe ser 5500.0 ==> expected: <5500.0> but was: <0.0>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1020)
-	at com.programa.ejemplo_3_2Test.testSumaNomina(ejemplo_3_2Test.java:14)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.programa.ejemplo_3_2Test

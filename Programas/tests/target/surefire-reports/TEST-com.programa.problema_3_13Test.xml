@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.programa.problema_3_13Test" time="0.004" tests="1" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.programa.problema_3_13Test" time="0.004" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\reyes\OneDrive\Documentos\Taller de Ing Soffware\Proyecto_Libro\java-tutor-tics\Programas\tests\target\test-classes;C:\Users\reyes\OneDrive\Documentos\Taller de Ing Soffware\Proyecto_Libro\java-tutor-tics\Programas\tests\target\classes;C:\Users\reyes\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\reyes\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\reyes\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\reyes\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
+    <property name="java.class.path" value="C:\Users\reyes\OneDrive\Documentos\Taller de Ing Soffware\Tutor-tics\java-tutor-tics\Programas\tests\target\test-classes;C:\Users\reyes\OneDrive\Documentos\Taller de Ing Soffware\Tutor-tics\java-tutor-tics\Programas\tests\target\classes;C:\Users\reyes\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\reyes\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\reyes\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\reyes\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="MX"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.4.7-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\reyes\AppData\Local\Temp\surefire5106167784492746405\surefirebooter-20251103214710632_3.jar C:\Users\reyes\AppData\Local\Temp\surefire5106167784492746405 2025-11-03T21-47-09_147-jvmRun1 surefire-20251103214710632_1tmp surefire_0-20251103214710632_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\reyes\AppData\Local\Temp\surefire18221360240063476147\surefirebooter-20251208153116365_3.jar C:\Users\reyes\AppData\Local\Temp\surefire18221360240063476147 2025-12-08T15-31-16_207-jvmRun1 surefire-20251208153116365_1tmp surefire_0-20251208153116365_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\reyes\OneDrive\Documentos\Taller de Ing Soffware\Proyecto_Libro\java-tutor-tics\Programas\tests\target\test-classes;C:\Users\reyes\OneDrive\Documentos\Taller de Ing Soffware\Proyecto_Libro\java-tutor-tics\Programas\tests\target\classes;C:\Users\reyes\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\reyes\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\reyes\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\reyes\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\reyes\OneDrive\Documentos\Taller de Ing Soffware\Tutor-tics\java-tutor-tics\Programas\tests\target\test-classes;C:\Users\reyes\OneDrive\Documentos\Taller de Ing Soffware\Tutor-tics\java-tutor-tics\Programas\tests\target\classes;C:\Users\reyes\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\reyes\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\reyes\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\reyes\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\reyes"/>
     <property name="user.language" value="es"/>
@@ -25,12 +25,12 @@
     <property name="java.version.date" value="2024-07-16"/>
     <property name="java.home" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.4.7-hotspot"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\reyes\OneDrive\Documentos\Taller de Ing Soffware\Proyecto_Libro\java-tutor-tics\Programas\tests"/>
+    <property name="basedir" value="C:\Users\reyes\OneDrive\Documentos\Taller de Ing Soffware\Tutor-tics\java-tutor-tics\Programas\tests"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\reyes\AppData\Local\Temp\surefire5106167784492746405\surefirebooter-20251103214710632_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\reyes\AppData\Local\Temp\surefire18221360240063476147\surefirebooter-20251208153116365_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.4+7-LTS"/>
@@ -41,19 +41,17 @@
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="skipTests" value="false"/>
     <property name="java.vendor.version" value="Temurin-21.0.4+7"/>
     <property name="localRepository" value="C:\Users\reyes\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="C:\Users\reyes\AppData\Local\Temp\"/>
     <property name="java.version" value="21.0.4"/>
-    <property name="user.dir" value="C:\Users\reyes\OneDrive\Documentos\Taller de Ing Soffware\Proyecto_Libro\java-tutor-tics\Programas\tests"/>
+    <property name="user.dir" value="C:\Users\reyes\OneDrive\Documentos\Taller de Ing Soffware\Tutor-tics\java-tutor-tics\Programas\tests"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="trimStackTrace" value="false"/>
-    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.4.7-hotspot\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Eclipse Adoptium\jdk-21.0.4.7-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Azure Data Studio\bin;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\apache-maven-3.9.11\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\reyes\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\reyes\AppData\Local\Programs\Python\Python313\;C:\Users\reyes\AppData\Local\Microsoft\WindowsApps;C:\Users\reyes\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Azure Data Studio\bin;C:\Users\reyes\.dotnet\tools;C:\Users\reyes\AppData\Roaming\npm;c:\Users\reyes\.vscode\extensions\vscjava.vscode-java-debug-0.58.3\bundled\scripts\noConfigScripts;c:\Users\reyes\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;."/>
+    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.4.7-hotspot\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Users\reyes\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\reyes\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-21.0.4.7-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Azure Data Studio\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\apache-maven-3.9.11\bin;C:\Program Files\Microsoft SQL Server\170\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\reyes\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\reyes\AppData\Local\Programs\Python\Python313\;C:\Users\reyes\AppData\Local\Microsoft\WindowsApps;C:\Users\reyes\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Azure Data Studio\bin;C:\Users\reyes\.dotnet\tools;C:\Users\reyes\AppData\Roaming\npm;c:\Users\reyes\.vscode\extensions\vscjava.vscode-java-debug-0.58.3\bundled\scripts\noConfigScripts;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Eclipse Adoptium"/>
@@ -61,17 +59,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testProcesarDatos" classname="com.programa.problema_3_13Test" time="0.003">
-    <failure message="problema_3_13 - testProcesarDatos: Promedio Región Centro debe ser 20.0 ==&gt; expected: &lt;20.0&gt; but was: &lt;0.0&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: problema_3_13 - testProcesarDatos: Promedio Región Centro debe ser 20.0 ==> expected: <20.0> but was: <0.0>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1020)
-	at com.programa.problema_3_13Test.testProcesarDatos(problema_3_13Test.java:23)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-]]></failure>
-  </testcase>
+  <testcase name="testProcesarDatos" classname="com.programa.problema_3_13Test" time="0.003"/>
 </testsuite>
