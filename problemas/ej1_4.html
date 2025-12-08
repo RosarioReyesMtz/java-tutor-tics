@@ -30,7 +30,6 @@
           <h2 id="ej1_4-title">Evaluación de Expresiones Lógicas</h2>
           
           <p class="exercise-description">
-            En este ejemplo aprenderás sobre la jerarquía de operadores y la evaluación de expresiones booleanas complejas.
             Se presentan tres casos de evaluación con operadores lógicos, relacionales y aritméticos combinados.
           </p>
 
@@ -53,14 +52,14 @@
             <ul>
               <li><strong>Caso A:</strong> Evaluar: $NO(15 \geq 7^2)$ O $(43 - 8 \times 2 \div 4 \neq 3 \times 2 \div 2)$</li>
               <li><strong>Caso B:</strong> Evaluar: $(15 \geq 7 \times 3^2$ Y $8 > 3$ Y $15 > 6)$ O $NO(7 \times 3 < 5 + 12 \times 2 \div 3^2)$</li>
-              <li><strong>Caso C:</strong> Intentar: $BOOLEANO = 5 + 3$ (genera error de tipos)</li>
+              <li><strong>Caso C:</strong> Intentar: $NO((7 \times 3 \div 2 \times 4) > (15 \div 2 \times 6 \geq 15 \times 2 \div 17 = 15) )$</li>
+              <li>El caso C su resultado es $NO(40 > (VERDADERO = 15 ))$ lo que produce un error de tipos.</li>
               <li>Imprimir los resultados de cada caso.</li>
             </ul>
 
             <h3>Resultado Esperado</h3>
-            <pre><code>--- Evaluación de Expresiones Lógicas (Ejemplo 1.4) ---
-Caso a) Resultado: true
-Caso b) Resultado: false
+            <pre><code>Caso a) Resultado: true
+Caso b) Resultado: true
 Caso c) Produce un error de tipos.</code></pre>
           </section>
 

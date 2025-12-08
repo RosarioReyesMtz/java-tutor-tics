@@ -30,6 +30,7 @@ digraph ejemplo_1_4 {
     paso6_b [label="Paso 6:\n¿21 < 7?\nRespuesta: NO (False)", shape=diamond];
     paso7_b [label="Paso 7:\nAplicar NO (negación)\nFalse se convierte en True", shape=box];
     
+    paso8_b [label="Paso 8:\nFalse O True\n= True", shape=box];
 
     salida_b [label="Caso b) Resultado: true", shape=egg, style=filled, fillcolor="#FFB6C1"];
     
@@ -57,7 +58,8 @@ digraph ejemplo_1_4 {
     paso4_b -> paso5_b;
     paso5_b -> paso6_b;
     paso6_b -> paso7_b;
-    paso7_b -> salida_b;
+    paso7_b -> paso8_b;
+    paso8_b -> salida_b;
     
     salida_b -> titulo_c;
     titulo_c -> salida_c;
