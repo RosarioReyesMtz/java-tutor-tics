@@ -10,25 +10,46 @@ class problema_1_5Test {
 
     @BeforeEach
     void setUp() {
-        // Esto crea un objeto nuevo antes de cada test
         cilindro = new problema_1_5();
     }
 
     @Test
-    void testCalculosRegulares() {
-        double radio = 10.0;
-        double altura = 5.0;
-        double volEsperado = 1570.7963;
-        double areaEsperada = 314.1592;
-
-        assertEquals(volEsperado, cilindro.calcularVolumen(radio, altura), 0.0001, "problema_1_5 - testCalculosRegulares: Volumen incorrecto para radio=10, altura=5");
-        assertEquals(areaEsperada, cilindro.calcularArea(radio, altura), 0.0001, "problema_1_5 - testCalculosRegulares: Área incorrecta para radio=10, altura=5");
+    void testVolumenValoresNormales() {
+        double volEsperado = Math.PI * Math.pow(10, 2) * 5;  // Fórmula exacta
+        assertEquals(volEsperado, cilindro.calcularVolumen(10, 5), 0.0001);
     }
 
     @Test
-    void testCalculosConCero() {
-        assertEquals(0.0, cilindro.calcularVolumen(0, 10), "problema_1_5 - testCalculosConCero: Volumen debe ser 0 si radio=0");
-        assertEquals(0.0, cilindro.calcularArea(10, 0), "problema_1_5 - testCalculosConCero: Área debe ser 0 si altura=0");
-        assertEquals(0.0, cilindro.calcularVolumen(0, 0), "problema_1_5 - testCalculosConCero: Volumen debe ser 0 si radio=0 y altura=0");
+    void testAreaValoresNormales() {
+        double areaEsperada = 2 * Math.PI * 10 * 5; // Área lateral
+        assertEquals(areaEsperada, cilindro.calcularArea(10, 5), 0.0001);
+    }
+
+    @Test
+    void testValoresCero() {
+        assertEquals(0, cilindro.calcularVolumen(0, 10), 0.0001);
+        assertEquals(0, cilindro.calcularArea(10, 0), 0.0001);
+        assertEquals(0, cilindro.calcularVolumen(0, 0), 0.0001);
+        assertEquals(0, cilindro.calcularArea(0, 0), 0.0001);
+    }
+
+    @Test
+    void testValoresNegativos() {
+        assertEquals(0, cilindro.calcularVolumen(-5, 10), 0.0001);
+        assertEquals(0, cilindro.calcularVolumen(5, -10), 0.0001);
+        assertEquals(0, cilindro.calcularArea(-5, 10), 0.0001);
+        assertEquals(0, cilindro.calcularArea(5, -10), 0.0001);
+    }
+
+    @Test
+    void testValoresGrandes() {
+        double radio = 1_000_000;
+        double altura = 500_000;
+
+        double volEsperado = Math.PI * Math.pow(radio, 2) * altura;
+        double areaEsperada = 2 * Math.PI * radio * altura;
+
+        assertEquals(volEsperado, cilindro.calcularVolumen(radio, altura), 0.0001);
+        assertEquals(areaEsperada, cilindro.calcularArea(radio, altura), 0.0001);
     }
 }
