@@ -7,16 +7,16 @@ digraph problema_1_5 {
     inicio [label="INICIO", shape=ellipse, style=filled, fillcolor="#90EE90"];
     
     // Entrada de datos
-    entrada [label="Leer:\nRADIO (radio del cilindro)\nALTURA (altura del cilindro)", shape=parallelogram, style=filled, fillcolor="#87CEEB"];
+    entrada [label="RADIO\nALTURA ", shape=parallelogram, style=filled, fillcolor="#87CEEB"];
     
     // Cálculo del volumen
-    calc_vol [label="VOL = π × RADIO² × ALTURA\n(Calcular volumen)", shape=box];
+    calc_vol [label="VOLUMEN = π × RADIO² × ALTURA\n", shape=box];
     
     // Cálculo del área lateral
-    calc_area [label="AREA = 2 × π × RADIO × ALTURA\n(Calcular área lateral)", shape=box];
+    calc_area [label="AREA = 2 × π × RADIO × ALTURA\n", shape=box];
     
     // Salida de resultados
-    salida [label="Imprimir:\n\"Volumen: \", VOL\n\"Área Lateral: \", AREA", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    salida [label=" Volumen\n AREA", shape=egg, style=filled, fillcolor="#FFB6C1"];
     
     // Fin
     fin [label="FIN", shape=ellipse, style=filled, fillcolor="#FF6B6B"];
