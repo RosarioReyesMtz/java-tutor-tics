@@ -27,10 +27,12 @@ public class problema_1_5 {
         double volumen = c.calcularVolumen(radio, altura);
         double area = c.calcularArea(radio, altura);
 
-        System.out.println("--- Resultados ---");
-        System.out.printf("Volumen: %.4f\n", volumen);
-        System.out.printf("Área: %.4f\n", area);
+        System.out.println("RESULTADOS:");
+        System.out.printf("Área del cilindro: %.4f unidades²\n", area);
+        System.out.printf("Volumen del cilindro: %.4f unidades³\n", volumen);
         
+    
+
         scanner.close();
     }
 }
