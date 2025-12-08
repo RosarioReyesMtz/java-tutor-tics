@@ -1,0 +1,65 @@
+digraph ejemplo_1_4 {
+    // Configuración general
+    rankdir=TB;
+    node [fontname="Arial", fontsize=11];
+    
+    // Inicio
+    inicio [label="INICIO", shape=ellipse, style=filled, fillcolor="#90EE90"];
+    
+    // CASO A: Evaluar primera expresión
+    titulo_a [label="CASO A", shape=box, style=filled, fillcolor="#FFD700"];
+    
+    paso1_a [label="Paso 1:\n7² = 49", shape=box];
+    paso2_a [label="Paso 2:\n¿15 >= 49?\nRespuesta: NO (False)", shape=diamond];
+    paso3_a [label="Paso 3:\nAplicar NO (negación)\nFalse se convierte en True", shape=box];
+    
+    paso4_a [label="Paso 4:\n43 - 8×2÷4 = 39\n3×2÷2 = 3", shape=box];
+    paso5_a [label="Paso 5:\n¿39 ≠ 3?\nRespuesta: SÍ (True)", shape=diamond];
+    
+    salida_a [label="Caso a) Resultado: true", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // CASO B: Evaluar segunda expresión
+    titulo_b [label="CASO B", shape=box, style=filled, fillcolor="#FFD700"];
+    
+    paso1_b [label="Paso 1:\n7 × 3² = 7 × 9 = 63", shape=box];
+    paso2_b [label="Paso 2:\n¿15 >= 63?\nRespuesta: NO (False)", shape=diamond];
+    paso3_b [label="Paso 3:\n¿8 > 3? → SÍ (True)\n¿15 > 6? → SÍ (True)", shape=diamond];
+    paso4_b [label="Paso 4:\nFalse Y True Y True\n= False", shape=box];
+    
+    paso5_b [label="Paso 5:\n12×2÷3² = 24÷9 = 2\n5 + 2 = 7", shape=box];
+    paso6_b [label="Paso 6:\n¿21 < 7?\nRespuesta: NO (False)", shape=diamond];
+    paso7_b [label="Paso 7:\nAplicar NO (negación)\nFalse se convierte en True", shape=box];
+    
+
+    salida_b [label="Caso b) Resultado: true", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // CASO C
+    titulo_c [label="CASO C", shape=box, style=filled, fillcolor="#FFD700"];
+    salida_c [label="Caso c) Produce un error de tipos", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // Fin
+    fin [label="FIN", shape=ellipse, style=filled, fillcolor="#FF6B6B"];
+    
+    // Conexiones
+    inicio -> titulo_a;
+    titulo_a -> paso1_a;
+    paso1_a -> paso2_a;
+    paso2_a -> paso3_a;
+    paso3_a -> paso4_a;
+    paso4_a -> paso5_a;
+    paso5_a -> salida_a;
+    
+    salida_a -> titulo_b;
+    titulo_b -> paso1_b;
+    paso1_b -> paso2_b;
+    paso2_b -> paso3_b;
+    paso3_b -> paso4_b;
+    paso4_b -> paso5_b;
+    paso5_b -> paso6_b;
+    paso6_b -> paso7_b;
+    paso7_b -> salida_b;
+    
+    salida_b -> titulo_c;
+    titulo_c -> salida_c;
+    salida_c -> fin;
+}

@@ -10,518 +10,108 @@
   <div class="container">
     <header class="page-header">
       <h1>Ejercicios del Libro: Metodología de la Programación (Osvaldo Cairo)</h1>
-      <p class="subtitle">Selecciona un ejercicio del menú para ver los detalles.</p>
+      <p class="subtitle">Selecciona un ejercicio para ver los detalles completos.</p>
     </header>
 
-    <nav class="exercises-nav" aria-label="Navegación de ejercicios">
-      <a href="#ej1_4" class="nav-link">Ej 1.4</a>
-      <a href="#prob1_5" class="nav-link">Prob 1.5</a>
-      <a href="#ej2_12" class="nav-link">Ej 2.12</a>
-      <a href="#ej3_2" class="nav-link">Ej 3.2</a>
-      <a href="#prob3_13" class="nav-link">Prob 3.13</a>
-      <a href="#ej4_10" class="nav-link">Ej 4.10</a>
-      <a href="#prob4_13" class="nav-link">Prob 4.13</a>
-      <a href="#prob5_1" class="nav-link">Prob 5.1</a>
-      <a href="#ps1_13" class="nav-link">PS 1.13</a>
-      <a href="#ps3_22" class="nav-link">PS 3.22</a>
-      <a href="#ps4_2" class="nav-link">PS 4.2</a>
-      <a href="#ps4_18" class="nav-link">PS 4.18</a>
-      <a href="#ps4_34" class="nav-link">PS 4.34</a>
-    </nav>
-
-    <main class="exercises-main">
-
-      <article id="ej1_4" class="exercise-card" aria-labelledby="ej1_4-title">
-        <header class="exercise-header">
-          <span class="exercise-badge">Ejemplo 1.4 (pág. 20)</span>
-          <h2 id="ej1_4-title">Evaluación de Expresiones Lógicas (Operadores)</h2>
-          
-          <p class="exercise-description">
-            Este ejemplo demuestra la jerarquía de operadores y la evaluación paso a paso de expresiones lógicas (booleanas) complejas, combinando operadores aritméticos, relacionales y lógicos (Y, O, NO).
-          </p>
-        </header>
-        
-        <div class="exercise-content">
-          <section class="exercise-main">
-            <h3>Requisitos</h3>
-            <ul>
-              <li>Evaluar el resultado de tres expresiones lógicas complejas.</li>
-              <li>Aplicar correctamente la jerarquía de operadores (aritméticos, relacionales y lógicos)</li>
-              <li><strong>Caso a:</strong> `NO(15 >= 7**2) O (43 - 8 * 2 div 4 <> 3 * 2 div 2).</li>
-              <li><strong>Caso b:</strong> `(15 >= 7*3**2 Y 8 > 3 Y 15 > 6) O NO(7*3 < 5 + 12*2 div 3**2).</li>
-              <li><strong>Caso c:</strong> Demostrar un error de tipo al comparar un valor lógico con uno numérico.</li>
-            </ul>
-
-            
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <p class="note-text">Conversión de pseudocódigo a Java:</p>
-            <ul>
-              <li><code>**</code> (potencia) es <code>Math.pow()</code></li>
-              <li><code>div</code> (div. entera) es <code>/</code> (con operandos int)</li>
-              <li><code>O</code> (OR) es <code>||</code></li>
-              <li><code>Y</code> (AND) es <code>&&</code></li>
-              <li><code>NO</code> (NOT) es <code>!</code></li>
-              <li><code><></code> (diferente) es <code>!=</code></li>
-            </ul>
-          </aside>
-        </div>
-      </article>
-
-      <article id="prob1_5" class="exercise-card" aria-labelledby="prob1_5-title">
-        <header class="exercise-header">
-          <span class="exercise-badge">Problema 1.5 (pág. 44)</span>
-          <h2 id="prob1_5-title">Calcular Área y Volumen de un Cilindro</h2>
-          
-          <p class="exercise-description">
-            Construya un diagrama de flujo tal que dado como datos el radio y la altura de un
-            cilindro, calcule e imprima el área y su volumen.
-          </p>
-        </header>
-        
-        <div class="exercise-content">
-          <section class="exercise-main">
-            <h3>Requisitos</h3>
-            <ul>
-              <li><strong>Datos:</strong> RADIO, ALTU (variables de tipo real).</li>
-              <li>Calcular el volumen con la fórmula: $Volumen = \pi \cdot radio^2 \cdot altura$.</li>
-              <li>Calcular el área (lateral) con la fórmula: $Area = 2 \cdot \pi \cdot radio \cdot altura$.</li>
-              <li>Imprimir ambos resultados.</li>
-            </ul>
-
-            <h3>Diagrama de Flujo</h3>
-            <img src="./Diagramas/imagen_diagrama_1_5.svg" alt="Diagrama">
-
-            
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <p class="note-text">Este problema introduce:</p>
-            <ul>
-              <li>Lectura de datos (entrada).</li>
-              <li>Procesamiento (cálculos matemáticos).</li>
-              <li>Escritura de datos (salida).</li>
-              <li>Uso de constantes como $\pi$.</li>
-            </ul>
-          </aside>
-        </div>
-      </article>
-
-      <article id="ej2_12" class="exercise-card" aria-labelledby="ej2_12-title">
-        <header class="exercise-header">
-          <span class="exercise-badge">Ejemplo 2.12 (pág. 74)</span>
-          <h2 id="ej2_12-title">Ordenar Tres Números en Forma Descendente</h2>
-          
-          <p class="exercise-description">
-            Dados los datos A, B y C que representan números enteros diferentes, construya
-            un diagrama de flujo para escribir estos números en forma descendente.
-          </p>
-        </header>
-        
-        <div class="exercise-content">
-          <section class="exercise-main">
-            <h3>Requisitos</h3>
-            <ul>
-              <li><strong>Datos:</strong> A, B, C (variables de tipo entero).</li>
-              <li>Se asume que los números son diferentes.</li>
-              <li>Imprimir los tres números ordenados del mayor al menor.</li>
-              <li>Utilizar estructuras selectivas en cascada (anidadas).</li>
-            </ul>
-
-            <h3>Diagrama de Flujo</h3>
-            <img src="./Diagramas/imagen_diagrama_2_12.svg" alt="Diagrama">
-            
-            
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <ul>
-              <li>Este ejercicio es clave para entender las <strong>estructuras selectivas anidadas</strong> (if-else dentro de if-else).</li>
-              <li>La lógica de árbol de decisión cubre todas las permutaciones posibles de orden.</li>
-            </ul>
-          </aside>
-        </div>
-      </article>
-
-      <article id="ej3_2" class="exercise-card" aria-labelledby="ej3_2-title">
-        <header class="exercise-header">
-          <span class="exercise-badge">Ejemplo 3.2 (pág. 110)</span>
-          <h2 id="ej3_2-title">Calcular Nómina con Estructura Repetitiva</h2>
-          
-          <p class="exercise-description">
-            Solución al problema de calcular la nómina total de 10 trabajadores de una empresa, 
-            utilizando una estructura algorítmica repetitiva (<code>repetir</code> o <code>FOR</code>).
-          </p>
-        </header>
-        
-        <div class="exercise-content">
-          <section class="exercise-main">
-            <h3>Requisitos</h3>
-            <ul>
-              <li><strong>Datos:</strong> SUEi (variable de tipo real que representa el sueldo del trabajador i, con $1 \le i \le 10$).</li>
-              <li>Utilizar una variable <strong>acumuladora</strong> (NOMINA) para sumar los sueldos.</li>
-              <li>Utilizar una variable <strong>contadora</strong> (I) para controlar el ciclo.</li>
-              <li>El ciclo debe ejecutarse 10 veces.</li>
-              <li>Imprimir el total de la nómina.</li>
-            </ul>
-
-            <h3>Diagrama de Flujo</h3>
-            <img src="./Diagramas/imagen_diagrama_3_2.svg" alt="Diagrama">
-
-           
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <ul>
-              <li>Este ejemplo introduce el concepto de <strong>acumulador</strong> (una variable que suma valores en cada iteración).</li>
-              <li>También muestra un <strong>ciclo definido</strong> (<code>FOR</code>), donde se sabe de antemano el número de repeticiones.</li>
-            </ul>
-          </aside>
-        </div>
-      </article>
-
-      <article id="prob3_13" class="exercise-card" aria-labelledby="prob3_13-title">
-        <header class="exercise-header">
-          <span class="exercise-badge">Problema 3.13 (pág. 150)</span>
-          <h2 id="prob3_13-title">Promedios Lluvias Regiones Cerealeras</h2>
-          
-          <p class="exercise-description">
-            En el centro meteorológico de Argentina se llevan los promedios mensuales de las lluvias caídas en las regiones NORTE, CENTRO y SUR. 
-            Se necesita calcular: a) El promedio anual de la región centro, b) El mes y registro con menor lluvia en la región sur, c) La región con mayor lluvia anual.
-          </p>
-        </header>
-        
-        <div class="exercise-content">
-          <section class="exercise-main">
-            <h3>Requisitos</h3>
-            <ul>
-              <li><strong>Datos:</strong> RNO, RCE, RSU (lluvia de las 3 regiones) por cada mes (12 veces).</li>
-              <li>a) Calcular $PRORCE = (\sum RCE) / 12$.</li>
-              <li>b) Encontrar el valor $MERSU$ (menor lluvia en SUR) y $MES$ (el mes en que ocurrió).</li>
-              <li>c) Comparar los totales $ARNO$, $ARCE$ y $ARSU$ para determinar la región con mayor lluvia.</li>
-            </ul>
-
-            <h3>Diagrama de Flujo</h3>
-            <img src="./Diagramas/imagen_diagrama_3_13.svg" alt="Diagrama" style="width: 100%; height: auto;">
-
-            
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <ul>
-              <li>Este problema combina múltiples cálculos dentro de un solo ciclo <code>FOR</code>.</li>
-              <li>Introduce la técnica de <strong>búsqueda de mínimo</strong>, inicializando una variable con un valor muy alto.</li>
-            </ul>
-          </aside>
-        </div>
-      </article>
-
-      <article id="ej4_10" class="exercise-card" aria-labelledby="ej4_10-title">
-        <header class="exercise-header">
-          <span class="exercise-badge">Ejemplo 4.10 (pág. 223)</span>
-          <h2 id="ej4_10-title">Control Meteorológico con Arreglos Tridimensionales</h2>
-          
-          <p class="exercise-description">
-            El Centro Meteorológico de México lleva el control de las lluvias caídas mensualmente en los 32 estados de la república, 
-            a lo largo de los últimos 5 años. Se utiliza un arreglo tridimensional <code>MET[32, 12, 5]</code>.
-          </p>
-        </header>
-        
-        <div class="exercise-content">
-          <section class="exercise-main">
-            <h3>Requisitos</h3>
-            <p>Dado el arreglo tridimensional <code>MET[estado][mes][año]</code>, calcular:</p>
-            <ul>
-              <li>a) Las lluvias mensuales caídas en cada estado, durante el 3er año.</li>
-              <li>b) El total de lluvias caídas en el país durante el 4to año.</li>
-              <li>c) El total de lluvias caídas durante el último año del estado 17.</li>
-              <li>d) El total de lluvias en México en los últimos 5 años.</li>
-            </ul>
-
-            <h3>Diagrama de Flujo </h3>
-            <img src="./Diagramas/imagen_diagrama_4_10.svg" alt="Diagrama">
-
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <ul>
-              <li>Este ejercicio demuestra cómo "fijar" uno o más índices de un arreglo multidimensional para consultar "rebanadas" (slices) de los datos.</li>
-              <li>Índice de Año 3 = 2</li>
-              <li>Índice de Año 4 = 3</li>
-              <li>Índice de Estado 17 = 16</li>
-            </ul>
-          </aside>
-        </div>
-      </article>
+    <main class="exercises-grid">
       
-      <article id="prob4_13" class="exercise-card" aria-labelledby="prob4_13-title">
-        <header class="exercise-header">
-          <span class="exercise-badge">Problema 4.13 (pág. 287)</span>
-          <h2 id="prob4_13-title">Intercambiar Renglones de una Matriz Cuadrada</h2>
-          
-          <p class="exercise-description">
-            Construya un diagrama de flujo que intercambie los renglones de un arreglo bidimensional cuadrado (A[N x N]). 
-            El renglón 1 debe intercambiarse con el N, el 2 con el N-1, y así sucesivamente.
-          </p>
-        </header>
-        
-        <div class="exercise-content">
-          <section class="exercise-main">
-            <h3>Requisitos</h3>
-            <ul>
-              <li><strong>Datos:</strong> Matriz A[N, N] (tipo entero, $1 < N < 50$).</li>
-              <li>El intercambio es simétrico: Renglón $i$ se intercambia con $N - 1 - i$ (en base 0) o $N - i + 1$ (en base 1).</li>
-              <li>El ciclo principal debe iterar solo hasta la mitad de los renglones ($N / 2$).</li>
-              <li>Se debe usar una variable $AUX$ para el intercambio.</li>
-            </ul>
-
-            <h3>Diagrama de Flujo</h3>
-            <img src="./Diagramas/imagen_diagrama_4_13.svg" alt="Diagrama" style="width: 100%; height: auto;">
-
-          
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <ul>
-              <li>El bucle exterior (<code>i</code>) solo necesita llegar a <code>N / 2</code>. Si llega hasta <code>N</code>, volvería a intercambiar los renglones, revirtiendo la operación.</li>
-              <li>El bucle interior (<code>j</code>) debe recorrer todas las columnas.</li>
-            </ul>
-          </aside>
-        </div>
+      <article class="exercise-card-home">
+        <span class="exercise-badge">Ejemplo 1.4</span>
+        <h2>Evaluación de Expresiones Lógicas</h2>
+        <p>Jerarquía de operadores y evaluación de expresiones booleanas complejas.</p>
+        <a href="problemas/ej1_4.html" class="btn-detail">Ver detalles →</a>
       </article>
 
-      <article id="prob5_1" class="exercise-card" aria-labelledby="prob5_1-title">
-        <header class="exercise-header">
-          <span class="exercise-badge">Problema 5.1 (pág. 354)</span>
-          <h2 id="prob5_1-title">Suma de Matrices Esparcidas</h2>
-          
-          <p class="exercise-description">
-            Una matriz esparcida (mayoría de ceros) no se almacena completa. Solo se guardan los valores distintos de cero, junto con su renglón y columna. 
-            El programa debe: a) Leer matrices A y B, y guardarlas en arreglos de registros (A1, B1). b) Obtener la matriz C = A + B, usando solo A1 y B1. c) Imprimir C.
-          </p>
-        </header>
-        
-        <div class="exercise-content">
-          <section class="exercise-main">
-            <h3>Requisitos</h3>
-            <ul>
-              <li><strong>Datos:</strong> Dos matrices A(M x N) y B(M x N), 1 < M < 50, 1 < N < 30.</li>
-              <li>Definir una estructura (Registro) para almacenar: <code>REN</code>, <code>COL</code>, <code>VAL</code>.</li>
-              <li>a) Llenar los arreglos A1 y B1 (Arreglos de Registros) solo con los valores distintos de 0.</li>
-              <li>b) Calcular C(M x N) = A + B. La suma debe hacerse "mezclando" (merge) los arreglos A1 y B1, similar a un <em>merge sort</em>.</li>
-              <li>c) Imprimir la matriz C resultante.</li>
-            </ul>
-
-            <h3>Diagrama de Flujo</h3>
-            <img src="./Diagramas/imagen_diagrama_5_1.svg" alt="Diagrama" style="width: 100%; height: auto;">
-
-           
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <ul>
-              <li>Este problema introduce <strong>Arreglos de Registros</strong> (en Java, `ArrayList` de una clase personalizada).</li>
-              <li>La lógica de suma (inciso b) es el algoritmo de "merge" (fusión) más complejo de este conjunto de problemas.</li>
-            </ul>
-          </aside>
-        </div>
+      <article class="exercise-card-home">
+        <span class="exercise-badge">Problema 1.5</span>
+        <h2>Área y Volumen de un Cilindro</h2>
+        <p>Cálculo de área lateral y volumen dado el radio y altura.</p>
+        <a href="problemas/prob1_5.html" class="btn-detail">Ver detalles →</a>
       </article>
 
-      <article id="ps1_13" class="exercise-card" aria-labelledby="ps1_13-title">
-        <header class="exercise-header">
-          <span class="exercise-badge">Problema PS 1.13 (pág. 408)</span>
-          <h2 id="ps1_13-title">Calcular Áreas y Volumen de un Prisma Pentagonal</h2>
-          
-          <p class="exercise-description">
-            Construya un diagrama de flujo tal que dado el perímetro de la base, el apotema
-            y la altura de un prisma pentagonal; calcule el área de la base, el área lateral, el
-            área total y el volumen.
-          </p>
-        </header>
-        
-        <div class="exercise-content">
-          <section class="exercise-main">
-            <h3>Requisitos</h3>
-            <ul>
-              <li><strong>Datos:</strong> PER, APO, ALT (variables de tipo real).</li>
-              <li>Calcular Área Base: $AB = (PER \cdot APO) / 2$.</li>
-              <li>Calcular Área Lateral: $AL = PER \cdot ALT$.</li>
-              <li>Calcular Área Total: $AT = 2 \cdot AB + AL$.</li>
-              <li>Calcular Volumen: $VOL = AB \cdot ALT$.</li>
-            </ul>
-          
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <ul>
-              <li>Este es un problema secuencial simple.</li>
-              <li>Se enfoca en la correcta aplicación de fórmulas matemáticas.</li>
-              <li>No hay diagrama de flujo en el libro para este problema.</li>
-            </ul>
-          </aside>
-        </div>
+      <article class="exercise-card-home">
+        <span class="exercise-badge">Ejemplo 2.12</span>
+        <h2>Ordenar Tres Números</h2>
+        <p>Ordenamiento descendente usando estructuras selectivas anidadas.</p>
+        <a href="problemas/ej2_12.html" class="btn-detail">Ver detalles →</a>
       </article>
 
-      <article id="ps3_22" class="exercise-card" aria-labelledby="ps3_22-title">
-        <header class="exercise-header">
-          <span class="exercise-badge">Problema PS 3.22 (pág. 426)</span>
-          <h2 id="ps3_22-title">Promedio de 35 Alumnos (Lectura Plana)</h2>
-          
-          <p class="exercise-description">
-            En una clase de una universidad se tienen 35 alumnos. Haga un diagrama de flu
-            jo que calcule e imprima la matrícula y el promedio de calificaciones de cada
-            alumno. Cada alumno de la clase tiene 5 calificaciones.
-          </p>
-        </header>
-        
-        <div class="exercise-content">
-          <section class="exercise-main">
-            <h3>Requisitos</h3>
-            <ul>
-              <li><strong>Datos:</strong> Un total de 35 alumnos.</li>
-              <li>Para cada alumno, se leen 6 datos: $MAT, CAL1, CAL2, CAL3, CAL4, CAL5$.</li>
-              <li>Se debe usar un ciclo <code>FOR</code> (Repetir) que se ejecute 35 veces.</li>
-              <li>Dentro del ciclo, leer los 6 datos, calcular el promedio de las 5 calificaciones.</li>
-              <li>Imprimir la matrícula y el promedio de ese alumno.</li>
-            </ul>
-            
-          
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <ul>
-              <li>Este problema (y el PS 3.23) ilustra la necesidad de <strong>ciclos anidados</strong>.</li>
-              <li>Esta versión (PS 3.22) resuelve el problema sin un ciclo interno, leyendo 5 variables separadas.</li>
-              <li>No hay diagrama de flujo en el libro para este problema.</li>
-            </ul>
-          </aside>
-        </div>
+      <article class="exercise-card-home">
+        <span class="exercise-badge">Ejemplo 3.2</span>
+        <h2>Calcular Nómina</h2>
+        <p>Uso de acumuladores y ciclos definidos para sumar 10 sueldos.</p>
+        <a href="problemas/ej3_2.html" class="btn-detail">Ver detalles →</a>
       </article>
 
-      <article id="ps4_2" class="exercise-card" aria-labelledby="ps4_2-title">
-        <header class="exercise-header">
-          <span class="exercise-badge">Problema PS 4.2 (pág. 441)</span>
-          <h2 id="ps4_2-title">Contar Ocurrencias en Arreglo Unidimensional</h2>
-          
-          <p class="exercise-description">
-            Construya un programa tal que dado como entrada un arreglo unidimensional de
-            enteros y un número entero, determine cuántas veces se encuentra el número
-            dentro del arreglo.
-          </p>
-        </header>
-        
-        <div class="exercise-content">
-          <section class="exercise-main">
-            <h3>Requisitos</h3>
-            <ul>
-              <li><strong>Datos:</strong> VEC (arreglo de 100 enteros), NUM (entero a buscar).</li>
-              <li>Recorrer el arreglo $VEC$ completo.</li>
-              <li>Usar un <strong>contador</strong> para registrar las veces que $NUM$ aparece en $VEC$.</li>
-              <li>Imprimir el contador final.</li>
-            </ul>
-            
-          
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <ul>
-              <li>Este es un ejercicio fundamental de recorrido de arreglos.</li>
-              <li>Aplica el concepto de <strong>contador</strong> simple.</li>
-              <li>No hay diagrama de flujo en el libro para este problema.</li>
-            </ul>
-          </aside>
-        </div>
+      <article class="exercise-card-home">
+        <span class="exercise-badge">Problema 3.13</span>
+        <h2>Promedios Lluvias Regiones</h2>
+        <p>Análisis meteorológico con búsqueda de mínimos y máximos.</p>
+        <a href="problemas/prob3_13.html" class="btn-detail">Ver detalles →</a>
       </article>
 
-      <article id="ps4_18" class="exercise-card" aria-labelledby="ps4_18-title">
-        <header class="exercise-header">
-          <span class="exercise-badge">Problema PS 4.18 (pág. 446)</span>
-          <h2 id="ps4_18-title">Generar Matriz Identidad</h2>
-          
-          <p class="exercise-description">
-            Construya un diagrama de flujo que llene de ceros una matriz cuadrada A [N x N], 
-            excepto en la diagonal principal donde debe asignar 1.
-          </p>
-        </header>
-        
-        <div class="exercise-content">
-          <section class="exercise-main">
-            <h3>Requisitos</h3>
-            <ul>
-              <li><strong>Datos:</strong> N (dimensión de la matriz, $1 < N < 50$).</li>
-              <li>Crear una matriz A[N][N].</li>
-              <li>Usar ciclos anidados (para $i$ y $j$).</li>
-              <li>Si $i == j$ (diagonal principal), asignar 1.</li>
-              <li>Si $i != j$, asignar 0.</li>
-              <li>Imprimir la matriz resultante.</li>
-            </ul>
-            
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <ul>
-              <li>Este ejercicio es clave para entender el manejo de índices (<code>i</code>, <code>j</code>) en matrices.</li>
-              <li>La condición <code>i == j</code> es la definición de la <strong>diagonal principal</strong>.</li>
-              <li>No hay diagrama de flujo en el libro para este problema.</li>
-            </ul>
-          </aside>
-        </div>
+      <article class="exercise-card-home">
+        <span class="exercise-badge">Ejemplo 4.10</span>
+        <h2>Control Meteorológico</h2>
+        <p>Arreglos tridimensionales con datos de 32 estados, 12 meses, 5 años.</p>
+        <a href="problemas/ej4_10.html" class="btn-detail">Ver detalles →</a>
       </article>
-      
-      <article id="ps4_34" class="exercise-card" aria-labelledby="ps4_34-title">
-        <header class="exercise-header">
-          <span class="exercise-badge">Problema PS 4.34 (pág. 453)</span>
-          <h2 id="ps4_34-title">Producción de Fábrica (Arreglo Tridimensional)</h2>
-          
-          <p class="exercise-description">
-            Se tiene un arreglo tridimensional (FABRICA[12, 4, 3]) con la producción de 12 meses, 4 años y 3 departamentos (dulces, conservas, bebidas). 
-            Se pide calcular: a) Departamento con mayor producción en 4 años. b) Mes del 2do año con mayor producción. c) Año con mayor producción. d) Depto, mes y año de la mayor producción.
-          </p>
-        </header>
-        
-        <div class="exercise-content">
-          <section class="exercise-main">
-            <h3>Requisitos</h3>
-            <ul>
-              <li><strong>Datos:</strong> Arreglo <code>FABRICA[12][4][3]</code> (Mes, Año, Depto).</li>
-              <li>a) Acumular por departamento y encontrar el máximo.</li>
-              <li>b) Acumular por mes (solo del 2do año, índice 1) y encontrar el máximo.</li>
-              <li>c) Acumular por año y encontrar el máximo.</li>
-              <li>d) Encontrar el valor máximo individual en la matriz 3D y guardar sus 3 índices.</li>
-            </ul>
-            
-           
-          </section>
-          
-          <aside class="exercise-sidebar">
-            <h3>Notas rápidas</h3>
-            <ul>
-              <li>Este problema requiere múltiples recorridos del arreglo 3D, acumulando los totales de diferentes maneras (por depto, por año, por mes).</li>
-              <li>Es un ejercicio avanzado sobre manipulación de arreglos multidimensionales.</li>
-              <li>No hay diagrama de flujo en el libro para este problema.</li>
-            </ul>
-          </aside>
-        </div>
+
+      <article class="exercise-card-home">
+        <span class="exercise-badge">Problema 4.13</span>
+        <h2>Intercambiar Renglones de Matriz</h2>
+        <p>Manipulación de matrices cuadradas con intercambio simétrico.</p>
+        <a href="problemas/prob4_13.html" class="btn-detail">Ver detalles →</a>
+      </article>
+
+      <article class="exercise-card-home">
+        <span class="exercise-badge">Problema 5.1</span>
+        <h2>Suma de Matrices Esparcidas</h2>
+        <p>Arreglos de registros y algoritmo de fusión para matrices dispersas.</p>
+        <a href="problemas/prob5_1.html" class="btn-detail">Ver detalles →</a>
+      </article>
+
+      <article class="exercise-card-home">
+        <span class="exercise-badge">PS 1.13</span>
+        <h2>Prisma Pentagonal</h2>
+        <p>Cálculo de áreas y volumen con fórmulas geométricas.</p>
+        <a href="problemas/ps1_13.html" class="btn-detail">Ver detalles →</a>
+      </article>
+
+      <article class="exercise-card-home">
+        <span class="exercise-badge">PS 3.22</span>
+        <h2>Promedio de 35 Alumnos</h2>
+        <p>Ciclos repetitivos para calcular promedios de calificaciones.</p>
+        <a href="problemas/ps3_22.html" class="btn-detail">Ver detalles →</a>
+      </article>
+
+      <article class="exercise-card-home">
+        <span class="exercise-badge">PS 4.2</span>
+        <h2>Contar Ocurrencias en Arreglo</h2>
+        <p>Búsqueda y conteo en arreglos unidimensionales.</p>
+        <a href="problemas/ps4_2.html" class="btn-detail">Ver detalles →</a>
+      </article>
+
+      <article class="exercise-card-home">
+        <span class="exercise-badge">PS 4.18</span>
+        <h2>Generar Matriz Identidad</h2>
+        <p>Creación de matriz identidad con ciclos anidados.</p>
+        <a href="problemas/ps4_18.html" class="btn-detail">Ver detalles →</a>
+      </article>
+
+      <article class="exercise-card-home">
+        <span class="exercise-badge">PS 4.34</span>
+        <h2>Producción de Fábrica</h2>
+        <p>Análisis de arreglo 3D con producción por mes, año y departamento.</p>
+        <a href="problemas/ps4_34.html" class="btn-detail">Ver detalles →</a>
       </article>
 
     </main>
 
     <footer class="page-footer">
-      <p class="note-text">Regresa al <a href="#top">menú</a> para elegir otro ejercicio.</p>
+      <p class="note-text">© 2025 - Ejercicios de Metodología de la Programación</p>
     </footer>
   </div>
 </body>
 </html>
+         

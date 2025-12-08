@@ -15,15 +15,18 @@ digraph Diagrama_3_3 {
     node [shape=parallelogram, style=solid];
     lectura [label="SUE"];
     
-    node [shape=parallelogram, style="solid,waves", waves=bottom];
+    node [shape=egg, style="solid,waves", waves=bottom];
     escritura [label="NOMINA"];
     
     node [shape=diamond, style=solid];
     cond [label="I <= 10"];
     
     inicio -> init_nom -> init_i -> cond;
-    cond -> lectura [label="Si"];
+    cond -> lectura [label="Si"]; 
     lectura -> proceso_nom -> increment_i -> cond;
     cond -> escritura [label="No"];
     escritura -> fin;
 }
+
+
+/* imprimir en pantalla shape=egg */

@@ -1,62 +1,79 @@
 <?xml version="1.0" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="253pt" height="338pt" viewBox="0.00 0.00 252.72 337.60">
-<g id="graph0" class="graph" transform="translate(4,333.6000061035156) scale(1)" data-name="G">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160pt" height="482pt" viewBox="0.00 0.00 160.46 482.25">
+<g id="graph0" class="graph" transform="translate(7.185012449709831,422.97908125137576) scale(0.8032939967570362)" data-name="problema_1_5">
 
-<polygon fill="white" stroke="none" points="-4,4 -4,-333.6 248.72,-333.6 248.72,4 -4,4" style=""/>
-<!-- INICIO -->
-<g id="node1" class="node" pointer-events="visible" data-name="INICIO">
+<polygon fill="white" stroke="none" points="-4,4 -4,-478.25 156.46,-478.25 156.46,4 -4,4"/>
+<!-- inicio -->
+<g id="node1" class="node" pointer-events="visible" data-name="inicio">
 
-<ellipse fill="#f5f5f5" stroke="black" cx="122.36" cy="-311.6" rx="41.15" ry="18" style=""/>
-<text text-anchor="middle" x="122.36" y="-307.4" font-family="Inter, sans-serif" font-size="14.00" style="">INICIO</text>
+<ellipse fill="#90ee90" stroke="black" cx="76.23" cy="-456.25" rx="27.99" ry="18"/>
+<text text-anchor="middle" x="76.23" y="-453.25" font-family="Arial" font-size="10.00">INICIO</text>
 </g>
-<!-- LEER -->
-<g id="node2" class="node" pointer-events="visible" data-name="LEER">
+<!-- leer -->
+<g id="node2" class="node" pointer-events="visible" data-name="leer">
 
-<polygon fill="#f5f5f5" stroke="black" points="228.05,-257.6 59.92,-257.6 16.67,-221.6 184.8,-221.6 228.05,-257.6" style=""/>
-<text text-anchor="middle" x="122.36" y="-235.4" font-family="Inter, sans-serif" font-size="14.00" style="">RADIO, ALTU</text>
+<polygon fill="#add8e6" stroke="black" points="133.73,-402.25 42.26,-402.25 18.72,-314.25 110.2,-314.25 133.73,-402.25"/>
+<text text-anchor="middle" x="76.23" y="-367.25" font-family="Arial" font-size="10.00">Ingresar:</text>
+<text text-anchor="middle" x="76.23" y="-355.25" font-family="Arial" font-size="10.00">Radio</text>
+<text text-anchor="middle" x="76.23" y="-343.25" font-family="Arial" font-size="10.00">Altura</text>
 </g>
-<!-- INICIO&#45;&gt;LEER -->
-<g id="edge1" class="edge" data-name="INICIO-&gt;LEER">
+<!-- inicio&#45;&gt;leer -->
+<g id="edge1" class="edge" data-name="inicio-&gt;leer">
 
-<path fill="none" stroke="black" d="M122.36,-293.3C122.36,-286.01 122.36,-277.33 122.36,-269.14" style=""/>
-<polygon fill="black" stroke="black" points="125.86,-269.22 122.36,-259.22 118.86,-269.22 125.86,-269.22" style=""/>
+<path fill="none" stroke="black" d="M76.23,-438.08C76.23,-431.18 76.23,-422.81 76.23,-414.13"/>
+<polygon fill="black" stroke="black" points="79.73,-414.15 76.23,-404.15 72.73,-414.15 79.73,-414.15"/>
 </g>
-<!-- PROCESO -->
-<g id="node3" class="node" pointer-events="visible" data-name="PROCESO">
+<!-- calc_vol -->
+<g id="node3" class="node" pointer-events="visible" data-name="calc_vol">
 
-<polygon fill="#f5f5f5" stroke="black" points="244.58,-185.4 0.14,-185.4 0.14,-144.2 244.58,-144.2 244.58,-185.4" style=""/>
-<text text-anchor="middle" x="122.36" y="-169" font-family="Inter, sans-serif" font-size="14.00" style="">VOL = 3.141592 * (RADIO^2) * ALTU</text>
-<text text-anchor="middle" x="122.36" y="-152.2" font-family="Inter, sans-serif" font-size="14.00" style="">ARE = 2 * 3.141592 * RADIO * ALTU</text>
+<path fill="none" stroke="black" d="M140.68,-278.25C140.68,-278.25 11.77,-278.25 11.77,-278.25 5.77,-278.25 -0.23,-272.25 -0.23,-266.25 -0.23,-266.25 -0.23,-254.25 -0.23,-254.25 -0.23,-248.25 5.77,-242.25 11.77,-242.25 11.77,-242.25 140.68,-242.25 140.68,-242.25 146.68,-242.25 152.68,-248.25 152.68,-254.25 152.68,-254.25 152.68,-266.25 152.68,-266.25 152.68,-272.25 146.68,-278.25 140.68,-278.25"/>
+<text text-anchor="middle" x="76.23" y="-263.25" font-family="Arial" font-size="10.00">Calcular Volumen:</text>
+<text text-anchor="middle" x="76.23" y="-251.25" font-family="Arial" font-size="10.00">Volumen = π × Radio² × Altura</text>
 </g>
-<!-- LEER&#45;&gt;PROCESO -->
-<g id="edge2" class="edge" data-name="LEER-&gt;PROCESO">
+<!-- leer&#45;&gt;calc_vol -->
+<g id="edge2" class="edge" data-name="leer-&gt;calc_vol">
 
-<path fill="none" stroke="black" d="M122.36,-221.35C122.36,-214.09 122.36,-205.41 122.36,-197.09" style=""/>
-<polygon fill="black" stroke="black" points="125.86,-197.28 122.36,-187.28 118.86,-197.28 125.86,-197.28" style=""/>
+<path fill="none" stroke="black" d="M76.23,-314.02C76.23,-305.89 76.23,-297.57 76.23,-290.02"/>
+<polygon fill="black" stroke="black" points="79.73,-290.06 76.23,-280.06 72.73,-290.06 79.73,-290.06"/>
 </g>
-<!-- ESCRIBIR -->
-<g id="node4" class="node" pointer-events="visible" data-name="ESCRIBIR">
+<!-- calc_area -->
+<g id="node4" class="node" pointer-events="visible" data-name="calc_area">
 
-<polygon fill="#f5f5f5" stroke="black" points="162.13,-108 82.59,-108 82.59,-72 162.13,-72 162.13,-108" style=""/>
-<text text-anchor="middle" x="122.36" y="-85.8" font-family="Inter, sans-serif" font-size="14.00" style="">VOL, ARE</text>
+<path fill="none" stroke="black" d="M136.34,-206.25C136.34,-206.25 16.11,-206.25 16.11,-206.25 10.11,-206.25 4.11,-200.25 4.11,-194.25 4.11,-194.25 4.11,-182.25 4.11,-182.25 4.11,-176.25 10.11,-170.25 16.11,-170.25 16.11,-170.25 136.34,-170.25 136.34,-170.25 142.34,-170.25 148.34,-176.25 148.34,-182.25 148.34,-182.25 148.34,-194.25 148.34,-194.25 148.34,-200.25 142.34,-206.25 136.34,-206.25"/>
+<text text-anchor="middle" x="76.23" y="-191.25" font-family="Arial" font-size="10.00">Calcular Área Lateral:</text>
+<text text-anchor="middle" x="76.23" y="-179.25" font-family="Arial" font-size="10.00">Área = 2 × π × Radio × Altura</text>
 </g>
-<!-- PROCESO&#45;&gt;ESCRIBIR -->
-<g id="edge3" class="edge" data-name="PROCESO-&gt;ESCRIBIR">
+<!-- calc_vol&#45;&gt;calc_area -->
+<g id="edge3" class="edge" data-name="calc_vol-&gt;calc_area">
 
-<path fill="none" stroke="black" d="M122.36,-143.91C122.36,-136.44 122.36,-127.8 122.36,-119.69" style=""/>
-<polygon fill="black" stroke="black" points="125.86,-119.9 122.36,-109.9 118.86,-119.9 125.86,-119.9" style=""/>
+<path fill="none" stroke="black" d="M76.23,-241.94C76.23,-234.65 76.23,-225.97 76.23,-217.78"/>
+<polygon fill="black" stroke="black" points="79.73,-217.86 76.23,-207.86 72.73,-217.86 79.73,-217.86"/>
 </g>
-<!-- FIM -->
-<g id="node5" class="node" pointer-events="visible" data-name="FIM">
+<!-- salida -->
+<g id="node5" class="node" pointer-events="visible" data-name="salida">
 
-<ellipse fill="#f5f5f5" stroke="black" cx="122.36" cy="-18" rx="28.42" ry="18" style=""/>
-<text text-anchor="middle" x="122.36" y="-13.8" font-family="Inter, sans-serif" font-size="14.00" style="">FIM</text>
+<polygon fill="#ffb6c1" stroke="black" points="81.01,-71.96 84.17,-72.13 87.3,-72.39 90.38,-72.73 93.41,-73.15 96.37,-73.66 99.24,-74.24 102.02,-74.91 104.7,-75.65 107.27,-76.47 109.71,-77.36 112.02,-78.32 114.19,-79.35 116.22,-80.45 118.09,-81.61 119.81,-82.82 121.37,-84.09 122.76,-85.42 123.98,-86.79 125.04,-88.21 125.93,-89.67 126.64,-91.16 127.19,-92.69 127.58,-94.25 127.8,-95.83 127.86,-97.43 127.76,-99.04 127.51,-100.67 127.11,-102.31 126.57,-103.94 125.9,-105.58 125.09,-107.2 124.17,-108.82 123.12,-110.42 121.97,-112 120.72,-113.56 119.37,-115.09 117.93,-116.58 116.41,-118.04 114.81,-119.46 113.15,-120.83 111.43,-122.15 109.65,-123.42 107.82,-124.64 105.94,-125.8 104.03,-126.89 102.08,-127.92 100.1,-128.88 98.1,-129.78 96.07,-130.59 94.03,-131.34 91.97,-132 89.89,-132.59 87.81,-133.09 85.71,-133.52 83.61,-133.86 81.5,-134.11 79.4,-134.28 77.28,-134.37 75.17,-134.37 73.06,-134.28 70.95,-134.11 68.84,-133.86 66.74,-133.52 64.65,-133.09 62.56,-132.59 60.49,-132 58.43,-131.34 56.38,-130.59 54.36,-129.78 52.35,-128.88 50.37,-127.92 48.43,-126.89 46.51,-125.8 44.64,-124.64 42.81,-123.42 41.03,-122.15 39.3,-120.83 37.64,-119.46 36.05,-118.04 34.53,-116.58 33.09,-115.09 31.74,-113.56 30.48,-112 29.33,-110.42 28.29,-108.82 27.36,-107.2 26.56,-105.58 25.88,-103.94 25.34,-102.31 24.95,-100.67 24.7,-99.04 24.6,-97.43 24.66,-95.83 24.88,-94.25 25.26,-92.69 25.81,-91.16 26.53,-89.67 27.42,-88.21 28.47,-86.79 29.7,-85.42 31.09,-84.09 32.64,-82.82 34.36,-81.61 36.24,-80.45 38.26,-79.35 40.43,-78.32 42.75,-77.36 45.19,-76.47 47.75,-75.65 50.43,-74.91 53.21,-74.24 56.09,-73.66 59.04,-73.15 62.07,-72.73 65.16,-72.39 68.29,-72.13 71.45,-71.96 74.63,-71.88 77.82,-71.88 81.01,-71.96"/>
+<text text-anchor="middle" x="76.23" y="-112.12" font-family="Arial" font-size="10.00">Resultados:</text>
+<text text-anchor="middle" x="76.23" y="-100.12" font-family="Arial" font-size="10.00">Volumen</text>
+<text text-anchor="middle" x="76.23" y="-88.12" font-family="Arial" font-size="10.00">Área</text>
 </g>
-<!-- ESCRIBIR&#45;&gt;FIM -->
-<g id="edge4" class="edge" data-name="ESCRIBIR-&gt;FIM">
+<!-- calc_area&#45;&gt;salida -->
+<g id="edge4" class="edge" data-name="calc_area-&gt;salida">
 
-<path fill="none" stroke="black" d="M122.36,-71.7C122.36,-64.41 122.36,-55.73 122.36,-47.54" style=""/>
-<polygon fill="black" stroke="black" points="125.86,-47.62 122.36,-37.62 118.86,-47.62 125.86,-47.62" style=""/>
+<path fill="none" stroke="black" d="M76.23,-170.02C76.23,-163.03 76.23,-154.61 76.23,-146.17"/>
+<polygon fill="black" stroke="black" points="79.73,-146.28 76.23,-136.28 72.73,-146.28 79.73,-146.28"/>
+</g>
+<!-- fin -->
+<g id="node6" class="node" pointer-events="visible" data-name="fin">
+
+<ellipse fill="#ff6b6b" stroke="black" cx="76.23" cy="-18" rx="27" ry="18"/>
+<text text-anchor="middle" x="76.23" y="-15" font-family="Arial" font-size="10.00">FIN</text>
+</g>
+<!-- salida&#45;&gt;fin -->
+<g id="edge5" class="edge" data-name="salida-&gt;fin">
+
+<path fill="none" stroke="black" d="M76.23,-71.64C76.23,-63.86 76.23,-55.52 76.23,-47.82"/>
+<polygon fill="black" stroke="black" points="79.73,-47.94 76.23,-37.94 72.73,-47.94 79.73,-47.94"/>
 </g>
 </g>
 </svg>

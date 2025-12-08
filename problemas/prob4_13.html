@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Problema 4.13 - Intercambiar Renglones de Matriz</title>
+  <link rel="stylesheet" href="../styles_desc.css">
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <a href="../index.html" class="back-link">← Volver al inicio</a>
+      <h1>Problema 4.13 - Intercambiar Renglones de Matriz</h1>
+    </header>
+
+    <main class="exercise-detail">
+      <article class="exercise-card" aria-labelledby="prob4_13-title">
+        <header class="exercise-header">
+          <span class="exercise-badge">Problema 4.13 (pág. 287)</span>
+          <h2 id="prob4_13-title">Intercambiar Renglones de una Matriz Cuadrada</h2>
+          
+          <p class="exercise-description">
+            Construya un diagrama de flujo que intercambie los renglones de un arreglo bidimensional cuadrado (A[N x N]). 
+            El renglón 1 debe intercambiarse con el N, el 2 con el N-1, y así sucesivamente.
+          </p>
+        </header>
+        
+        <div class="exercise-content">
+          <section class="exercise-main">
+            <h3>Requisitos</h3>
+            <ul>
+              <li><strong>Datos:</strong> Matriz A[N, N] (tipo entero, $1 < N < 50$).</li>
+              <li>El intercambio es simétrico: Renglón $i$ se intercambia con $N - 1 - i$ (en base 0) o $N - i + 1$ (en base 1).</li>
+              <li>El ciclo principal debe iterar solo hasta la mitad de los renglones ($N / 2$).</li>
+              <li>Se debe usar una variable $AUX$ para el intercambio.</li>
+            </ul>
+
+            <h3>Diagrama de Flujo</h3>
+            <img src="../Diagramas/imagen_diagrama_4_13.svg" alt="Diagrama de flujo Problema 4.13" style="width: 100%; height: auto;">
+          </section>
+          
+          <aside class="exercise-sidebar">
+            <h3>Notas rápidas</h3>
+            <ul>
+              <li>El bucle exterior (<code>i</code>) solo necesita llegar a <code>N / 2</code>. Si llega hasta <code>N</code>, volvería a intercambiar los renglones, revirtiendo la operación.</li>
+              <li>El bucle interior (<code>j</code>) debe recorrer todas las columnas.</li>
+            </ul>
+          </aside>
+        </div>
+      </article>
+    </main>
+
+    <footer class="page-footer">
+      <a href="../index.html" class="back-link">← Volver al inicio</a>
+    </footer>
+  </div>
+</body>
+</html>

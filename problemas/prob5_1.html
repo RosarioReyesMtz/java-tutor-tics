@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Problema 5.1 - Suma de Matrices Esparcidas</title>
+  <link rel="stylesheet" href="../styles_desc.css">
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <a href="../index.html" class="back-link">← Volver al inicio</a>
+      <h1>Problema 5.1 - Suma de Matrices Esparcidas</h1>
+    </header>
+
+    <main class="exercise-detail">
+      <article class="exercise-card" aria-labelledby="prob5_1-title">
+        <header class="exercise-header">
+          <span class="exercise-badge">Problema 5.1 (pág. 354)</span>
+          <h2 id="prob5_1-title">Suma de Matrices Esparcidas</h2>
+          
+          <p class="exercise-description">
+            Una matriz esparcida (mayoría de ceros) no se almacena completa. Solo se guardan los valores distintos de cero, junto con su renglón y columna. 
+            El programa debe: a) Leer matrices A y B, y guardarlas en arreglos de registros (A1, B1). b) Obtener la matriz C = A + B, usando solo A1 y B1. c) Imprimir C.
+          </p>
+        </header>
+        
+        <div class="exercise-content">
+          <section class="exercise-main">
+            <h3>Requisitos</h3>
+            <ul>
+              <li><strong>Datos:</strong> Dos matrices A(M x N) y B(M x N), 1 < M < 50, 1 < N < 30.</li>
+              <li>Definir una estructura (Registro) para almacenar: <code>REN</code>, <code>COL</code>, <code>VAL</code>.</li>
+              <li>a) Llenar los arreglos A1 y B1 (Arreglos de Registros) solo con los valores distintos de 0.</li>
+              <li>b) Calcular C(M x N) = A + B. La suma debe hacerse "mezclando" (merge) los arreglos A1 y B1, similar a un <em>merge sort</em>.</li>
+              <li>c) Imprimir la matriz C resultante.</li>
+            </ul>
+
+            <h3>Diagrama de Flujo</h3>
+            <img src="../Diagramas/imagen_diagrama_5_1.svg" alt="Diagrama de flujo Problema 5.1" style="width: 100%; height: auto;">
+          </section>
+          
+          <aside class="exercise-sidebar">
+            <h3>Notas rápidas</h3>
+            <ul>
+              <li>Este problema introduce <strong>Arreglos de Registros</strong> (en Java, <code>ArrayList</code> de una clase personalizada).</li>
+              <li>La lógica de suma (inciso b) es el algoritmo de "merge" (fusión) más complejo de este conjunto de problemas.</li>
+            </ul>
+          </aside>
+        </div>
+      </article>
+    </main>
+
+    <footer class="page-footer">
+      <a href="../index.html" class="back-link">← Volver al inicio</a>
+    </footer>
+  </div>
+</body>
+</html>

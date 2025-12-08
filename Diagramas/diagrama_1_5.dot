@@ -1,28 +1,31 @@
-/* Pega este código en un editor de Graphviz (como Graphviz Online)
-  para generar tu archivo de imagen (ej. diagrama.png)
-*/
-digraph G {
-    graph [fontname="Inter, sans-serif"];
-    node [shape=ellipse, style=filled, fillcolor="#f5f5f5", fontname="Inter, sans-serif"];
-    edge [fontname="Inter, sans-serif"];
 
-    // Definición de Nodos con las formas del diagrama de flujo
-    INICIO [shape=ellipse];
+digraph problema_1_5 {
+    // Configuración general
+    rankdir=TB;
+    node [fontname="Arial", fontsize=10];
     
-    LEER [shape=parallelogram, label="RADIO, ALTU"];
+    // Inicio
+    inicio [label="INICIO", shape=ellipse, style=filled, fillcolor="#90EE90"];
     
-    PROCESO [
-      shape=rect, 
-      label="VOL = 3.141592 * (RADIO^2) * ALTU\nARE = 2 * 3.141592 * RADIO * ALTU"
-    ];
+    // Entrada de datos
+    leer [label="Ingresar:\nRadio\nAltura", shape=parallelogram, style=filled, fillcolor="#ADD8E6"];
     
-    ESCRIBIR [shape=document, label="VOL, ARE"];
+    // Proceso: Calcular Volumen
+    calc_vol [label="Calcular Volumen:\nVolumen = π × Radio² × Altura", shape=box, style=rounded];
     
-    FIM [shape=ellipse];
-
+    // Proceso: Calcular Área
+    calc_area [label="Calcular Área Lateral:\nÁrea = 2 × π × Radio × Altura", shape=box, style=rounded];
+    
+    // Salida de resultados
+    salida [label="Resultados:\nVolumen\nÁrea", shape=egg, style=filled, fillcolor="#FFB6C1"];
+    
+    // Fin
+    fin [label="FIN", shape=ellipse, style=filled, fillcolor="#FF6B6B"];
+    
     // Conexiones
-    INICIO -> LEER;
-    LEER -> PROCESO;
-    PROCESO -> ESCRIBIR;
-    ESCRIBIR -> FIM;
+    inicio -> leer;
+    leer -> calc_vol;
+    calc_vol -> calc_area;
+    calc_area -> salida;
+    salida -> fin;
 }

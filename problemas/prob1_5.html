@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Problema 1.5 - Área y Volumen de un Cilindro</title>
+  <link rel="stylesheet" href="../styles_desc.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <a href="../index.html" class="back-link">← Volver al inicio</a>
+      <h1>Problema 1.5 - Área y Volumen de un Cilindro</h1>
+    </header>
+
+    <main class="exercise-detail">
+      <article class="exercise-card" aria-labelledby="prob1_5-title">
+        <header class="exercise-header">
+          <span class="exercise-badge">Problema 1.5 (pág. 44)</span>
+          <h2 id="prob1_5-title">Calcular Área y Volumen de un Cilindro</h2>
+          
+          <p class="exercise-description">
+            Construya un diagrama de flujo tal que dado como datos el radio y la altura de un
+            cilindro, calcule e imprima el área y su volumen.
+          </p>
+        </header>
+        
+        <div class="exercise-content">
+          <section class="exercise-main">
+            <h3>Requisitos</h3>
+            <ul>
+              <li><strong>Datos:</strong> radio, altura (variables de tipo real).</li>
+              <li>Calcular el volumen con la fórmula: $Volumen = \pi \cdot radio^2 \cdot altura$.</li>
+              <li>Calcular el área (lateral) con la fórmula: $Area = 2 \cdot \pi \cdot radio \cdot altura$.</li>
+              <li>Imprimir ambos resultados.</li>
+            </ul>
+
+            <h3>Diagrama de Flujo</h3>
+            <button onclick="toggleDiagram()" class="btn-diagram" id="btnDiagram">Ver diagrama de flujo ↓</button>
+            <div id="diagramContainer" style="display: none; margin-top: 1rem;">
+              <img src="../Diagramas/imagen_diagrama_1_5.svg" alt="Diagrama de flujo Problema 1.5" style="width: 50%; height: auto;">
+            </div>
+
+            <script>
+              function toggleDiagram() {
+                const container = document.getElementById('diagramContainer');
+                const btn = document.getElementById('btnDiagram');
+                
+                if (container.style.display === 'none') {
+                  container.style.display = 'block';
+                  btn.textContent = 'Ocultar diagrama de flujo ↑';
+                } else {
+                  container.style.display = 'none';
+                  btn.textContent = 'Ver diagrama de flujo ↓';
+                }
+              }
+            </script>
+          </section>
+          
+          <aside class="exercise-sidebar">
+            <h3>Notas rápidas</h3>
+            <p class="note-text">Este problema introduce:</p>
+            <ul>
+              <li>Lectura de datos (entrada).</li>
+              <li>Procesamiento (cálculos matemáticos).</li>
+              <li>Escritura de datos (salida).</li>
+              <li>Uso de constantes como $\pi$.</li>
+            </ul>
+          </aside>
+        </div>
+      </article>
+    </main>
+
+    <footer class="page-footer">
+      <a href="../index.html" class="back-link">← Volver al inicio</a>
+    </footer>
+  </div>
+</body>
+</html>

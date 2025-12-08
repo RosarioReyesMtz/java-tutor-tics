@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejemplo 1.4 - Evaluación de Expresiones Lógicas</title>
+  <link rel="stylesheet" href="../styles_desc.css">
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <a href="../index.html" class="back-link">← Volver al inicio</a>
+      <h1>Ejemplo 1.4 - Evaluación de Expresiones Lógicas</h1>
+    </header>
+
+    <main class="exercise-detail">
+      <article class="exercise-card" aria-labelledby="ej1_4-title">
+        <header class="exercise-header">
+          <span class="exercise-badge">Ejemplo 1.4 (pág. 20)</span>
+          <h2 id="ej1_4-title">Evaluación de Expresiones Lógicas (Operadores)</h2>
+          
+          <p class="exercise-description">
+            Este ejemplo demuestra la jerarquía de operadores y la evaluación paso a paso de expresiones lógicas (booleanas) complejas, combinando operadores aritméticos, relacionales y lógicos (Y, O, NO).
+          </p>
+        </header>
+        
+        <div class="exercise-content">
+          <section class="exercise-main">
+            <h3>Requisitos</h3>
+            <ul>
+              <li>Evaluar el resultado de tres expresiones lógicas complejas.</li>
+              <li>Aplicar correctamente la jerarquía de operadores (aritméticos, relacionales y lógicos)</li>
+              <li><strong>Caso a:</strong> <code>NO(15 >= 7**2) O (43 - 8 * 2 div 4 <> 3 * 2 div 2)</code></li>
+              <li><strong>Caso b:</strong> <code>(15 >= 7*3**2 Y 8 > 3 Y 15 > 6) O NO(7*3 < 5 + 12*2 div 3**2)</code></li>
+              <li><strong>Caso c:</strong> Demostrar un error de tipo al comparar un valor lógico con uno numérico.</li>
+            </ul>
+
+         
+          </section>
+          
+          <aside class="exercise-sidebar">
+            <h3>Notas rápidas</h3>
+            <p class="note-text">Conversión de pseudocódigo a Java:</p>
+            <ul>
+              <li><code>**</code> (potencia) es <code>Math.pow()</code></li>
+              <li><code>div</code> (div. entera) es <code>/</code> (con operandos int)</li>
+              <li><code>O</code> (OR) es <code>||</code></li>
+              <li><code>Y</code> (AND) es <code>&&</code></li>
+              <li><code>NO</code> (NOT) es <code>!</code></li>
+              <li><code><></code> (diferente) es <code>!=</code></li>
+            </ul>
+          </aside>
+        </div>
+      </article>
+    </main>
+
+    <footer class="page-footer">
+      <a href="../index.html" class="back-link">← Volver al inicio</a>
+    </footer>
+  </div>
+</body>
+</html>
